@@ -5,6 +5,7 @@
 	--main-color: indianred;
 
 	--dark-shade: #0e0e0e;
+	--dark-shade-m1: #232323;
 
 	--light-gray: #f2f2f2;
 }
@@ -127,6 +128,10 @@ body {
 	top: 16%;
 }
 
+.main-section.hero h3 b {
+	font-size: 28px;
+}
+
 .main-section.hero .action-btn {
 	width: 250px;
 	position: relative;
@@ -231,6 +236,11 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+}
+
+.skills-wrapper h1 {
+	font-size: 75px;
+	color: var(--dark-shade-m1);
 }
 
 .wrapper-icon {
