@@ -320,6 +320,8 @@ select:-webkit-autofill {
 	font-size: 26px;
 	font-weight: bold;
 	margin: 0 15px;
+	width: 315px;
+	text-align: right;
 }
 
 /* END HOME */

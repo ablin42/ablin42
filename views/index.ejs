@@ -136,7 +136,7 @@
 	<section class="section main-section even" id="contact-section" data-anchor="contact">
 		<h1 class="hero-title mt-2">Contact</h1>
 
-		<form class="col-md-6 offset-md-3 mt-5 p-0" id="contact" method="POST" action="/api/contact/">
+		<form class="col-md-6 offset-md-3 mt-5 p-0" id="contact-form" method="POST" action="/api/contact/">
 			<div class="row">
 				<div class="col-md-12">
 					<label class="control-label">Email</label>
@@ -170,7 +170,7 @@
 	new fullpage("#fullPage", {
 		autoScrolling: true,
 
-		anchors: ["landing", "portfolio", "skills"],
+		anchors: ["landing", "portfolio", "skills", "contact"],
 		navigation: true,
 		navigationPosition: "right",
 		navigationTooltips: ["Landing", "Portfolio", "Skills"],
@@ -179,13 +179,6 @@
 		//slidesNavPosition: "bottom"
 	});
 </script>
-
-<!-- Front-end: --Javascript, --jQuery, xxAJAX, --HTML, --CSS, --Bootstrap, --Vue.js, xxFlatUI
-Back-end: --Node.js, --API, --PHP, C
- Database: xxNoSQL, --SQL
-Sysadmin: --Unix, --Docker, xxParamètrage serveur
-Autres: --Git, --AWS S3
--->
 
 <%- include('partials/footer'); -%>
 
