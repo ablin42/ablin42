@@ -58,7 +58,8 @@ app.use(
 				"cdnjs.cloudflare.com",
 				"stackpath.bootstrapcdn.com",
 				"kit.fontawesome.com",
-				"'sha256-/cUBdVL3Z8rqgK/i62eIdBoFNnPghvrSMIUOLIgqn8s='"
+				"'sha256-/cUBdVL3Z8rqgK/i62eIdBoFNnPghvrSMIUOLIgqn8s='",
+				"'sha256-eus0V0bybkWWWM9Te/joMqJqJzngnMHvXNn7MVAFbAM='"
 			],
 			frameSrc: [],
 			imgSrc: ["'self'"]

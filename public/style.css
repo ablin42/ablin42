@@ -2,7 +2,7 @@
 
 /* GLOBAL */
 :root {
-	--main-color: indianred;
+	--main-color: #cd5c5c;
 
 	--dark-shade: #0e0e0e;
 	--dark-shade-m1: #232323;
@@ -28,6 +28,7 @@ html {
 
 body {
 	overflow-x: hidden;
+	z-index: 0;
 }
 
 .action-btn {
@@ -107,6 +108,13 @@ body {
 /* END NAVBAR */
 
 /* HOME */
+#landing-section {
+	background-repeat: no-repeat;
+	background-image: url(/svg/background_landing.svg);
+	/*background-size: cover;*/
+	z-index: 2;
+}
+
 .main-section {
 	height: 100vh;
 }
@@ -121,7 +129,7 @@ body {
 
 .main-section.hero h3 {
 	font-size: 22px;
-	color: indianred;
+	color: var(--main-color);
 	opacity: 0.85;
 	position: relative;
 	left: 13%;
@@ -142,7 +150,7 @@ body {
 .scroll-indicator {
 	height: 140px;
 	position: relative;
-	bottom: -36%; /* might be fucky */
+	bottom: -21%; /* might be fucky */
 	width: 100%;
 }
 
