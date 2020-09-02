@@ -61,12 +61,15 @@ body {
 	opacity: 1;
 	z-index: 5;
 	width: 250px;
-	position: relative;
-	top: 29%;
-	left: 22%;
+
 	text-decoration: none;
 	font-size: 24px;
 	text-align: center;
+}
+
+.portfolio-link {
+	margin-left: 21%;
+	margin-top: 9%;
 }
 
 .action-link:hover {
@@ -76,14 +79,59 @@ body {
 	font-weight: bold;
 }
 
-.action-link.inverted {
+.action-link.inverted,
+.action-btn.inverted {
 	background: var(--light-gray) !important;
 	color: var(--main-color) !important;
 }
 
-.action-link.inverted:hover {
+.action-link.inverted:hover,
+.action-btn.inverted:hover {
 	background: var(--dark-shade) !important;
 	color: var(--main-color) !important;
+	font-weight: bold;
+}
+
+.fp-table {
+	display: flex !important;
+}
+
+input,
+textarea {
+	background-color: #e6e6e6 !important;
+	font-weight: bold;
+	color: var(--brand-blue-m2);
+	box-sizing: border-box;
+	border: 2px solid transparent !important;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	transition: ease-in-out 0.3s;
+}
+
+input:focus,
+textarea:focus,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+	outline: none !important;
+	background-color: white !important;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	-webkit-text-fill-color: var(--dark-shade-m1) !important;
+	border: 2px solid transparent !important;
+	box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+	-webkit-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+	-moz-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+}
+
+.control-label {
+	font-size: 24px;
+	color: var(--dark-shade);
 	font-weight: bold;
 }
 /* END GLOBAL */
@@ -131,27 +179,16 @@ body {
 	font-size: 22px;
 	color: var(--main-color);
 	opacity: 0.85;
-	position: relative;
-	left: 13%;
-	top: 16%;
+	margin-top: 10%;
+	margin-left: 13%;
 }
 
 .main-section.hero h3 b {
 	font-size: 28px;
 }
 
-.main-section.hero .action-btn {
-	width: 250px;
-	position: relative;
-	top: 30%;
-	left: 22%;
-}
-
 .scroll-indicator {
 	height: 140px;
-	position: relative;
-	bottom: -21%; /* might be fucky */
-	width: 100%;
 }
 
 .scroll-indicator::before {
@@ -190,9 +227,8 @@ body {
 	font-family: "Montserrat";
 	font-weight: bold;
 	color: var(--main-color);
-	position: relative;
-	top: 14%;
-	left: 10%;
+	margin-left: 10%;
+	margin-top: -25px;
 	font-style: italic;
 }
 
@@ -205,29 +241,24 @@ body {
 	opacity: 0.9;
 	font-size: 3.5rem;
 	width: 50%;
-	position: relative;
-	left: 13%;
-	top: 14%;
+	margin-left: 13%;
 	margin-top: -20px;
 }
 
 .skills-section-wrapper {
 	width: 70%;
-	position: relative;
-	top: 15%;
-	margin: 0 auto 15px auto;
+	margin: 25px auto 15px auto;
 }
 
 .skills-section {
 }
 
 .skills-text {
-	position: relative;
 	text-align: center;
-	top: 12%;
 	color: var(--main-color);
 	opacity: 0.95;
 	font-size: 2em;
+	margin-top: -25px;
 }
 
 .skills-section h2 {
@@ -270,6 +301,25 @@ body {
 	height: 80px;
 	width: 80px;
 	margin: auto;
+}
+
+.contact-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.contact-footer ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-footer li {
+	display: inline-block;
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0 15px;
 }
 
 /* END HOME */

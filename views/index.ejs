@@ -9,21 +9,20 @@
 		<h1 class="hero-title">Andréas Blin</h1>
 		<h2 class="hero-secondary-title">I will build the website you've been dreaming of</h2>
 
-		<!--<input type="submit" class="action-btn" value="My portfolio" id="goto-portfolio" />-->
-		<a href="#portfolio" class="action-link">My portfolio</a>
+		<a href="#portfolio" class="action-link portfolio-link">My portfolio</a>
 
 		<img src="/svg/undraw_freelancer.svg" class="freelancer-svg" alt="Freelance Illustration" />
 		<div class="scroll-indicator"></div>
 	</section>
 
 	<section class="section main-section even" id="portfolio-section" data-anchor="portfolio">
-		<h1 class="hero-title">Portfolio</h1>
+		<h1 class="hero-title mt-2">Portfolio</h1>
 
 		<a href="#skills" class="action-link inverted">My skills</a>
 	</section>
 
 	<section class="section main-section" id="skills-section" data-anchor="skills">
-		<h1 class="hero-title">Skills</h1>
+		<h1 class="hero-title mt-2 mb-0">Skills</h1>
 		<p class="skills-text">Here is a non-exhaustive list of the technologies I work with...</p>
 
 		<div class="skills-section-wrapper">
@@ -130,6 +129,39 @@
 					<h1>}</h1>
 				</div>
 			</div>
+		</div>
+		<a href="#contact" class="action-link m-auto">Contact me !</a>
+	</section>
+
+	<section class="section main-section even" id="contact-section" data-anchor="contact">
+		<h1 class="hero-title mt-2">Contact</h1>
+
+		<form class="col-md-6 offset-md-3 mt-5 p-0" id="contact" method="POST" action="/api/contact/">
+			<div class="row">
+				<div class="col-md-12">
+					<label class="control-label">Email</label>
+					<input placeholder="johndoe@gmail.com" type="email" name="email" id="email" required />
+				</div>
+			</div>
+			<div class="row mt-2">
+				<div class="col-md-12">
+					<label class="control-label">Object</label>
+					<input placeholder="Hello, I'm looking for someone to build my website..." type="text" name="title" id="title" required />
+				</div>
+				<div class="col-md-12 mt-2">
+					<label class="control-label">Message</label>
+					<textarea class="mb-0" id="content" rows="5" name="content" placeholder="Write your message here...." required></textarea>
+				</div>
+			</div>
+			<input type="submit" class="action-btn inverted" value="Send" id="submit-contact" />
+			<input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+		</form>
+
+		<div class="contact-footer">
+			<ul>
+				<li><i class="fas fa-phone"></i> +33 6 89 89 81 98</li>
+				<li>ablin.dev@gmail.com <i class="fas fa-envelope"></i></li>
+			</ul>
 		</div>
 	</section>
 </div>
