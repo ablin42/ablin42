@@ -216,7 +216,7 @@ body {
 .skills-text {
 	position: relative;
 	text-align: center;
-	top: 10%;
+	top: 12%;
 	color: var(--main-color);
 	opacity: 0.95;
 	font-size: 2em;
@@ -229,10 +229,8 @@ body {
 }
 
 .skills-wrapper {
-	/*width: 70%;*/
+	width: 70%;
 	margin: 25px auto;
-	/*position: relative;
-	top: 25%;*/
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;

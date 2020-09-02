@@ -1,136 +1,152 @@
 <%- include('partials/head'); -%>
-<nav class="navbar navbar-dark">
+<!--<nav class="navbar navbar-dark">
 	<a class="navbar-brand" href="#">ablin@dev</a>
-</nav>
+</nav>-->
 
-<section class="main-section hero" id="landing-section">
-	<h3>Hi, Im a <b>{ fullstack web developer }</b> and my name is</h3>
-	<h1 class="hero-title">Andréas Blin</h1>
-	<h2 class="hero-secondary-title">I will build the website you've been dreaming of</h2>
+<div id="fullPage">
+	<section class="section main-section hero" id="landing-section" data-anchor="landing">
+		<h3>Hi, Im a <b>{ fullstack web developer }</b> and my name is</h3>
+		<h1 class="hero-title">Andréas Blin</h1>
+		<h2 class="hero-secondary-title">I will build the website you've been dreaming of</h2>
 
-	<!--<input type="submit" class="action-btn" value="My portfolio" id="goto-portfolio" />-->
-	<a href="#portfolio-section" class="action-link">My portfolio</a>
+		<!--<input type="submit" class="action-btn" value="My portfolio" id="goto-portfolio" />-->
+		<a href="#portfolio" class="action-link">My portfolio</a>
 
-	<img src="/svg/undraw_freelancer.svg" class="freelancer-svg" alt="Freelance Illustration" />
-	<div class="scroll-indicator"></div>
-</section>
+		<img src="/svg/undraw_freelancer.svg" class="freelancer-svg" alt="Freelance Illustration" />
+		<div class="scroll-indicator"></div>
+	</section>
 
-<section class="main-section even" id="portfolio-section">
-	<h1 class="hero-title">Portfolio</h1>
+	<section class="section main-section even" id="portfolio-section" data-anchor="portfolio">
+		<h1 class="hero-title">Portfolio</h1>
 
-	<a href="#skills-section" class="action-link inverted">My skills</a>
-</section>
+		<a href="#skills" class="action-link inverted">My skills</a>
+	</section>
 
-<section class="main-section" id="skills-section">
-	<h1 class="hero-title">Skills</h1>
-	<p class="skills-text">Here is a non-exhaustive list of the technologies I work with...</p>
+	<section class="section main-section" id="skills-section" data-anchor="skills">
+		<h1 class="hero-title">Skills</h1>
+		<p class="skills-text">Here is a non-exhaustive list of the technologies I work with...</p>
 
-	<div class="skills-section-wrapper">
-		<div class="skills-section">
-			<h2>Front-end</h2>
-			<div class="skills-wrapper">
-				<h1>{</h1>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/javascript_icon.png" alt="Javascript" />
+		<div class="skills-section-wrapper">
+			<div class="skills-section">
+				<h2>Front-end</h2>
+				<div class="skills-wrapper">
+					<h1>{</h1>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/javascript_icon.png" alt="Javascript" />
+						</div>
+						<label>Javascript</label>
 					</div>
-					<label>Javascript</label>
-				</div>
 
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/html_icon.png" alt="HTML5" />
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/html_icon.png" alt="HTML5" />
+						</div>
+						<label>HTML5</label>
 					</div>
-					<label>HTML5</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/css_icon.png" alt="CSS3" />
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/css_icon.png" alt="CSS3" />
+						</div>
+						<label>CSS3</label>
 					</div>
-					<label>CSS3</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/vuejs_icon.png" alt="Vuejs" />
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/vuejs_icon.png" alt="Vuejs" />
+						</div>
+						<label>Vue.js</label>
 					</div>
-					<label>Vue.js</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/bootstrap_icon.png" alt="Bootstrap" />
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/bootstrap_icon.png" alt="Bootstrap" />
+						</div>
+						<label>Bootstrap</label>
 					</div>
-					<label>Bootstrap</label>
+					<h1>}</h1>
 				</div>
-				<h1>}</h1>
+			</div>
+
+			<div class="skills-section">
+				<h2>Back-end</h2>
+				<div class="skills-wrapper">
+					<h1>{</h1>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/nodejs_icon.png" alt="NodeJS" />
+						</div>
+						<label>NodeJS</label>
+					</div>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/css_icon.png" alt="PHP" />
+						</div>
+						<label>PHP</label>
+					</div>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/database_icon.png" alt="Database SQL/noSQL" />
+						</div>
+						<label>SQL / noSQL</label>
+					</div>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/api_icon.png" alt="API" />
+						</div>
+						<label>API</label>
+					</div>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/s3_icon.png" alt="S3" />
+						</div>
+						<label>S3</label>
+					</div>
+					<h1>}</h1>
+				</div>
+			</div>
+
+			<div class="skills-section">
+				<h2>Misc</h2>
+				<div class="skills-wrapper">
+					<h1>{</h1>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/git_icon.png" alt="Git" />
+						</div>
+						<label>Git</label>
+					</div>
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/docker_icon.png" alt="Docker" />
+						</div>
+						<label>Docker</label>
+					</div>
+
+					<div class="wrapper-icon">
+						<div>
+							<img class="skill-icon" src="/img/icons/console_icon.png" alt="Shell" />
+						</div>
+						<label>Shell</label>
+					</div>
+					<h1>}</h1>
+				</div>
 			</div>
 		</div>
+	</section>
+</div>
 
-		<div class="skills-section">
-			<h2>Back-end</h2>
-			<div class="skills-wrapper">
-				<h1>{</h1>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/nodejs_icon.png" alt="NodeJS" />
-					</div>
-					<label>NodeJS</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/css_icon.png" alt="PHP" />
-					</div>
-					<label>PHP</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/database_icon.png" alt="Database SQL/noSQL" />
-					</div>
-					<label>SQL / noSQL</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/api_icon.png" alt="API" />
-					</div>
-					<label>API</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/s3_icon.png" alt="S3" />
-					</div>
-					<label>S3</label>
-				</div>
-				<h1>}</h1>
-			</div>
-		</div>
+<script>
+	new fullpage("#fullPage", {
+		autoScrolling: true,
 
-		<div class="skills-section">
-			<h2>Misc</h2>
-			<div class="skills-wrapper">
-				<h1>{</h1>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/git_icon.png" alt="Git" />
-					</div>
-					<label>Git</label>
-				</div>
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/docker_icon.png" alt="Docker" />
-					</div>
-					<label>Docker</label>
-				</div>
-
-				<div class="wrapper-icon">
-					<div>
-						<img class="skill-icon" src="/img/icons/console_icon.png" alt="Shell" />
-					</div>
-					<label>Shell</label>
-				</div>
-				<h1>}</h1>
-			</div>
-		</div>
-	</div>
-</section>
+		anchors: ["landing", "portfolio", "skills"],
+		navigation: true,
+		navigationPosition: "right",
+		navigationTooltips: ["Landing", "Portfolio", "Skills"],
+		showActiveTooltip: false
+		//slidesNavigation: false,
+		//slidesNavPosition: "bottom"
+	});
+</script>
 
 <!-- Front-end: --Javascript, --jQuery, xxAJAX, --HTML, --CSS, --Bootstrap, --Vue.js, xxFlatUI
 Back-end: --Node.js, --API, --PHP, C
