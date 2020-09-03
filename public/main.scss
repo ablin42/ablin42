@@ -1,3 +1,43 @@
+$colors: (
+	primary: #eeeeee,
+	primary-light: lighten(#eeeeee, 40%),
+	primary-dark: darken(#eeeeee, 40%),
+	secondary: #cccccc
+);
+
+//map-get($colors, primary);
+
+@function color($colorName) {
+	@return map-get($colors, $colorName);
+}
+
+//color(primary);
+
+$desktop: 840px;
+@mixin desktop {
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}
+
+%text {
+	font-size: 0.9rem;
+	line-height: 1.7em;
+}
+
+.class {
+	@extend %text;
+
+	@include desktop {
+		font-size: 24px;
+	}
+}
+
+html[data-theme="dark"] {
+	//transition effect when swapping theme
+	//js script sets data theme
+}
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap"); /* main */
 
 /* GLOBAL */
