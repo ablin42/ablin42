@@ -1,10 +1,20 @@
 <%- include('partials/head'); -%>
-<!--<nav class="navbar navbar-dark">
-	<a class="navbar-brand" href="#">ablin@dev</a>
-</nav>-->
 
 <div id="fullPage">
 	<section class="section main-section hero" id="landing-section" data-anchor="landing">
+		<nav class="navbar navbar-dark">
+			<a class="navbar-brand" href="#">ablin@dev</a>
+
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.github.com/ablin42" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.linkedin.com/in/ablin42/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+				</li>
+			</ul>
+		</nav>
+
 		<h3>Hi, Im a <b>{ fullstack web developer }</b> and my name is</h3>
 		<h1 class="hero-title">Andréas Blin</h1>
 		<h2 class="hero-secondary-title">I will build the website you've been dreaming of</h2>
@@ -18,7 +28,24 @@
 	<section class="section main-section even" id="portfolio-section" data-anchor="portfolio">
 		<h1 class="hero-title mt-2">Portfolio</h1>
 
-		<a href="#skills" class="action-link inverted">My skills</a>
+		<div class="slide">
+			<div class="portfolio-item">
+				<h1>Maral.fr</h1>
+
+				<div class="portfolio-thumbnail-wrapper col-md-6 offset-md-3">
+					<a href="https://www.maral.fr" target="_blank"> <img class="w-100" src="/img/maral_thumbnail.jpg" alt="Maral.fr Screenshot" /></a>
+				</div>
+				<p class="col-md-6 offset-md-3">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor dui quis maximus feugiat. Duis sit amet sapien aliquet, hendrerit sem non, commodo arcu. Vivamus semper, felis ac
+					condimentum ultricies, odio est elementum turpis, et fringilla orci velit a lorem.
+				</p>
+				<a href="#skills" class="action-link inverted m-auto">My skills</a>
+			</div>
+		</div>
+
+		<div class="slide"></div>
+
+		<div class="slide"></div>
 	</section>
 
 	<section class="section main-section" id="skills-section" data-anchor="skills">
@@ -151,7 +178,7 @@
 			<div class="row mt-2">
 				<div class="col-md-12">
 					<label class="control-label">Object</label>
-					<input placeholder="Hello, I'm looking for someone to build my website..." type="text" name="title" id="title" required />
+					<input placeholder="Hello..." type="text" name="title" id="title" required />
 				</div>
 				<div class="col-md-12 mt-2">
 					<label class="control-label">Message</label>
