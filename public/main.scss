@@ -1,9 +1,10 @@
 $colors: (
 	light-shade: #f1f1f1,
-	light-gray: #f2f2f2,
+	light-gray: #dedddd,
 	dark-shade: #080808,
 	dark-shade-light: lighten(#080808, 7.5%),
-	main: #f34023
+	main: #f34023,
+	main-light: lighten(#f34023, 10%)
 );
 
 @function color($colorName) {
@@ -99,18 +100,25 @@ body {
 }
 
 .action-btn:hover {
-	opacity: 0.9;
+	background: color(light-gray) !important;
+	color: color(main) !important;
+	text-decoration: none;
+	font-weight: bold;
+
+	-webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 }
 
 .action-link {
 	display: block;
 	padding: 10px 0;
 	border: none !important;
-	background: color(main);
+	//background: color(main);
+	background: linear-gradient(90deg, color(main), color(main-light));
 	color: white;
 	outline: none;
 	cursor: pointer;
-	transition: 0.2s ease-in;
+	transition: 0.3s ease-in-out;
 	opacity: 1;
 	z-index: 5;
 	width: 250px;
@@ -121,18 +129,36 @@ body {
 
 	-webkit-clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
 	clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
-}
 
-.portfolio-link {
-	margin-left: 21%;
-	margin-top: 6.35%;
+	&:before {
+		border-radius: inherit;
+		background-image: linear-gradient(270deg, color(main), color(main-light));
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		z-index: -100;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+	}
 }
 
 .action-link:hover {
-	background: color(light-gray) !important;
-	color: color(main) !important;
+	color: color(light-shade) !important;
 	text-decoration: none;
-	font-weight: bold;
+	transform: scale(1.05);
+
+	-webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 }
 
 /*
@@ -156,11 +182,25 @@ body {
 .fp-controlArrow.fp-next {
 	right: 50px;
 	border-color: transparent transparent transparent color(dark-shade-light);
+	transition: ease-in 0.15s;
+}
+
+.fp-controlArrow.fp-next:hover {
+	transform: scale(1.05);
+	border-color: transparent transparent transparent color(main);
+	opacity: 0.9;
 }
 
 .fp-controlArrow.fp-prev {
 	left: 50px;
 	border-color: transparent color(dark-shade-light) transparent transparent;
+	transition: ease-in 0.15s;
+}
+
+.fp-controlArrow.fp-prev:hover {
+	transform: scale(1.05);
+	border-color: transparent color(main) transparent transparent;
+	opacity: 0.9;
 }
 
 input,
@@ -213,7 +253,7 @@ select:-webkit-autofill {
 	font-size: 1.5em;
 	margin-left: 3%;
 	color: color(light-gray) !important;
-	transition: ease-in-out 0.3s; /* causes brand to slide in */
+	transition: ease-in-out 0.2s; /* causes brand to slide in */
 	padding: 0;
 }
 
@@ -234,7 +274,7 @@ select:-webkit-autofill {
 			padding: 0;
 			i {
 				color: color(light-gray);
-				transition: ease-in-out 0.3s;
+				transition: ease-in-out 0.2s;
 				font-size: 1.5em;
 			}
 
@@ -267,24 +307,53 @@ select:-webkit-autofill {
 .hero {
 	position: relative;
 
+	h1 {
+		/*background: linear-gradient(to top, color(main), color(main-light));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;*/
+		margin-bottom: 15px;
+	}
+
+	h2 {
+		color: color(light-shade);
+		font-size: 30px;
+		text-indent: 50px;
+	}
+
 	h3 {
 		font-size: 22px;
-		color: color(main);
-		opacity: 0.85;
-		margin-top: 10%;
+		color: color(light-shade);
+		opacity: 0.9;
+		margin-top: 7%;
 		margin-left: 13%;
+		margin-bottom: 15px;
 
 		b {
 			font-size: 28px;
+			color: color(main-light);
+			/*background: linear-gradient(to top, color(main), color(main-light));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;*/
 		}
+
+		i {
+			font-size: 40px;
+			font-style: normal;
+			color: color(main);
+		}
+	}
+
+	.portfolio-link {
+		margin-left: 25%;
+		margin-top: 1em;
 	}
 }
 
 .scroll-indicator {
 	height: 100px;
 	position: absolute;
-	left: 50%;
-	top: 80%;
+	left: 31.5%;
+	top: 61%;
 }
 
 .scroll-indicator::before {
@@ -319,7 +388,7 @@ select:-webkit-autofill {
 }
 
 .hero-title {
-	font-size: 8rem;
+	font-size: 7.5rem;
 	font-family: "Montserrat";
 	font-weight: bold;
 	color: color(main);
@@ -335,7 +404,7 @@ select:-webkit-autofill {
 
 .hero-secondary-title {
 	color: color(main);
-	opacity: 0.9;
+	opacity: 0.95;
 	font-size: 3.5rem;
 	width: 50%;
 	margin-left: 13%;
@@ -347,7 +416,7 @@ select:-webkit-autofill {
 	background: linear-gradient(to bottom, color(dark-shade) 50%, color(light-shade) 50%);
 
 	.bg-clipper {
-		height: 100%;
+		height: 102%;
 		background-color: color(dark-shade);
 		clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
 	}
@@ -469,7 +538,7 @@ select:-webkit-autofill {
 	}
 	.portfolio-thumbnail-wrapper {
 		padding: 10px;
-		background-color: color(dark-shade-light);
+		background-color: color(light-gray);
 
 		img {
 			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
