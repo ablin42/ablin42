@@ -424,7 +424,7 @@ select:-webkit-autofill {
 }
 
 #contact-section {
-	background-color: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
+	background: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
 
 	.bg-clipper {
 		height: 100%;

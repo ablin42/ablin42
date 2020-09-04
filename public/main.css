@@ -427,7 +427,8 @@ select:-webkit-autofill {
 }
 
 #contact-section {
-  background-color: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--main-color)), color-stop(50%, var(--dark-shade)));
+  background: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
 }
 
 #contact-section .bg-clipper {
