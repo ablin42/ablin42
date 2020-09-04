@@ -1,36 +1,49 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-.class {
-  font-size: 0.9rem;
-  line-height: 1.7em;
-}
-
-@media (min-width: 840px) {
-  .class {
-    font-size: 24px;
-  }
-}
-
-/* main */
-/* GLOBAL */
-:root {
-  /* alt main colors
+/* 
+	alt main colors
 		#f34023 orangeish
  		#5f23f3 purple
 	
-	--main-color: #cd5c5c;
-
+	--light-shade: #cd5c5c;
 	--dark-shade: #0e0e0e;
 	--dark-shade-m1: #232323;
+	--light-gray: #f2f2f2;
 
-	--light-gray: #f2f2f2;*/
-  --main-color: #f1f1f1;
-  --brand-color: #f34023;
-  --dark-shade: #080808;
-  --dark-shade-m1: #232323;
-  --light-gray: #f2f2f2;
+	
+	--light-shade: #f1f1f1;
+	--brand-color: #f34023;
+	--dark-shade: #080808;
+	--dark-shade-m1: #232323;
+	--light-gray: #f2f2f2;
+*/
+/*
+@mixin desktop {
+	@media (min-width: 840px) {
+		@content;
+	}
 }
 
+%text {
+	font-size: 0.9rem;
+	line-height: 1.7em;
+}
+
+.classxx {
+	@extend %text;
+
+	@include desktop {
+		font-size: 24px;
+	}
+}
+
+html[data-theme="dark"] {
+	//transition effect when swapping theme
+	//js script sets data theme
+}
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+/* main */
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -45,11 +58,11 @@
 body,
 html {
   height: 100vh;
-  background-color: var(--dark-shade);
+  background-color: #080808;
 }
 
 body {
-  background-color: var(--main-color);
+  background-color: #f1f1f1;
   overflow-x: hidden;
   z-index: 0;
 }
@@ -59,7 +72,7 @@ body {
   width: 100%;
   height: 50px;
   border: none !important;
-  background: var(--brand-color) !important;
+  background: #f34023 !important;
   color: white;
   outline: none;
   cursor: pointer;
@@ -79,7 +92,7 @@ body {
   display: block;
   padding: 10px 0;
   border: none !important;
-  background: var(--brand-color);
+  background: #f34023;
   color: white;
   outline: none;
   cursor: pointer;
@@ -101,8 +114,8 @@ body {
 }
 
 .action-link:hover {
-  background: var(--light-gray) !important;
-  color: var(--brand-color) !important;
+  background: #f2f2f2 !important;
+  color: #f34023 !important;
   text-decoration: none;
   font-weight: bold;
 }
@@ -110,13 +123,13 @@ body {
 /*
 .action-link.inverted,
 .action-btn.inverted {
-	background: var(--dark-shade-m1) !important;
-	color: var(--brand-color) !important;
+	background: color(dark-shade-light) !important;
+	color: color(main) !important;
 }*/
 .action-link.inverted:hover,
 .action-btn.inverted:hover {
-  background: var(--dark-shade-m1) !important;
-  color: var(--brand-color) !important;
+  background: #1b1b1b !important;
+  color: #f34023 !important;
   font-weight: bold;
 }
 
@@ -128,19 +141,19 @@ body {
 
 .fp-controlArrow.fp-next {
   right: 50px;
-  border-color: transparent transparent transparent var(--dark-shade-m1);
+  border-color: transparent transparent transparent #1b1b1b;
 }
 
 .fp-controlArrow.fp-prev {
   left: 50px;
-  border-color: transparent var(--dark-shade-m1) transparent transparent;
+  border-color: transparent #1b1b1b transparent transparent;
 }
 
 input,
 textarea {
   background-color: #e6e6e6 !important;
   font-weight: bold;
-  color: var(--brand-color);
+  color: #f34023;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 2px solid transparent !important;
@@ -166,7 +179,7 @@ select:-webkit-autofill:focus {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-text-fill-color: var(--brand-color) !important;
+  -webkit-text-fill-color: #f34023 !important;
   border: 2px solid transparent !important;
   box-shadow: 0 0 0 30px #e6e6e6 inset !important;
   -webkit-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
@@ -175,7 +188,7 @@ select:-webkit-autofill {
 
 .control-label {
   font-size: 24px;
-  color: var(--dark-shade);
+  color: #080808;
   font-weight: bold;
   margin-bottom: -3px;
 }
@@ -187,7 +200,7 @@ select:-webkit-autofill {
   font-family: "Montserrat";
   font-size: 1.5em;
   margin-left: 3%;
-  color: var(--light-gray) !important;
+  color: #f2f2f2 !important;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
   /* causes brand to slide in */
@@ -195,7 +208,7 @@ select:-webkit-autofill {
 }
 
 .navbar-brand:hover {
-  color: var(--brand-color) !important;
+  color: #f34023 !important;
 }
 
 .navbar-dark {
@@ -219,33 +232,33 @@ select:-webkit-autofill {
 }
 
 .navbar-nav li a i {
-  color: var(--light-gray);
+  color: #f2f2f2;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
   font-size: 1.5em;
 }
 
 .navbar-nav li a i:hover {
-  color: var(--brand-color);
+  color: #f34023;
 }
 
 /* END NAVBAR */
 /* HOME */
 #landing-section {
   background-repeat: no-repeat;
-  background-color: var(--dark-shade);
+  background-color: #080808;
   /*background-image: url(/svg/background_landing.svg);
 	background-size: cover;*/
   z-index: 2;
 }
 
 .main-section {
-  background-color: var(--dark-shade);
+  background-color: #080808;
   height: 100vh;
 }
 
 .main-section.even {
-  background-color: var(--main-color);
+  background-color: #f1f1f1;
 }
 
 .hero {
@@ -254,7 +267,7 @@ select:-webkit-autofill {
 
 .hero h3 {
   font-size: 22px;
-  color: var(--brand-color);
+  color: #f34023;
   opacity: 0.85;
   margin-top: 10%;
   margin-left: 13%;
@@ -315,7 +328,7 @@ select:-webkit-autofill {
   font-size: 8rem;
   font-family: "Montserrat";
   font-weight: bold;
-  color: var(--brand-color);
+  color: #f34023;
   margin-left: 10%;
   margin-top: -25px;
   font-style: italic;
@@ -323,11 +336,11 @@ select:-webkit-autofill {
 }
 
 .main-section.even .hero-title {
-  color: var(--brand-color);
+  color: #f34023;
 }
 
 .hero-secondary-title {
-  color: var(--brand-color);
+  color: #f34023;
   opacity: 0.9;
   font-size: 3.5rem;
   width: 50%;
@@ -337,12 +350,13 @@ select:-webkit-autofill {
 
 #skills-section {
   margin-top: -1px;
-  background-color: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #080808), color-stop(50%, #f1f1f1));
+  background: linear-gradient(to bottom, #080808 50%, #f1f1f1 50%);
 }
 
 #skills-section .bg-clipper {
   height: 100%;
-  background-color: var(--dark-shade);
+  background-color: #080808;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
           clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
 }
@@ -354,13 +368,13 @@ select:-webkit-autofill {
 
 #skills-section .skills-section h2 {
   font-size: 3rem;
-  color: var(--brand-color);
+  color: #f34023;
   opacity: 0.95;
 }
 
 #skills-section .skills-text {
   text-align: center;
-  color: var(--brand-color);
+  color: #f34023;
   opacity: 0.95;
   font-size: 2em;
   -webkit-transform: rotate(90deg);
@@ -385,7 +399,7 @@ select:-webkit-autofill {
 
 #skills-section .skills-wrapper h1 {
   font-size: 75px;
-  color: var(--dark-shade-m1);
+  color: #1b1b1b;
 }
 
 #skills-section .skills-wrapper .wrapper-icon {
@@ -405,7 +419,7 @@ select:-webkit-autofill {
 #skills-section .skills-wrapper .wrapper-icon label {
   display: block;
   text-align: center;
-  color: var(--light-gray);
+  color: #f2f2f2;
 }
 
 #skills-section .skills-wrapper .wrapper-icon .skill-icon {
@@ -416,26 +430,26 @@ select:-webkit-autofill {
 }
 
 #landing-section {
-  background-color: var(--main-color);
+  background-color: #f1f1f1;
 }
 
 #landing-section .bg-clipper {
   height: 100%;
-  background-color: var(--dark-shade);
+  background-color: #080808;
   -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 98%, 89% 95%, 31% 85%, 0px 78%);
           clip-path: polygon(0px 0px, 100% 0px, 100% 98%, 89% 95%, 31% 85%, 0px 78%);
 }
 
 #contact-section {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--main-color)), color-stop(50%, var(--dark-shade)));
-  background: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f1f1f1), color-stop(50%, #080808));
+  background: linear-gradient(to bottom, #f1f1f1 50%, #080808 50%);
 }
 
 #contact-section .bg-clipper {
   height: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 97%, 28% 89%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 97%, 28% 89%, 0 80%);
-  background-color: var(--main-color);
+  background-color: #f1f1f1;
 }
 
 #contact-section .contact-footer {
@@ -465,16 +479,16 @@ select:-webkit-autofill {
 }
 
 #contact-section .contact-footer li i {
-  color: var(--brand-color);
+  color: #f34023;
 }
 
 #portfolio-section {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--main-color)), color-stop(50%, var(--dark-shade)));
-  background: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f1f1f1), color-stop(50%, #080808));
+  background: linear-gradient(to bottom, #f1f1f1 50%, #080808 50%);
 }
 
 #portfolio-section .bg-clipper {
-  background-color: var(--main-color);
+  background-color: #f1f1f1;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
           clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
 }
@@ -485,7 +499,7 @@ select:-webkit-autofill {
 
 #portfolio-section .portfolio-thumbnail-wrapper {
   padding: 10px;
-  background-color: var(--dark-shade-m1);
+  background-color: #1b1b1b;
 }
 
 #portfolio-section .portfolio-thumbnail-wrapper img {
@@ -514,8 +528,8 @@ select:-webkit-autofill {
   display: inline-block;
   margin: 10px 10px 0 10px;
   padding: 5px 15px;
-  background-color: var(--dark-shade-m1);
-  color: var(--brand-color);
+  background-color: #1b1b1b;
+  color: #f34023;
   font-weight: bold;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -526,7 +540,7 @@ select:-webkit-autofill {
 #portfolio-section .portfolio-item ul li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: var(--main-color);
+  background-color: #f1f1f1;
 }
 
 #portfolio-section .portfolio-item p {
