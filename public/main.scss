@@ -346,7 +346,8 @@ select:-webkit-autofill {
 }
 
 #skills-section {
-	background-color: var(--main-color);
+	margin-top: -1px;
+	background-color: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
 
 	.bg-clipper {
 		height: 100%;
@@ -423,7 +424,7 @@ select:-webkit-autofill {
 }
 
 #contact-section {
-	background-color: var(--dark-shade);
+	background-color: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
 
 	.bg-clipper {
 		height: 100%;
@@ -459,7 +460,7 @@ select:-webkit-autofill {
 }
 
 #portfolio-section {
-	background-color: var(--dark-shade);
+	background: linear-gradient(to bottom, var(--main-color) 50%, var(--dark-shade) 50%);
 
 	.bg-clipper {
 		background-color: var(--main-color);
