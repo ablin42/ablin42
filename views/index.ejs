@@ -20,7 +20,6 @@
 			<h1 class="hero-title">Andréas Blin</h1>
 			<h2 class="hero-secondary-title">I will build the website you've been dreaming of</h2>
 
-			<!--<a href="#portfolio" class="action-link portfolio-link"><span class="button-helper"></span>Portfolio</a>-->
 			<a href="#portfolio" class="action-link portfolio-link">Portfolio</a>
 			<img src="/svg/undraw_freelancer.svg" class="freelancer-svg" alt="Freelance Illustration" />
 			<div class="scroll-indicator"></div>
@@ -29,12 +28,11 @@
 
 	<section class="section main-section even" id="portfolio-section" data-anchor="portfolio">
 		<div class="bg-clipper">
-			<h1 class="hero-title mt-2 mb-5">Portfolio</h1>
-
 			<div class="slide">
+				<h1 class="hero-title mt-4 mb-0"><a href="https://www.maral.fr" target="_blank">Maral.fr</a></h1>
+
 				<div class="portfolio-item row">
 					<div class="portfolio-info col-md-4 offset-md-1">
-						<h1>Maral.fr</h1>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor dui quis maximus feugiat. Duis sit amet sapien aliquet, hendrerit sem non, commodo arcu. Vivamus semper, felis ac
 							condimentum ultricies, odio est elementum turpis, et fringilla orci velit a lorem.
@@ -43,6 +41,17 @@
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor dui quis maximus feugiat. Duis sit amet sapien aliquet, hendrerit sem non, commodo arcu. Vivamus semper, felis ac
 							condimentum ultricies, odio est elementum turpis, et fringilla orci velit a lorem.
 						</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor dui quis maximus feugiat. Duis sit amet sapien aliquet, hendrerit sem non, commodo arcu. Vivamus semper, felis ac
+							condimentum ultricies, odio est elementum turpis, et fringilla orci velit a lorem.
+						</p>
+						<div class="skill-call-wrapper">
+							<a href="#skills" class="action-link m-auto">Skills</a>
+						</div>
+					</div>
+
+					<div class="portfolio-thumbnail-wrapper col-md-6">
+						<a href="https://www.maral.fr" target="_blank"><img class="w-100" src="/img/maral_thumbnail.jpg" alt="Maral.fr Screenshot" /></a>
 						<ul>
 							<li>NodeJS</li>
 							<li>API</li>
@@ -50,13 +59,6 @@
 							<li>HTML</li>
 							<li>CSS</li>
 						</ul>
-						<div class="skill-call-wrapper">
-							<a href="#skills" class="action-link inverted m-auto">Skills</a>
-						</div>
-					</div>
-
-					<div class="portfolio-thumbnail-wrapper col-md-6">
-						<a href="https://www.maral.fr" target="_blank"> <img class="w-100" src="/img/maral_thumbnail.jpg" alt="Maral.fr Screenshot" /></a>
 					</div>
 				</div>
 			</div>
@@ -207,7 +209,7 @@
 						<textarea class="mb-0" id="content" rows="5" name="content" placeholder="Write your message here...." required></textarea>
 					</div>
 				</div>
-				<input type="submit" class="action-btn inverted" value="Send" id="submit-contact" />
+				<input type="submit" class="action-btn" value="Send" id="submit-contact" />
 				<input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
 			</form>
 
