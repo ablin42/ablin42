@@ -4,7 +4,9 @@ $colors: (
 	dark-shade: #080808,
 	dark-shade-light: lighten(#080808, 7.5%),
 	main: #f34023,
-	main-light: lighten(#f34023, 10%)
+	main-light: lighten(#f34023, 10%),
+	maral: #1a7cc3,
+	maral-dark: darken(#1a7cc3, 10%)
 );
 
 @function color($colorName) {
@@ -435,8 +437,8 @@ select:-webkit-autofill {
 
 	.skills-section {
 		h2 {
-			font-size: 3rem;
-			color: color(main);
+			font-size: 2rem;
+			color: color(main-light);
 			opacity: 0.95;
 		}
 	}
@@ -481,6 +483,11 @@ select:-webkit-autofill {
 				height: 80px;
 				width: 80px;
 				margin: auto;
+				transition: ease-in 0.2s;
+			}
+
+			.icon-hovered {
+				transform: scale(1.15);
 			}
 		}
 	}
@@ -551,6 +558,7 @@ select:-webkit-autofill {
 	.portfolio-thumbnail-wrapper {
 		padding: 10px;
 		background-color: color(light-gray);
+		margin: auto 0;
 
 		img {
 			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
@@ -558,6 +566,7 @@ select:-webkit-autofill {
 	}
 
 	.portfolio-item {
+		height: 65%;
 		h1 {
 			text-align: center;
 			font-weight: bold;
@@ -567,6 +576,7 @@ select:-webkit-autofill {
 			margin-bottom: 0;
 			display: flex;
 			flex-wrap: wrap;
+			margin-top: 2rem;
 			li {
 				display: inline-block;
 				margin: 10px 10px 0 10px;
@@ -594,9 +604,9 @@ select:-webkit-autofill {
 
 		.skill-call-wrapper {
 			position: absolute;
-			bottom: 0;
+			bottom: 3%;
+			left: -1%;
 			width: 100%;
-			text-align: center;
 		}
 
 		.action-link {
@@ -605,8 +615,33 @@ select:-webkit-autofill {
 		}
 
 		.portfolio-info {
-			padding: 0 2rem 0 2rem;
+			padding: 0 3rem 0 2rem;
 			height: auto !important;
+		}
+		.portfolio-info:first-child {
+			margin-top: 1rem;
+		}
+	}
+
+	#maral {
+		h1,
+		h1 a {
+			color: color(maral);
+		}
+
+		b {
+			color: color(maral);
+		}
+		li {
+			color: color(maral);
+		}
+
+		.action-link {
+			background-image: linear-gradient(90deg, color(maral-dark), color(maral)) !important;
+
+			&:before {
+				background-image: linear-gradient(270deg, color(maral-dark), color(maral)) !important;
+			}
 		}
 	}
 }

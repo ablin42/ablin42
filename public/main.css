@@ -447,8 +447,8 @@ select:-webkit-autofill {
 }
 
 #skills-section .skills-section h2 {
-  font-size: 3rem;
-  color: #f34023;
+  font-size: 2rem;
+  color: #f66a53;
   opacity: 0.95;
 }
 
@@ -507,6 +507,13 @@ select:-webkit-autofill {
   height: 80px;
   width: 80px;
   margin: auto;
+  -webkit-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
+}
+
+#skills-section .skills-wrapper .wrapper-icon .icon-hovered {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 #landing-section {
@@ -586,11 +593,16 @@ select:-webkit-autofill {
 #portfolio-section .portfolio-thumbnail-wrapper {
   padding: 10px;
   background-color: #dedddd;
+  margin: auto 0;
 }
 
 #portfolio-section .portfolio-thumbnail-wrapper img {
   -webkit-clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
           clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
+}
+
+#portfolio-section .portfolio-item {
+  height: 65%;
 }
 
 #portfolio-section .portfolio-item h1 {
@@ -608,6 +620,7 @@ select:-webkit-autofill {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 #portfolio-section .portfolio-item ul li {
@@ -638,9 +651,9 @@ select:-webkit-autofill {
 
 #portfolio-section .portfolio-item .skill-call-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: 3%;
+  left: -1%;
   width: 100%;
-  text-align: center;
 }
 
 #portfolio-section .portfolio-item .action-link {
@@ -649,8 +662,35 @@ select:-webkit-autofill {
 }
 
 #portfolio-section .portfolio-item .portfolio-info {
-  padding: 0 2rem 0 2rem;
+  padding: 0 3rem 0 2rem;
   height: auto !important;
+}
+
+#portfolio-section .portfolio-item .portfolio-info:first-child {
+  margin-top: 1rem;
+}
+
+#portfolio-section #maral h1,
+#portfolio-section #maral h1 a {
+  color: #1a7cc3;
+}
+
+#portfolio-section #maral b {
+  color: #1a7cc3;
+}
+
+#portfolio-section #maral li {
+  color: #1a7cc3;
+}
+
+#portfolio-section #maral .action-link {
+  background-image: -webkit-gradient(linear, left top, right top, from(#145f96), to(#1a7cc3)) !important;
+  background-image: linear-gradient(90deg, #145f96, #1a7cc3) !important;
+}
+
+#portfolio-section #maral .action-link:before {
+  background-image: -webkit-gradient(linear, right top, left top, from(#145f96), to(#1a7cc3)) !important;
+  background-image: linear-gradient(270deg, #145f96, #1a7cc3) !important;
 }
 
 /* END HOME */
