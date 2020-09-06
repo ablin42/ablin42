@@ -26,6 +26,7 @@ router.post("/", limiter, vContact, async (req, res) => {
 	try {
 		const subject = `Contact mail received FROM [${req.body.email}] - ${req.body.title}`;
 		const content = req.body.content;
+		await utils.checkValidity(req);
 
 		if (await mailer(process.env.EMAIL, subject, content)) throw new Error("An error occured while sending the mail");
 
