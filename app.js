@@ -1,12 +1,31 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 //const cors = require("cors");
 const helmet = require("helmet");
 const session = require("express-session");
 const flash = require("express-flash");
+const MongoStore = require("connect-mongo")(session);
+const csrf = require("csurf");
+const expressSanitizer = require("express-sanitizer");
 const sanitize = require("mongo-sanitize");
 const path = require("path");
 require("dotenv").config();
+
+//Connect to DB
+mongoose.connect(
+	process.env.DB_CONNECTION,
+	{
+		useNewUrlParser: true,
+		useCreateIndex: true,
+		useFindAndModify: false,
+		useUnifiedTopology: true
+	},
+	err => {
+		if (err) throw err;
+		console.log("Connected to database");
+	}
+);
 
 // Express
 const app = express();
@@ -19,10 +38,10 @@ app.set("trust proxy", 1);
 //-- Express Session --//
 app.use(
 	session({
-		/*store: new MongoStore({
+		store: new MongoStore({
 			mongooseConnection: mongoose.connection,
 			ttl: 365 * 24 * 60 * 60
-		}),*/
+		}),
 		name: "ablin42",
 		secret: process.env.SESSION_SECRET,
 		resave: true,
@@ -37,6 +56,27 @@ app.use(
 		//sameSite: "Lax",
 	})
 );
+
+// Body-Parser
+app.use(bodyParser.urlencoded({ extended: true, limit: 25000000 }));
+app.use(
+	bodyParser.json({
+		verify: function (req, res, buf) {
+			let url = req.originalUrl;
+			if (url.startsWith("/api/order/confirm")) req.rawBody = buf.toString();
+		},
+		limit: 25000000
+	})
+);
+// BP Error handler
+app.use(function (err, req, res, next) {
+	res.status(err.status || 500);
+	if (req.headers["content-type"] === "application/x-www-form-urlencoded") {
+		req.flash("warning", err.message);
+		return res.status(403).redirect(req.headers.referer);
+	}
+	return res.status(200).json({ error: true, message: err.message });
+});
 
 //Helmet;
 app.use(helmet());
@@ -57,9 +97,7 @@ app.use(
 				"cdn.jsdelivr.net",
 				"cdnjs.cloudflare.com",
 				"stackpath.bootstrapcdn.com",
-				"kit.fontawesome.com",
-				"'sha256-wmvdIZ8AQnfxezFjZzOoK61DdXjE3og3XT5W0D4W0V4='",
-				"'sha256-kJ4tLp6jUXRhNN9T0qp/6BA9HcczUXGwfyCRXYUb37w='"
+				"kit.fontawesome.com"
 			],
 			frameSrc: [],
 			imgSrc: ["'self'"]
@@ -67,6 +105,24 @@ app.use(
 		reportOnly: false
 	})
 );
+
+app.use(csrf({ cookie: false }));
+
+// Keep session
+app.use((req, res, next) => {
+	res.locals.session = req.session;
+	next();
+});
+
+// Sanitize body and query params
+app.use((req, res, next) => {
+	req.body = sanitize(req.body);
+	req.query = sanitize(req.query);
+
+	next();
+});
+
+app.use(expressSanitizer());
 
 //app.use(cors());
 app.use(flash());
@@ -81,8 +137,21 @@ app.post("/report-violation", (req, res) => {
 	res.status(204).end();
 });
 
+const contactRoute = require("./controllers/contact");
+app.use("/api/contact", contactRoute);
+
+/* MAIN ROUTE */
+
 app.get("/", (req, res) => {
-	return res.status(200).render("index");
+	try {
+		let obj = { csrfToken: req.csrfToken() };
+
+		return res.status(200).render("index", obj);
+	} catch (err) {
+		console.log("HOME ROUTE ERROR:", err, req.headers, req.ipAddress);
+
+		return res.status(200).send("bide");
+	}
 });
 
 const port = process.env.PORT;

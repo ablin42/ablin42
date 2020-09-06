@@ -40,7 +40,7 @@
 						</p>
 						<p>
 							I used <b><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></b> for the main layout of the front-end design, although most of the <b>CSS</b> has been custom-made to the
-							client's taste. The Node.js back-end is built around a <b>custom API</b> to manage requests and orders seamlessly.
+							client's taste. The <b>NodeJS</b> back-end is built around a <b>custom API</b> to manage requests and orders seamlessly.
 						</p>
 						<p>Includes an admin interface that allows the client to manage the content of the website and the orders very easily, with just a few clicks.</p>
 
@@ -201,7 +201,11 @@
 		<div class="bg-clipper">
 			<h1 class="hero-title mt-2">Contact</h1>
 
-			<form class="col-md-6 offset-md-3 mt-5 p-0" id="contact-form" method="POST" action="/api/contact/">
+			<div class="col-md-6 offset-md-3 p-0 contact-alert-wrapper">
+				<div id="contact-alert"></div>
+			</div>
+
+			<form class="col-md-6 offset-md-3 p-0" id="contact-form" method="POST" action="/api/contact/">
 				<div class="row">
 					<div class="col-md-12">
 						<label class="control-label">Email</label>
@@ -232,21 +236,8 @@
 	</section>
 </div>
 
-<script>
-	new fullpage("#fullPage", {
-		autoScrolling: true,
-		scrollingSpeed: 1500,
-
-		anchors: ["landing", "portfolio", "skills", "contact"],
-		navigation: true,
-		navigationPosition: "right",
-		navigationTooltips: ["Landing", "Portfolio", "Skills", "Contact"],
-		showActiveTooltip: false
-		//slidesNavigation: false,
-		//slidesNavPosition: "bottom"
-	});
-</script>
-
+<script src="/scripts/fullpageConfig.js"></script>
+<script src="/scripts/submit_contact.js"></script>
 <script src="/scripts/icon_hover.js"></script>
 <%- include('partials/footer'); -%>
 

@@ -166,6 +166,18 @@ body {
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 }
 
+.contact-alert-wrapper {
+  height: 50px;
+}
+
+.alert {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+  -webkit-clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
+  clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
+}
+
 .fp-table {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -641,8 +653,8 @@ select:-webkit-autofill {
 }
 
 #portfolio-section .portfolio-item ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   background-color: #f1f1f1;
 }
 
