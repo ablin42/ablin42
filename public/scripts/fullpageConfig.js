@@ -8,6 +8,13 @@ new fullpage("#fullPage", {
 	navigationTooltips: ["Landing", "Portfolio", "Skills", "Contact"],
 	showActiveTooltip: false,
 
+	afterLoad: function (origin, destination, direction) {
+		if (origin.anchor == "landing") {
+			removeAnimations();
+			triggerAnimations("landing-section");
+		}
+	},
+
 	onLeave: function (origin, destination, direction) {
 		let sectionId = destination.anchor.toLowerCase() + "-section";
 
