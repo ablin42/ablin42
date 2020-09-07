@@ -373,11 +373,101 @@ select:-webkit-autofill {
   margin-top: 1em;
 }
 
+@-webkit-keyframes portfolioLinkAnim {
+  0% {
+    -webkit-transform: translateX(-800px);
+            transform: translateX(-800px);
+    opacity: 0;
+  }
+  32% {
+    -webkit-transform: rotate(-15deg) translateX(0);
+            transform: rotate(-15deg) translateX(0);
+    opacity: 0.33;
+  }
+  66% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+    opacity: 0.66;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes portfolioLinkAnim {
+  0% {
+    -webkit-transform: translateX(-800px);
+            transform: translateX(-800px);
+    opacity: 0;
+  }
+  32% {
+    -webkit-transform: rotate(-15deg) translateX(0);
+            transform: rotate(-15deg) translateX(0);
+    opacity: 0.33;
+  }
+  66% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+    opacity: 0.66;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.portfolioLinkAnim {
+  opacity: 0;
+  -webkit-animation: portfolioLinkAnim 0.7s 1 1.4s ease forwards;
+          animation: portfolioLinkAnim 0.7s 1 1.4s ease forwards;
+}
+
 .scroll-indicator {
   height: 100px;
   position: absolute;
   left: 31.5%;
   top: 61%;
+}
+
+@-webkit-keyframes indicatorAnim {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes indicatorAnim {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.indicatorAnim {
+  opacity: 0;
+  -webkit-animation: indicatorAnim 1s 1 1.8s ease forwards;
+          animation: indicatorAnim 1s 1 1.8s ease forwards;
 }
 
 .scroll-indicator::before {
@@ -429,6 +519,39 @@ select:-webkit-autofill {
   margin-top: -25px;
   font-style: italic;
   display: inline-block;
+  opacity: 1;
+}
+
+.heroAnim {
+  opacity: 0;
+  -webkit-animation: heroAnim 1s 1 0.6s ease forwards;
+          animation: heroAnim 1s 1 0.6s ease forwards;
+}
+
+@-webkit-keyframes heroAnim {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroAnim {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .main-section.even .hero-title {
@@ -532,8 +655,72 @@ select:-webkit-autofill {
           transform: scale(1.15);
 }
 
+.firstHeroAnim {
+  opacity: 0;
+  -webkit-animation: firstHeroAnim 0.6s 1 0s ease;
+          animation: firstHeroAnim 0.6s 1 0s ease;
+}
+
+.lastHeroAnim {
+  opacity: 0;
+  -webkit-animation: lastHeroAnim 0.8s 1 1.2s ease forwards;
+          animation: lastHeroAnim 0.8s 1 1.2s ease forwards;
+}
+
 #landing-section {
   background-color: #f1f1f1;
+}
+
+@-webkit-keyframes firstHeroAnim {
+  0% {
+    -webkit-transform: translateX(-55%);
+            transform: translateX(-55%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.9;
+  }
+}
+
+@keyframes firstHeroAnim {
+  0% {
+    -webkit-transform: translateX(-55%);
+            transform: translateX(-55%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes lastHeroAnim {
+  0% {
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.95;
+  }
+}
+
+@keyframes lastHeroAnim {
+  0% {
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.95;
+  }
 }
 
 #landing-section .bg-clipper {

@@ -16,20 +16,20 @@
 				</ul>
 			</nav>
 
-			<h3>Hi, Im a <i>{</i><b> fullstack web developer </b><i>}</i> and my name is</h3>
-			<h1 class="hero-title">Andréas Blin</h1>
-			<h2 class="hero-secondary-title">I will build the website you've been dreaming of</h2>
+			<h3 data-animation="firstHeroAnim">Hi, Im a <i>{</i><b> fullstack web developer </b><i>}</i> and my name is</h3>
+			<h1 class="hero-title" data-animation="heroAnim">Andréas Blin</h1>
+			<h2 class="hero-secondary-title" data-animation="lastHeroAnim">I will build the website you've been dreaming of</h2>
 
-			<a href="#portfolio" class="action-link portfolio-link">Portfolio</a>
+			<a href="#portfolio" class="action-link portfolio-link" data-animation="portfolioLinkAnim">Portfolio</a>
 			<img src="/svg/undraw_freelancer.svg" class="freelancer-svg" alt="Freelance Illustration" />
-			<div class="scroll-indicator"></div>
+			<div class="scroll-indicator" data-animation="indicatorAnim"></div>
 		</div>
 	</section>
 
 	<section class="section main-section even" id="portfolio-section" data-anchor="portfolio">
 		<div class="bg-clipper">
 			<div class="slide" id="maral">
-				<h1 class="hero-title mt-4 mb-0"><a href="https://www.maral.fr" target="_blank">Maral.fr</a></h1>
+				<h1 class="hero-title mt-4 mb-0" data-animation="heroAnim"><a href="https://www.maral.fr" target="_blank">Maral.fr</a></h1>
 
 				<div class="portfolio-item row">
 					<div class="portfolio-info col-md-4 offset-md-1">
@@ -74,7 +74,7 @@
 
 	<section class="section main-section" id="skills-section" data-anchor="skills">
 		<div class="bg-clipper">
-			<h1 class="hero-title mt-2 mb-0">Skills</h1>
+			<h1 class="hero-title mt-2 mb-0" data-animation="heroAnim">Skills</h1>
 
 			<p class="skills-text">{ Non-exhaustive list }</p>
 			<div class="skills-section-wrapper">
@@ -199,7 +199,7 @@
 
 	<section class="section main-section even" id="contact-section" data-anchor="contact">
 		<div class="bg-clipper">
-			<h1 class="hero-title mt-2">Contact</h1>
+			<h1 class="hero-title mt-2" data-animation="heroAnim">Contact</h1>
 
 			<div class="col-md-6 offset-md-3 p-0 contact-alert-wrapper">
 				<div id="contact-alert"></div>
@@ -240,22 +240,3 @@
 <script src="/scripts/submit_contact.js"></script>
 <script src="/scripts/icon_hover.js"></script>
 <%- include('partials/footer'); -%>
-
-<!--
-<section class="intro">
-  <p class="scroll-text">Scroll down</p>
-</section>
-<section class="anim">
-  <h1 data-lax-preset="rightToLeft-.1 fadeInOut">Animation</h1>
-  <p class="desc" data-lax-preset="blurInOut fadeInOut">
-    Check out this nifty little scroll based animation with laxxx.js
-  </p>
-  <div class="lax box1" data-lax-preset="spin fadeOut"></div>
-  <div
-    class="box2"
-    data-lax-scale="700 0, 500 1, 100 1, 0 0"
-    data-lax-anchor="self"
-  ></div>
-</section>
-<section></section>
-<script src="/scripts/laxConfig.js"></script>-->

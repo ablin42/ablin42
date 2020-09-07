@@ -97,7 +97,8 @@ app.use(
 				"cdn.jsdelivr.net",
 				"cdnjs.cloudflare.com",
 				"stackpath.bootstrapcdn.com",
-				"kit.fontawesome.com"
+				"kit.fontawesome.com",
+				"'unsafe-eval'"
 			],
 			frameSrc: [],
 			imgSrc: ["'self'"]
