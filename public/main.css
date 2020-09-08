@@ -696,13 +696,13 @@ select:-webkit-autofill {
     opacity: 0;
   }
   32% {
-    -webkit-transform: rotate(-15deg) translateX(0);
-            transform: rotate(-15deg) translateX(0);
+    -webkit-transform: rotate(-5deg) translateX(0);
+            transform: rotate(-5deg) translateX(0);
     opacity: 0.33;
   }
   66% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
     opacity: 0.66;
   }
   85% {
@@ -723,13 +723,13 @@ select:-webkit-autofill {
     opacity: 0;
   }
   32% {
-    -webkit-transform: rotate(-15deg) translateX(0);
-            transform: rotate(-15deg) translateX(0);
+    -webkit-transform: rotate(-5deg) translateX(0);
+            transform: rotate(-5deg) translateX(0);
     opacity: 0.33;
   }
   66% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
     opacity: 0.66;
   }
   85% {
@@ -928,5 +928,65 @@ select:-webkit-autofill {
           animation: indicatorAnim 1s 1 1.8s ease forwards;
 }
 
+/*
+@keyframes navbarAnim {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.navbarAnim {
+	opacity: 0;
+	animation: navbarAnim 0.4s 1 0s ease forwards;
+}*/
+@-webkit-keyframes freelancerAnim {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes freelancerAnim {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.freelancerAnim {
+  opacity: 0;
+  -webkit-animation: freelancerAnim 1s 1 0s ease forwards;
+          animation: freelancerAnim 1s 1 0s ease forwards;
+}
+
+/*
+@keyframes bgAnim {
+	0% {
+		transform: scale(0.97) translateX(-2%) translateY(-2%);
+	}
+	100% {
+		transform: scale(1) translateX(0) translateY(0);
+	}
+}
+
+.bgAnim {
+	animation: bgAnim 0.5s 1 0s ease;
+}*/
 /* END KEYFRAMES & ANIMATION CLASSES */
 /*# sourceMappingURL=main.css.map */
