@@ -31,14 +31,24 @@ function removeAnimations() {
 	});
 }
 
+let endedAnim = 0;
+function countEndedAnim(totalAnim) {
+	if (totalAnim === endedAnim) {
+		removeAnimations();
+		endedAnim = 0;
+	}
+	endedAnim++;
+}
+
 function triggerAnimations(sectionId) {
 	let toAnimate = document.querySelectorAll(`#${sectionId} [data-animation]`);
 
 	toAnimate.forEach(item => {
+		item.addEventListener("animationend", function (e) {
+			countEndedAnim(toAnimate.length);
+		});
+
 		let animationName = item.dataset.animation;
 		item.classList.add(animationName);
 	});
-	setTimeout(function () {
-		removeAnimations();
-	}, 2000);
 }

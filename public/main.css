@@ -694,24 +694,14 @@ select:-webkit-autofill {
             transform: translateX(-800px);
     opacity: 0;
   }
-  32% {
-    -webkit-transform: rotate(-5deg) translateX(0);
-            transform: rotate(-5deg) translateX(0);
-    opacity: 0.33;
-  }
-  66% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-    opacity: 0.66;
-  }
-  85% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-    opacity: 0.85;
+  95% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+    opacity: 0.95;
   }
   100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: rotate(0) translateX(0);
+            transform: rotate(0) translateX(0);
     opacity: 1;
   }
 }
@@ -721,24 +711,14 @@ select:-webkit-autofill {
             transform: translateX(-800px);
     opacity: 0;
   }
-  32% {
-    -webkit-transform: rotate(-5deg) translateX(0);
-            transform: rotate(-5deg) translateX(0);
-    opacity: 0.33;
-  }
-  66% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-    opacity: 0.66;
-  }
-  85% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-    opacity: 0.85;
+  95% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+    opacity: 0.95;
   }
   100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: rotate(0) translateX(0);
+            transform: rotate(0) translateX(0);
     opacity: 1;
   }
 }
@@ -923,26 +903,10 @@ select:-webkit-autofill {
 
 .indicatorAnim {
   opacity: 0;
-  -webkit-animation: indicatorAnim 1s 1 1.8s ease forwards;
-          animation: indicatorAnim 1s 1 1.8s ease forwards;
+  -webkit-animation: indicatorAnim 0.8s 1 1.8s ease forwards;
+          animation: indicatorAnim 0.8s 1 1.8s ease forwards;
 }
 
-/*
-@keyframes navbarAnim {
-	0% {
-		transform: translateX(100%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
-
-.navbarAnim {
-	opacity: 0;
-	animation: navbarAnim 0.4s 1 0s ease forwards;
-}*/
 @-webkit-keyframes freelancerAnim {
   0% {
     -webkit-transform: translateX(-200%);
@@ -955,6 +919,7 @@ select:-webkit-autofill {
     opacity: 1;
   }
 }
+
 @keyframes freelancerAnim {
   0% {
     -webkit-transform: translateX(-200%);
