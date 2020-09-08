@@ -897,8 +897,8 @@ select:-webkit-autofill {
 
 .portfolioLinkAnim {
   opacity: 0;
-  -webkit-animation: portfolioLinkAnim 0.7s 1 1.4s ease forwards;
-          animation: portfolioLinkAnim 0.7s 1 1.4s ease forwards;
+  -webkit-animation: portfolioLinkAnim 0.7s 1 1.4s ease both;
+          animation: portfolioLinkAnim 0.7s 1 1.4s ease both;
 }
 
 .indicatorAnim {

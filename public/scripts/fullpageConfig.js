@@ -1,6 +1,6 @@
 new fullpage("#fullPage", {
 	autoScrolling: true,
-	scrollingSpeed: 1500,
+	scrollingSpeed: 1000,
 
 	anchors: ["landing", "portfolio", "skills", "contact"],
 	navigation: true,
@@ -17,7 +17,6 @@ new fullpage("#fullPage", {
 	onLeave: function (origin, destination, direction) {
 		let sectionId = destination.anchor.toLowerCase() + "-section";
 
-		removeAnimations();
 		triggerAnimations(sectionId);
 	}
 });
@@ -31,21 +30,12 @@ function removeAnimations() {
 	});
 }
 
-let endedAnim = 0;
-function countEndedAnim(totalAnim) {
-	if (totalAnim === endedAnim) {
-		removeAnimations();
-		endedAnim = 0;
-	}
-	endedAnim++;
-}
-
 function triggerAnimations(sectionId) {
 	let toAnimate = document.querySelectorAll(`#${sectionId} [data-animation]`);
 
 	toAnimate.forEach(item => {
-		item.addEventListener("animationend", function (e) {
-			countEndedAnim(toAnimate.length);
+		item.addEventListener("animationend", function () {
+			item.classList.remove(animationName);
 		});
 
 		let animationName = item.dataset.animation;
