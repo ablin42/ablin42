@@ -9,8 +9,7 @@ new fullpage("#fullPage", {
 	showActiveTooltip: false,
 
 	afterLoad: function (origin, destination, direction) {
-		if (origin.anchor == "landing") {
-			removeAnimations();
+		if (origin.anchor == "landing" && direction == null) {
 			triggerAnimations("landing-section");
 		}
 	},
@@ -39,4 +38,7 @@ function triggerAnimations(sectionId) {
 		let animationName = item.dataset.animation;
 		item.classList.add(animationName);
 	});
+	setTimeout(function () {
+		removeAnimations();
+	}, 2000);
 }

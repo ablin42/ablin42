@@ -152,7 +152,6 @@ body {
 
 	-webkit-clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
 	clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
-
 	&:before {
 		border-radius: inherit;
 		background-image: linear-gradient(270deg, color(main), color(main-light));
@@ -363,7 +362,6 @@ select:-webkit-autofill {
 	.portfolio-link {
 		margin-left: 25%;
 		margin-top: 1em;
-		opacity: 0;
 	}
 }
 
