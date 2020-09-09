@@ -86,7 +86,7 @@ body {
 
 .action-btn {
 	display: block;
-	background: linear-gradient(90deg, color(main), color(main-light));
+	background-image: linear-gradient(90deg, color(main), color(main-light));
 	width: 100%;
 	height: 50px;
 	border: none !important;
@@ -117,19 +117,16 @@ body {
 	}
 
 	&:hover {
+		color: color(light-shade) !important;
+		text-decoration: none;
+		transform: scale(1.01);
+
+		-webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 		&:before {
 			opacity: 1;
 		}
 	}
-}
-
-.action-btn:hover {
-	color: color(light-shade) !important;
-	text-decoration: none;
-	font-weight: bold;
-
-	-webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
-	clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 }
 
 .action-link {
@@ -243,7 +240,9 @@ textarea {
 	resize: none;
 }
 
-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
 textarea:focus,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill:focus,
@@ -360,7 +359,7 @@ select:-webkit-autofill {
 	}
 
 	.portfolio-link {
-		margin-left: 25%;
+		margin-left: 26%;
 		margin-top: 1em;
 	}
 }
@@ -368,7 +367,7 @@ select:-webkit-autofill {
 .scroll-indicator {
 	height: 100px;
 	position: absolute;
-	left: 31.5%;
+	left: 32.5%;
 	top: 61%;
 }
 
@@ -509,21 +508,24 @@ select:-webkit-autofill {
 	background: linear-gradient(to bottom, color(light-shade) 50%, color(dark-shade) 50%);
 
 	.bg-clipper {
-		height: 100%;
-		clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 97%, 28% 89%, 0 80%);
+		height: 105%;
+		clip-path: polygon(0 0, 100% 0, 100% 87%, 86% 98%, 19% 98%, 0 86%);
 		background-color: color(light-shade);
 	}
 
 	.contact-footer {
-		height: 200px;
 		width: 100%;
-		margin-top: 50px;
-		width: 100%;
+		position: absolute;
+		bottom: 0;
+		background-color: #080808;
+		padding: 0 10%;
 
 		ul {
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
 			list-style: none;
 			display: flex;
-			justify-content: center;
+			justify-content: space-evenly;
 		}
 
 		li {
@@ -531,13 +533,47 @@ select:-webkit-autofill {
 			font-size: 26px;
 			font-weight: bold;
 			margin: 0 15px;
-			width: 315px;
 			text-align: right;
+
+			span {
+				color: color(light-gray);
+			}
 
 			i {
 				color: color(main);
 			}
 		}
+	}
+
+	#infoContactBtn {
+		margin-bottom: 200px;
+		position: relative;
+		i {
+			font-size: 3rem;
+		}
+	}
+
+	#infoContactBtn .tooltiptext {
+		-webkit-clip-path: polygon(calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px), 0 0);
+		clip-path: polygon(calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px), 0 0);
+		visibility: hidden;
+		width: 50%;
+		background-color: color(dark-shade-light);
+		color: color(light-gray);
+		text-align: center;
+		position: absolute;
+		z-index: 5;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+
+	#infoContactBtn:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
 	}
 }
 

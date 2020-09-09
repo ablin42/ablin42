@@ -42,3 +42,10 @@ function triggerAnimations(sectionId) {
 		item.classList.add(animationName);
 	});
 }
+
+let contactBtn = document.querySelector("#infoContactBtn");
+if (contactBtn)
+	contactBtn.addEventListener("mouseon", function () {
+		//trigger hover anim
+		//trigger box popup
+	});
