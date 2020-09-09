@@ -43,6 +43,8 @@ html[data-theme="dark"] {
 */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /* main */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
 /* GLOBAL */
 * {
   margin: 0;
@@ -267,7 +269,6 @@ select:-webkit-autofill {
 /* NAVBAR */
 .navbar-brand {
   font-weight: bold;
-  font-family: "Montserrat";
   font-size: 1.5em;
   margin-left: 3%;
   color: #dedddd !important;
@@ -371,7 +372,7 @@ select:-webkit-autofill {
   height: 100px;
   position: absolute;
   left: 32.5%;
-  top: 61%;
+  top: 63%;
 }
 
 .scroll-indicator::before {
@@ -402,7 +403,6 @@ select:-webkit-autofill {
 
 .hero-title {
   font-size: 7.5rem;
-  font-family: "Montserrat";
   font-weight: bold;
   color: #f34023;
   margin-left: 10%;
@@ -422,7 +422,7 @@ select:-webkit-autofill {
   font-size: 3.5rem;
   width: 50%;
   margin-left: 13%;
-  margin-top: -20px;
+  margin-top: 2em;
 }
 
 #skills-section {
@@ -699,35 +699,35 @@ select:-webkit-autofill {
 /* KEYFRAMES & ANIMATION CLASSES */
 @-webkit-keyframes portfolioLinkAnim {
   0% {
-    -webkit-transform: translateX(-800px);
-            transform: translateX(-800px);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
     opacity: 0;
   }
-  95% {
-    -webkit-transform: translateX(2px);
-            transform: translateX(2px);
-    opacity: 0.95;
+  98% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+    opacity: 0.98;
   }
   100% {
-    -webkit-transform: rotate(0) translateX(0);
-            transform: rotate(0) translateX(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes portfolioLinkAnim {
   0% {
-    -webkit-transform: translateX(-800px);
-            transform: translateX(-800px);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
     opacity: 0;
   }
-  95% {
-    -webkit-transform: translateX(2px);
-            transform: translateX(2px);
-    opacity: 0.95;
+  98% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+    opacity: 0.98;
   }
   100% {
-    -webkit-transform: rotate(0) translateX(0);
-            transform: rotate(0) translateX(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }
@@ -838,6 +838,8 @@ select:-webkit-autofill {
 
 @-webkit-keyframes heroAnim {
   0% {
+    -webkit-filter: blur(0.5rem);
+            filter: blur(0.5rem);
     -webkit-transform: translateX(-150%);
             transform: translateX(-150%);
     opacity: 0;
@@ -848,6 +850,8 @@ select:-webkit-autofill {
     opacity: 0.7;
   }
   100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -856,6 +860,8 @@ select:-webkit-autofill {
 
 @keyframes heroAnim {
   0% {
+    -webkit-filter: blur(0.5rem);
+            filter: blur(0.5rem);
     -webkit-transform: translateX(-150%);
             transform: translateX(-150%);
     opacity: 0;
@@ -866,6 +872,8 @@ select:-webkit-autofill {
     opacity: 0.7;
   }
   100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -894,20 +902,20 @@ select:-webkit-autofill {
 
 .lastHeroAnim {
   opacity: 0;
-  -webkit-animation: lastHeroAnim 0.8s 1 1.2s ease forwards;
-          animation: lastHeroAnim 0.8s 1 1.2s ease forwards;
+  -webkit-animation: lastHeroAnim 0.8s 1 1s ease forwards;
+          animation: lastHeroAnim 0.8s 1 1s ease forwards;
 }
 
 .heroAnim {
   opacity: 0;
-  -webkit-animation: heroAnim 1s 1 0.6s ease forwards;
-          animation: heroAnim 1s 1 0.6s ease forwards;
+  -webkit-animation: heroAnim 1s 1 0.2s ease forwards;
+          animation: heroAnim 1s 1 0.2s ease forwards;
 }
 
 .portfolioLinkAnim {
   opacity: 0;
-  -webkit-animation: portfolioLinkAnim 0.7s 1 1.4s ease both;
-          animation: portfolioLinkAnim 0.7s 1 1.4s ease both;
+  -webkit-animation: portfolioLinkAnim 0.5s 1 1.6s ease both;
+          animation: portfolioLinkAnim 0.5s 1 1.6s ease both;
 }
 
 .indicatorAnim {
@@ -918,8 +926,8 @@ select:-webkit-autofill {
 
 @-webkit-keyframes freelancerAnim {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     opacity: 0;
   }
   100% {
@@ -931,8 +939,8 @@ select:-webkit-autofill {
 
 @keyframes freelancerAnim {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     opacity: 0;
   }
   100% {
@@ -944,8 +952,8 @@ select:-webkit-autofill {
 
 .freelancerAnim {
   opacity: 0;
-  -webkit-animation: freelancerAnim 1s 1 0s ease forwards;
-          animation: freelancerAnim 1s 1 0s ease forwards;
+  -webkit-animation: freelancerAnim 1s 1 0.2s ease forwards;
+          animation: freelancerAnim 1s 1 0.2s ease forwards;
 }
 
 /*
