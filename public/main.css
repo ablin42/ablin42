@@ -372,7 +372,7 @@ select:-webkit-autofill {
   height: 100px;
   position: absolute;
   left: 32.5%;
-  top: 63%;
+  top: 72%;
 }
 
 .scroll-indicator::before {
@@ -422,7 +422,7 @@ select:-webkit-autofill {
   font-size: 3.5rem;
   width: 50%;
   margin-left: 13%;
-  margin-top: 2em;
+  margin-top: 5em;
 }
 
 #skills-section {
