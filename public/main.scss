@@ -791,6 +791,23 @@ select:-webkit-autofill {
 	animation: freelancerAnim 1s 1 0.2s ease forwards;
 }
 
+@keyframes formAnim {
+	0% {
+		filter: blur(0.5rem);
+		transform: scale(0.9);
+		opacity: 0.9;
+	}
+	100% {
+		filter: blur(0);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.formAnim {
+	animation: formAnim 1s 1 0s ease;
+}
+
 /*
 @keyframes bgAnim {
 	0% {

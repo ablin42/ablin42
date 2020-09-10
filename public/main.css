@@ -972,6 +972,45 @@ select:-webkit-autofill {
           animation: freelancerAnim 1s 1 0.2s ease forwards;
 }
 
+@-webkit-keyframes formAnim {
+  0% {
+    -webkit-filter: blur(0.5rem);
+            filter: blur(0.5rem);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes formAnim {
+  0% {
+    -webkit-filter: blur(0.5rem);
+            filter: blur(0.5rem);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.formAnim {
+  -webkit-animation: formAnim 1s 1 0s ease;
+          animation: formAnim 1s 1 0s ease;
+}
+
 /*
 @keyframes bgAnim {
 	0% {
