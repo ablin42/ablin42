@@ -61,6 +61,10 @@ html[data-theme="dark"] {
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap"); /* main */
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* GLOBAL */
 
@@ -69,7 +73,7 @@ html[data-theme="dark"] {
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Roboto", sans-serif;
 	overflow-wrap: break-word;
 	scroll-behavior: smooth;
 }
@@ -121,7 +125,6 @@ body {
 	&:hover {
 		color: color(light-shade) !important;
 		text-decoration: none;
-		transform: scale(1.01);
 
 		-webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 		clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
@@ -357,16 +360,16 @@ select:-webkit-autofill {
 	}
 
 	.portfolio-link {
-		margin-left: 26%;
-		margin-top: 1em;
+		margin-left: 23%;
+		margin-top: 3em;
 	}
 }
 
 .scroll-indicator {
 	height: 100px;
 	position: absolute;
-	left: 32.5%;
-	top: 72%;
+	left: 29.5%;
+	top: 73%;
 }
 
 .scroll-indicator::before {
@@ -397,6 +400,7 @@ select:-webkit-autofill {
 .hero-title {
 	font-size: 7.5rem;
 	font-weight: bold;
+	font-family: "Roboto Slab", serif;
 	color: color(main);
 	margin-left: 10%;
 	margin-top: -25px;
@@ -410,12 +414,13 @@ select:-webkit-autofill {
 }
 
 .hero-secondary-title {
-	color: color(main);
-	opacity: 0.95;
-	font-size: 3.5rem;
+	color: #000000 !important;
+	opacity: 0.6;
+	font-size: 5rem !important;
 	width: 50%;
-	margin-left: 13%;
-	margin-top: 5em;
+	margin-left: 7%;
+	margin-top: 1.5rem;
+	line-height: 4rem;
 }
 
 #skills-section {
@@ -507,7 +512,7 @@ select:-webkit-autofill {
 	.bg-clipper {
 		height: 105%;
 		clip-path: polygon(0 0, 100% 0, 100% 87%, 86% 98%, 19% 98%, 0 86%);
-		background-color: color(light-shade);
+		background: linear-gradient(to bottom, color(light-shade) 89%, color(dark-shade) 11%);
 	}
 
 	.contact-footer {
@@ -703,17 +708,16 @@ select:-webkit-autofill {
 	}
 	70% {
 		transform: translateX(10px);
-		opacity: 0.7;
+		opacity: 0.45;
 	}
 	100% {
 		transform: translateX(0);
-		opacity: 0.95;
+		opacity: 0.6;
 	}
 }
 
 @keyframes heroAnim {
 	0% {
-		filter: blur(0.5rem);
 		transform: translateX(-150%);
 		opacity: 0;
 	}
@@ -722,7 +726,6 @@ select:-webkit-autofill {
 		opacity: 0.7;
 	}
 	100% {
-		filter: blur(0);
 		opacity: 1;
 		transform: translateX(0);
 	}
@@ -761,10 +764,12 @@ select:-webkit-autofill {
 
 @keyframes freelancerAnim {
 	0% {
+		filter: blur(0.5rem);
 		transform: translateX(100%);
 		opacity: 0;
 	}
 	100% {
+		filter: blur(0);
 		transform: translateX(0);
 		opacity: 1;
 	}
