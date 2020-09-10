@@ -225,7 +225,7 @@ body {
 
 input,
 textarea {
-	background-color: #e6e6e6 !important;
+	background-color: #e0dede !important !important;
 	font-weight: bold;
 	color: color(main);
 	box-sizing: border-box;
@@ -397,6 +397,13 @@ select:-webkit-autofill {
 	z-index: 1;
 }
 
+.contact-svg {
+	position: absolute;
+	top: 6%;
+	right: 4%;
+	width: 35%;
+}
+
 .hero-title {
 	font-size: 7.5rem;
 	font-weight: bold;
@@ -515,6 +522,10 @@ select:-webkit-autofill {
 		background: linear-gradient(to bottom, color(light-shade) 89%, color(dark-shade) 11%);
 	}
 
+	#contact-form {
+		margin-left: 10%;
+	}
+
 	.contact-footer {
 		width: 100%;
 		position: absolute;
@@ -524,7 +535,7 @@ select:-webkit-autofill {
 
 		ul {
 			margin-top: 0.5rem;
-			margin-bottom: 0.5rem;
+			margin-bottom: 0.6rem;
 			list-style: none;
 			display: flex;
 			justify-content: space-evenly;

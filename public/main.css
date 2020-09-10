@@ -219,7 +219,7 @@ body {
 
 input,
 textarea {
-  background-color: #e6e6e6 !important;
+  background-color: #e0dede !important !important;
   font-weight: bold;
   color: #f34023;
   -webkit-box-sizing: border-box;
@@ -403,6 +403,13 @@ select:-webkit-autofill {
   z-index: 1;
 }
 
+.contact-svg {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  width: 35%;
+}
+
 .hero-title {
   font-size: 7.5rem;
   font-weight: bold;
@@ -541,6 +548,10 @@ select:-webkit-autofill {
   background: linear-gradient(to bottom, #f1f1f1 89%, #080808 11%);
 }
 
+#contact-section #contact-form {
+  margin-left: 10%;
+}
+
 #contact-section .contact-footer {
   width: 100%;
   position: absolute;
@@ -551,7 +562,7 @@ select:-webkit-autofill {
 
 #contact-section .contact-footer ul {
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
