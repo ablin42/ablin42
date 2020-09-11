@@ -13,6 +13,30 @@ $colors: (
 	@return map-get($colors, $colorName);
 }
 
+.dark-mode {
+	filter: invert(1) hue-rotate(180deg);
+
+	.invert {
+		filter: invert(1) hue-rotate(180deg);
+	}
+}
+
+/*
+
+document.onkeypress = function (e) {
+	e = e || window.event;
+
+	if (e.keycode === 13) {
+		document.documentElement.classList.toggle('dark-mode')
+
+		document.querySelectorAll('.inverted').forEach((result) => {
+			result.classList.toggle('invert);
+		})
+	}
+}
+
+*/
+
 /* 
 	alt main colors
 		#f34023 orangeish
@@ -225,7 +249,7 @@ body {
 
 input,
 textarea {
-	background-color: #e0dede !important !important;
+	background-color: #e0dede !important;
 	font-weight: bold;
 	color: color(main);
 	box-sizing: border-box;
@@ -402,6 +426,7 @@ select:-webkit-autofill {
 	top: 6%;
 	right: 4%;
 	width: 35%;
+	opacity: 0.7;
 }
 
 .hero-title {
@@ -789,6 +814,24 @@ select:-webkit-autofill {
 .freelancerAnim {
 	opacity: 0;
 	animation: freelancerAnim 1s 1 0.2s ease forwards;
+}
+
+@keyframes contactSvgAnim {
+	0% {
+		filter: blur(0.5rem);
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		filter: blur(0);
+		transform: translateX(0);
+		opacity: 0.7;
+	}
+}
+
+.contactSvgAnim {
+	opacity: 0;
+	animation: contactSvgAnim 1s 1 0.2s ease forwards;
 }
 
 @keyframes formAnim {
