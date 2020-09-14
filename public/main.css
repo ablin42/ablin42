@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 .dark-mode {
   -webkit-filter: invert(1) hue-rotate(180deg);
           filter: invert(1) hue-rotate(180deg);
@@ -74,6 +75,16 @@ html[data-theme="dark"] {
 }
 */
 /* main */
+@font-face {
+  font-family: "Noir";
+  src: url("./fonts/HelveticaNeue Medium.ttf");
+}
+
+@font-face {
+  font-family: "Proto";
+  src: url("./fonts/VolkornRegular.otf") format("opentype");
+}
+
 /* GLOBAL */
 * {
   margin: 0;
@@ -81,7 +92,7 @@ html[data-theme="dark"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica";
   overflow-wrap: break-word;
   scroll-behavior: smooth;
 }
@@ -100,19 +111,22 @@ body {
 
 .action-btn {
   display: block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f34023), to(#f66a53));
-  background-image: linear-gradient(90deg, #f34023, #f66a53);
-  width: 100%;
-  height: 50px;
+  padding: 10px 0;
   border: none !important;
-  background: #f34023 !important;
-  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#f34023), to(#f66a53));
+  background: linear-gradient(90deg, #f34023, #f66a53);
+  color: #f1f1f1 !important;
   outline: none;
   cursor: pointer;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   opacity: 1;
   z-index: 5;
+  width: 250px;
+  margin: 5px auto 0 auto;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
   -webkit-clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
   clip-path: polygon(calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px), 0 0);
 }
@@ -137,6 +151,37 @@ body {
 .action-btn:hover {
   color: #f1f1f1 !important;
   text-decoration: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
+}
+
+.action-btn:hover:before {
+  opacity: 1;
+}
+
+.action-btn:before {
+  border-radius: inherit;
+  background-image: -webkit-gradient(linear, right top, left top, from(red), to(blue));
+  background-image: linear-gradient(270deg, red, blue);
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+  color: #f1f1f1 !important;
+  text-decoration: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0);
 }
@@ -242,7 +287,9 @@ body {
   opacity: 0.9;
 }
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
 textarea {
   background-color: #e0dede !important;
   font-weight: bold;
@@ -287,7 +334,7 @@ select:-webkit-autofill {
 
 .control-label {
   font-size: 24px;
-  color: #080808;
+  color: #272727;
   font-weight: bold;
   margin-bottom: -3px;
 }
@@ -437,15 +484,19 @@ select:-webkit-autofill {
 }
 
 .hero-title {
-  font-size: 7.5rem;
+  font-size: 8rem;
   font-weight: bold;
-  font-family: "Roboto Slab", serif;
+  font-family: "Noir" !important;
   color: #f34023;
   margin-left: 10%;
   margin-top: -25px;
   font-style: italic;
   display: inline-block;
   opacity: 1;
+}
+
+.hero-title a {
+  font-family: "Noir" !important;
 }
 
 .main-section.even .hero-title {

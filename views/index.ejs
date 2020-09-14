@@ -17,7 +17,7 @@
 			</nav>
 
 			<h3 data-animationC="firstHeroAnim">Hi, Im a <i>{</i><b> fullstack web developer </b><i>}</i> and my name is</h3>
-			<h1 class="hero-title" data-animation="heroAnim">Andréas Blin</h1>
+			<h1 class="hero-title" data-animation="heroAnim">Andreas Blin</h1>
 			<h2 class="hero-secondary-title">❝<i>I will build the website you've been dreaming of</i> ❞</h2>
 
 			<a href="#portfolio" class="action-link portfolio-link" data-animation="portfolioLinkAnim">Portfolio</a>
@@ -201,10 +201,6 @@
 		<div class="bg-clipper">
 			<h1 class="hero-title mt-2" data-animation="heroAnim">Contact</h1>
 
-			<div class="col-md-6 offset-md-3 p-0 contact-alert-wrapper">
-				<div id="contact-alert"></div>
-			</div>
-
 			<form class="col-md-6" id="contact-form" method="POST" data-animation="formAnim" action="/api/contact/">
 				<div class="row">
 					<div class="col-md-12">
@@ -224,6 +220,10 @@
 				</div>
 				<input type="submit" class="action-btn" value="Send" id="submit-contact" />
 				<input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+				
+				<div class="col-md-12 p-0 contact-alert-wrapper">
+					<div id="contact-alert"></div>
+				</div>
 			</form>
 
 			<img src="/svg/undraw_messages.svg" class="contact-svg" alt="Contact Illustration" data-animation="contactSvgAnim" />
