@@ -607,7 +607,7 @@ select:-webkit-autofill {
 
 		li {
 			display: inline-block;
-			font-size: 26px;
+			font-size: 3vw;
 			font-weight: bold;
 			margin: 0 15px;
 			text-align: right;
@@ -904,3 +904,21 @@ select:-webkit-autofill {
 	animation: bgAnim 0.5s 1 0s ease;
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
+
+@media (max-width: 768px) {
+	#contact-section {
+		.hero-title {
+			margin-left: -4% !important;
+			display: flex;
+			justify-content: center;
+		}
+
+		#contact-form {
+			margin: 0 auto !important;
+		}
+
+		.contact-svg {
+			display: none;
+		}
+	}
+}

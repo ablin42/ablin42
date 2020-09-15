@@ -635,7 +635,7 @@ select:-webkit-autofill {
 
 #contact-section .contact-footer li {
   display: inline-block;
-  font-size: 26px;
+  font-size: 3vw;
   font-weight: bold;
   margin: 0 15px;
   text-align: right;
@@ -1126,4 +1126,21 @@ select:-webkit-autofill {
 	animation: bgAnim 0.5s 1 0s ease;
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
+@media (max-width: 768px) {
+  #contact-section .hero-title {
+    margin-left: -4% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #contact-section #contact-form {
+    margin: 0 auto !important;
+  }
+  #contact-section .contact-svg {
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */
