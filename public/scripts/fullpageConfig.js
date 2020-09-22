@@ -7,6 +7,7 @@ new fullpage("#fullPage", {
 	navigationPosition: "right",
 	navigationTooltips: ["Landing", "Portfolio", "Skills", "Contact"],
 	showActiveTooltip: false,
+	//responsiveWidth: 900,
 
 	afterLoad: function (origin, destination, direction) {
 		if (origin.anchor == "landing" && direction == null) {

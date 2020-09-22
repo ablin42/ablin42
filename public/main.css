@@ -402,7 +402,7 @@ select:-webkit-autofill {
 }
 
 .hero h3 {
-  font-size: 22px;
+  font-size: clamp(16px, 3vw, 22px);
   color: #f1f1f1;
   opacity: 0.9;
   margin-top: 7%;
@@ -411,32 +411,30 @@ select:-webkit-autofill {
 }
 
 .hero h3 b {
-  font-size: 28px;
+  font-size: 1.25em;
   color: #f66a53;
 }
 
 .hero h3 i {
-  font-size: 40px;
+  font-size: 1.9em;
   font-style: normal;
   color: #f34023;
 }
 
 .hero .portfolio-link {
-  margin-left: 23%;
   margin-top: 1em;
 }
 
 .scroll-indicator {
   height: 100px;
   position: absolute;
-  left: 29.5%;
-  top: 73%;
+  left: 31.5%;
 }
 
 .scroll-indicator::before {
   -webkit-animation: bounce 1s ease infinite;
           animation: bounce 1s ease infinite;
-  bottom: 2rem;
+  bottom: 0;
   color: #fff;
   content: "╲╱";
   font-size: 2rem;
@@ -461,14 +459,14 @@ select:-webkit-autofill {
 
 .contact-svg {
   position: absolute;
-  top: 6%;
+  top: clamp(6%, 25%, 80px);
   right: 4%;
   width: 35%;
   opacity: 0.7;
 }
 
 .hero-title {
-  font-size: 8rem;
+  font-size: clamp(75px, 9vw, 128px);
   /*font-weight: bold;*/
   font-family: "Noir" !important;
   color: #f34023;
@@ -490,11 +488,10 @@ select:-webkit-autofill {
 .hero-secondary-title {
   color: #000000 !important;
   opacity: 0.6;
-  font-size: 5rem !important;
-  width: 50%;
-  margin-left: 7%;
+  font-size: clamp(40px, 5vw, 75px) !important;
   margin-top: 4.5rem;
-  line-height: 4rem;
+  line-height: 3.5vw;
+  line-height: clamp(35px, 4vw, 60px);
 }
 
 #skills-section {
@@ -519,12 +516,13 @@ select:-webkit-autofill {
   font-size: 2rem;
   color: #f66a53;
   opacity: 0.95;
+  margin-left: 3.5em;
 }
 
 #skills-section .skills-text {
   text-align: center;
-  color: #f34023;
-  opacity: 0.95;
+  color: #f66a53;
+  opacity: 0.75;
   font-size: 2em;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -534,8 +532,6 @@ select:-webkit-autofill {
 }
 
 #skills-section .skills-wrapper {
-  width: 70%;
-  margin: 25px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,7 +598,7 @@ select:-webkit-autofill {
 }
 
 #contact-section .bg-clipper {
-  height: 105%;
+  height: 107%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 86% 98%, 19% 98%, 0 86%);
           clip-path: polygon(0 0, 100% 0, 100% 87%, 86% 98%, 19% 98%, 0 86%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(89%, #f1f1f1), color-stop(11%, #0c0c0c));
@@ -619,6 +615,7 @@ select:-webkit-autofill {
   bottom: 0;
   background-color: #080808;
   padding: 0 10%;
+  max-height: 100px;
 }
 
 #contact-section .contact-footer ul {
@@ -635,7 +632,7 @@ select:-webkit-autofill {
 
 #contact-section .contact-footer li {
   display: inline-block;
-  font-size: 3vw;
+  font-size: clamp(14px, 4vw, 26px);
   font-weight: bold;
   margin: 0 15px;
   text-align: right;
@@ -1126,7 +1123,74 @@ select:-webkit-autofill {
 	animation: bgAnim 0.5s 1 0s ease;
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
+@media (max-width: 1200px) {
+  #contact-section .contact-svg {
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  #contact-section .bg-clipper {
+    height: 102%;
+  }
+  #contact-section .contact-footer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact-section .contact-footer li {
+    text-align: center;
+  }
+  #contact-section .contact-svg {
+    margin-top: 10%;
+  }
+  #landing-section .bg-clipper {
+    height: 110%;
+  }
+  #skills-section .skills-section h2 {
+    margin-left: 0;
+  }
+  #skills-section .skills-text {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 0;
+    position: initial !important;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero .hero-title {
+    margin-left: 5%;
+    margin-top: -15px;
+    text-indent: 20px;
+  }
+  .hero .hero-secondary-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .hero .portfolio-link {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero .scroll-indicator {
+    position: relative;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-indent: 25px;
+  }
+  #contact-section .bg-clipper {
+    height: 105%;
+  }
   #contact-section .hero-title {
     margin-left: -4% !important;
     display: -webkit-box;
@@ -1137,10 +1201,17 @@ select:-webkit-autofill {
             justify-content: center;
   }
   #contact-section #contact-form {
-    margin: 0 auto !important;
+    margin: 2em auto 0 auto !important;
   }
   #contact-section .contact-svg {
     display: none;
+  }
+  #skills-section .skills-wrapper h1 {
+    font-size: 40px;
+  }
+  #skills-section .skills-wrapper .wrapper-icon .skill-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 /*# sourceMappingURL=main.css.map */
