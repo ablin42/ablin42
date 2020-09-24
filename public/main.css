@@ -675,14 +675,27 @@ select:-webkit-autofill {
 }
 
 #portfolio-section .portfolio-thumbnail-wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#portfolio-section .portfolio-thumbnail-wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 10px;
   background-color: #dedddd;
-  margin: auto 0;
 }
 
 #portfolio-section .portfolio-thumbnail-wrapper img {
+  margin: auto;
   -webkit-clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
           clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
+}
+
+#portfolio-section .portfolio-thumbnail-wrapper .skills-used-small {
+  display: none;
 }
 
 #portfolio-section .portfolio-item {
@@ -728,15 +741,13 @@ select:-webkit-autofill {
 
 #portfolio-section .portfolio-item p {
   text-align: left;
-  font-size: 20px;
+  font-size: 19px;
   margin-top: 10px;
   text-indent: 50px;
 }
 
 #portfolio-section .portfolio-item .skill-call-wrapper {
-  position: absolute;
-  bottom: 3%;
-  left: -1%;
+  margin-top: 1em;
   width: 100%;
 }
 
@@ -1126,9 +1137,21 @@ select:-webkit-autofill {
 	animation: bgAnim 0.5s 1 0s ease;
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
+@media (max-width: 1450px) {
+  .skills-used-small {
+    display: block !important;
+  }
+  .skills-used-large {
+    display: none;
+  }
+}
+
 @media (max-width: 1200px) {
   #contact-section .contact-svg {
     margin-top: 5%;
+  }
+  #portfolio-section .portfolio-item p {
+    font-size: 18px;
   }
 }
 
@@ -1164,6 +1187,25 @@ select:-webkit-autofill {
     text-align: left;
     margin-bottom: 0;
     position: initial !important;
+  }
+  #portfolio-section .portfolio-thumbnail-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 3em;
+  }
+  #portfolio-section .portfolio-thumbnail-wrapper a {
+    width: 70%;
+  }
+  #portfolio-section .portfolio-item p {
+    font-size: 18px;
+  }
+  #portfolio-section .portfolio-item .portfolio-info {
+    width: 90%;
+    margin: auto;
+  }
+  #portfolio-section .portfolio-item .skills-used-small {
+    width: 30%;
   }
 }
 

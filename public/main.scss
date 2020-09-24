@@ -647,12 +647,19 @@ select:-webkit-autofill {
 		margin-bottom: -45px;
 	}
 	.portfolio-thumbnail-wrapper {
-		padding: 10px;
-		background-color: color(light-gray);
-		margin: auto 0;
+		height: fit-content;
+		a {
+			display: flex;
+			padding: 10px;
+			background-color: color(light-gray);
+		}
 
 		img {
+			margin: auto;
 			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
+		}
+		.skills-used-small {
+			display: none;
 		}
 	}
 
@@ -686,17 +693,16 @@ select:-webkit-autofill {
 				background-color: color(light-shade);
 			}
 		}
+
 		p {
 			text-align: left;
-			font-size: 20px;
+			font-size: 19px;
 			margin-top: 10px;
 			text-indent: 50px;
 		}
 
 		.skill-call-wrapper {
-			position: absolute;
-			bottom: 3%;
-			left: -1%;
+			margin-top: 1em;
 			width: 100%;
 		}
 
@@ -909,10 +915,27 @@ select:-webkit-autofill {
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
 
+@media (max-width: 1450px) {
+	.skills-used-small {
+		display: block !important;
+	}
+	.skills-used-large {
+		display: none;
+	}
+}
+
 @media (max-width: 1200px) {
 	#contact-section {
 		.contact-svg {
 			margin-top: 5%;
+		}
+	}
+
+	#portfolio-section {
+		.portfolio-item {
+			p {
+				font-size: 18px;
+			}
 		}
 	}
 }
@@ -958,6 +981,30 @@ select:-webkit-autofill {
 			text-align: left;
 			margin-bottom: 0;
 			position: initial !important;
+		}
+	}
+
+	#portfolio-section {
+		.portfolio-thumbnail-wrapper {
+			a {
+				width: 70%;
+			}
+			display: flex;
+			margin-bottom: 3em;
+		}
+		.portfolio-item {
+			p {
+				font-size: 18px;
+			}
+
+			.portfolio-info {
+				width: 90%;
+				margin: auto;
+			}
+
+			.skills-used-small {
+				width: 30%;
+			}
 		}
 	}
 }

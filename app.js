@@ -61,10 +61,6 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: true, limit: 25000000 }));
 app.use(
 	bodyParser.json({
-		verify: function (req, res, buf) {
-			let url = req.originalUrl;
-			if (url.startsWith("/api/order/confirm")) req.rawBody = buf.toString();
-		},
 		limit: 25000000
 	})
 );
