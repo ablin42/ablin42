@@ -1263,4 +1263,10 @@ select:-webkit-autofill {
     font-size: 40px;
   }
 }
+
+@media (max-width: 540px) {
+  #skills-section .skills-section h2 {
+    font-size: 1.25em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
