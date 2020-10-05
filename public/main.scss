@@ -22,6 +22,38 @@ $colors: (
 	}
 }
 
+// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+$min_width: 320px;
+$max_width: 1920px;
+$min_font: 16px;
+$max_font: 24px;
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		& {
+			font-size: $min-font-size;
+			@media screen and (min-width: $min-vw) {
+				font-size: calc(
+					#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+						((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+				);
+			}
+			@media screen and (min-width: $max-vw) {
+				font-size: $max-font-size;
+			}
+		}
+	}
+}
+
 /*
 
 document.onkeypress = function (e) {
@@ -394,12 +426,13 @@ select:-webkit-autofill {
 
 	h2 {
 		color: color(light-shade);
-		font-size: 30px;
+		//font-size: 30px;
 		text-indent: 50px;
 	}
 
 	h3 {
-		font-size: clamp(16px, 3vw, 22px);
+		//font-size: clamp(16px, 3vw, 22px);
+		@include fluid-type($min_width, $max_width, 16px, 22px);
 		color: color(light-shade);
 		opacity: 0.9;
 		margin-top: 7%;
@@ -464,7 +497,8 @@ select:-webkit-autofill {
 }
 
 .hero-title {
-	font-size: clamp(75px, 9vw, 128px);
+	//font-size: clamp(75px, 9vw, 128px);
+	@include fluid-type($min_width, $max_width, 75px, 128px);
 	//font-size: calc(75px + 4vw); //128px
 	/*font-weight: bold;*/
 	font-family: "Noir" !important;
@@ -488,7 +522,8 @@ select:-webkit-autofill {
 	color: #000000 !important;
 	opacity: 0.6;
 	//font-size: 4vw !important;
-	font-size: clamp(40px, 5vw, 75px) !important;
+	//font-size: clamp(40px, 5vw, 75px) !important;
+	@include fluid-type($min_width, $max_width, 40px, 75px);
 	margin-top: 4.5rem;
 	line-height: 3.5vw;
 	line-height: clamp(35px, 4vw, 60px);
@@ -614,7 +649,8 @@ select:-webkit-autofill {
 		li {
 			display: inline-block;
 			//font-size: 26px;
-			font-size: clamp(14px, 4vw, 26px);
+			//font-size: clamp(14px, 4vw, 26px);
+			@include fluid-type($min_width, $max_width, 14px, 26px);
 			font-weight: bold;
 			margin: 0 15px;
 			text-align: right;
@@ -643,10 +679,69 @@ select:-webkit-autofill {
 		height: 118%;
 	}
 
+	.phone-wrapper {
+		display: inline-block;
+		margin: 30px 30px 30px 30px;
+		background-color: #f8f8f8;
+		border: 1px solid #c0c0c0;
+		padding: 0 10px 0 10px;
+		border-radius: 25px;
+		max-width: 100% !important;
+	}
+
+	.phone-black {
+		background-color: color(dark-shade);
+		border-color: color(dark-shade-light);
+	}
+
+	.phone-screenshot {
+		max-width: 260px;
+		border: 1px solid #000000;
+	}
+
+	.phone-small-round-top {
+		margin: 10px auto;
+		width: 5px;
+		height: 5px;
+		background-color: #c0c0c0;
+		border-radius: 50%;
+	}
+
+	.phone-round-top-left {
+		float: left;
+		margin-left: 65px;
+		margin-top: -2px;
+		width: 9px;
+		height: 9px;
+		background-color: #c0c0c0;
+		border-radius: 50%;
+	}
+
+	.phone-speaker {
+		margin: 15px auto;
+		margin-top: 10px;
+		width: 30px;
+		height: 5px;
+		background-color: #c0c0c0;
+		border-radius: 3px;
+	}
+
+	.phone-button {
+		border-radius: 50%;
+		margin: 10px auto;
+		width: 30px;
+		height: 30px;
+		border: 2px solid #c0c0c0;
+		background: none !important;
+	}
+
 	.hero-title {
 		margin-bottom: -45px;
 	}
 	.portfolio-thumbnail-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: fit-content;
 		a {
 			display: flex;
@@ -654,10 +749,10 @@ select:-webkit-autofill {
 			background-color: color(light-gray);
 		}
 
-		img {
-			margin: auto;
-			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
-		}
+		//img {
+		//	margin: auto;
+		//	clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
+		//}
 		.skills-used-small {
 			display: none;
 		}
@@ -712,8 +807,12 @@ select:-webkit-autofill {
 		}
 
 		.portfolio-info {
-			padding: 0 3rem 0 2rem;
+			padding: 30px 3rem 0 2rem;
 			height: auto !important;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 		.portfolio-info:first-child {
 			margin-top: 1rem;
