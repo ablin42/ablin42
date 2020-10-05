@@ -1,13 +1,16 @@
 $colors: (
 	light-shade: #f1f1f1,
 	light-gray: #dedddd,
-	dark-shade: #0c0c0c,
-	dark-shade-light: lighten(#0c0c0c, 7.5%),
-	dark-shade-lighter: lighten(#0c0c0c, 12%),
-	main: #f34023,
-	main-light: lighten(#f34023, 10%),
-	maral: #1a7cc3,
-	maral-dark: darken(#1a7cc3, 10%)
+	dark-shade: #151515,
+	//#0c0c0c,
+	dark-shade-light: lighten(#151515, 7.5%),
+	dark-shade-lighter: lighten(#151515, 12%),
+	main: #751fff,
+	//#f34023,
+	main-light: lighten(#751fff, 10%),
+	main-dark: darken(#751fff, 10%),
+	maral: #233bde,
+	maral-dark: darken(#233bde, 10%)
 );
 
 @function color($colorName) {
@@ -144,6 +147,15 @@ html[data-theme="dark"] {
 	font-family: "Helvetica";
 	overflow-wrap: break-word;
 	scroll-behavior: smooth;
+}
+
+a,
+b {
+	color: color(main-dark);
+}
+
+a:hover {
+	color: color(main-light);
 }
 
 body,
@@ -623,7 +635,7 @@ select:-webkit-autofill {
 	.bg-clipper {
 		height: 107%;
 		clip-path: polygon(0 0, 100% 0, 100% 87%, 86% 98%, 19% 98%, 0 86%);
-		background: linear-gradient(to bottom, color(light-shade) 89%, color(dark-shade) 11%);
+		background: linear-gradient(to bottom, color(light-shade) 88%, color(dark-shade) 12%);
 	}
 
 	#contact-form {
@@ -667,7 +679,15 @@ select:-webkit-autofill {
 }
 
 #portfolio-section {
-	h1 a {
+	h1 {
+		text-align: center;
+		font-weight: normal !important;
+		margin: 0 0 0 0 !important;
+		position: absolute;
+		top: 5%;
+	}
+
+	a {
 		color: color(main);
 		text-decoration: none;
 	}
@@ -735,31 +755,43 @@ select:-webkit-autofill {
 		background: none !important;
 	}
 
+	.iphone-class {
+		width: 100%;
+		min-width: 175px;
+		max-width: 375px;
+	}
+
 	.hero-title {
 		margin-bottom: -45px;
 	}
 	.portfolio-thumbnail-wrapper {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
 		height: fit-content;
 		a {
+			width: 45%;
+			min-width: 275px;
+		}
+		/*a {
 			display: flex;
 			padding: 10px;
 			background-color: color(light-gray);
 		}
 
-		//img {
-		//	margin: auto;
-		//	clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
-		//}
+		img {
+			margin: auto;
+			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
+		}*/
 		.skills-used-small {
 			display: none;
 		}
 	}
 
 	.portfolio-item {
-		height: 65%;
+		height: 95%;
+		display: flex;
+		align-items: center;
 		h1 {
 			text-align: center;
 			font-weight: bold;
@@ -769,13 +801,12 @@ select:-webkit-autofill {
 			margin-bottom: 0;
 			display: flex;
 			flex-wrap: wrap;
-			margin-top: 2rem;
 			li {
 				display: inline-block;
 				margin: 10px 10px 0 10px;
 				padding: 5px 15px;
 				background-color: color(dark-shade-light);
-				color: color(main);
+				color: color(light-shade);
 				font-weight: bold;
 				transition: 0.3s ease-in-out;
 
@@ -785,14 +816,15 @@ select:-webkit-autofill {
 
 			li:hover {
 				transform: scale(1.3);
-				background-color: color(light-shade);
+				background-color: transparent;
+				color: color(maral);
 			}
 		}
 
 		p {
 			text-align: left;
 			font-size: 19px;
-			margin-top: 10px;
+			margin: 0px 2.2em 20px 2.2em;
 			text-indent: 50px;
 		}
 
@@ -807,8 +839,7 @@ select:-webkit-autofill {
 		}
 
 		.portfolio-info {
-			padding: 30px 3rem 0 2rem;
-			height: auto !important;
+			height: 95% !important;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -824,8 +855,7 @@ select:-webkit-autofill {
 		h1 a,
 		b a,
 		b,
-		a,
-		li {
+		a {
 			color: color(maral);
 		}
 
@@ -843,7 +873,7 @@ select:-webkit-autofill {
 
 @keyframes portfolioLinkAnim {
 	0% {
-		transform: scale(0.8);
+		transform: translateY(-50px) scale(0.8);
 		opacity: 0;
 	}
 	98% {
@@ -851,7 +881,7 @@ select:-webkit-autofill {
 		opacity: 0.98;
 	}
 	100% {
-		transform: scale(1);
+		transform: translateY(0) scale(1);
 		opacity: 1;
 	}
 }
@@ -938,12 +968,12 @@ select:-webkit-autofill {
 
 .portfolioLinkAnim {
 	opacity: 0;
-	animation: portfolioLinkAnim 0.5s 1 1.6s ease both;
+	animation: portfolioLinkAnim 0.5s 1 0.35s ease both;
 }
 
 .indicatorAnim {
 	opacity: 0;
-	animation: indicatorAnim 0.8s 1 1.8s ease forwards;
+	animation: indicatorAnim 0.8s 1 0.6s ease forwards;
 }
 
 @keyframes freelancerAnim {
@@ -959,7 +989,7 @@ select:-webkit-autofill {
 	}
 }
 
-.freelancerAnim {
+.freelancerAnimx {
 	opacity: 0;
 	animation: freelancerAnim 1s 1 0.2s ease forwards;
 }
@@ -995,8 +1025,64 @@ select:-webkit-autofill {
 	}
 }
 
-.formAnim {
+.formAnimx {
 	animation: formAnim 1s 1 0s ease;
+}
+
+@keyframes dropDownAnim {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.dropDownAnim {
+	animation: dropDownAnim 0.5s 1 0s ease-in-out;
+}
+
+@keyframes iphoneAnim {
+	0% {
+		transform: translateY(-300px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.iphoneAnim {
+	animation: iphoneAnim 0.85s 1 0s ease-in-out;
+}
+
+@keyframes leftBracketAnim {
+	0% {
+		transform: translateX(-100px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.leftBracketAnim {
+	animation: leftBracketAnim 0.8s 1 0s ease-in-out;
+}
+
+@keyframes rightBracketAnim {
+	0% {
+		transform: translateX(100px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.rightBracketAnim {
+	animation: rightBracketAnim 0.8s 1 0s ease-in-out;
 }
 
 /*

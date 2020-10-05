@@ -16,8 +16,8 @@
 				</ul>
 			</nav>
 
-			<h3 class="col-md-8" data-animationC="firstHeroAnim">Hi, Im a <i>{</i><b> fullstack web developer </b><i>}</i> and my name is</h3>
-			<h1 class="hero-title" data-animation="heroAnim">Andréas Blin</h1>
+			<h3 class="col-md-8" data-animation="dropDownAnim">Hi, Im a <i>{</i><b> fullstack web developer </b><i>}</i> and my name is</h3>
+			<h1 class="hero-title" data-animation="dropDownAnim">Andréas Blin</h1>
 			<h2 class="hero-secondary-title col-md-6 offset-md-1">❝<i>I will build the website you've been dreaming of</i> ❞</h2>
 
 			<a href="#portfolio" class="action-link portfolio-link offset-md-3" data-animation="portfolioLinkAnim">Portfolio</a>
@@ -29,19 +29,17 @@
 	<section class="section main-section even" id="portfolio-section" data-anchor="portfolio">
 		<div class="bg-clipper">
 			<div class="slide" id="maral">
-				<h1 class="hero-title mt-4 mb-0 col-12" data-animation="heroAnim"><a href="https://www.maral.fr" target="_blank">Maral.fr</a></h1>
-
 				<div class="portfolio-item row">
-					<div class="portfolio-thumbnail-wrapper col-lg-3 offset-lg-2">
-						<!--	<a href="https://www.maral.fr" target="_blank"><img class="w-100" src="/img/maral_thumbnail.jpg" alt="Maral.fr Screenshot" draggable="false" /></a>
--->
-						<div class="phone-wrapper phone-black">
+					<div class="portfolio-thumbnail-wrapper col-lg-5 p-0">
+						<!--	<a href="https://www.maral.fr" target="_blank"><img class="w-100" src="/img/maral_thumbnail.jpg" alt="Maral.fr Screenshot" draggable="false" /></a>-->
+						<!--<div class="phone-wrapper phone-black">
 							<div class="phone-small-round-top"></div>
 							<div class="phone-round-top-left"></div>
 							<div class="phone-speaker"></div>
-							<img src="/img/maral_thumbnail2.png" draggable="false" class="phone-screenshot" />
-							<div class="phone-button"></div>
-						</div>
+							<a href="https://www.maral.fr" target="_blank"><img src="/img/maral_thumbnail2.png" draggable="false" class="phone-screenshot" /></a>
+							<a href="https://www.maral.fr" target="_blank"><div class="phone-button"></div></a>
+						</div>-->
+						<a href="https://www.maral.fr" target="_blank" data-animation="iphoneAnim"><img src="/img/iphone7.png" draggable="false" class="iphone-class" /></a>
 						<div class="skills-used-small">
 							<ul>
 								<li>NodeJS</li>
@@ -56,8 +54,10 @@
 						</div>
 					</div>
 
-					<div class="portfolio-info col-lg-5">
-						<p>
+					<div class="portfolio-info col-lg-4 offset-lg-1">
+						<h1 class="hero-title mt-4 mb-0 col-12" data-animation="dropDownAnim"><a href="https://www.maral.fr" target="_blank">Maral.fr</a></h1>
+
+						<p class="pt-5">
 							An <b>e-commerce</b> website allowing customers to purchase paintings or replicas of these paintings using <b><a href="https://pwinty.com/" target="_blank">Pwinty API</a></b> to
 							automatically handle replicas orders. Clients can pay for their orders by card using the <b><a href="https://stripe.com/" target="_blank">Stripe API</a></b
 							>.
@@ -96,14 +96,14 @@
 
 	<section class="section main-section" id="skills-section" data-anchor="skills">
 		<div class="bg-clipper">
-			<h1 class="hero-title mt-2 mb-0" data-animation="heroAnim">Skills</h1>
+			<h1 class="hero-title mt-2 mb-0" data-animation="dropDownAnim">Skills</h1>
 
 			<div class="skill-content col-md-10 p-3">
 				<p class="skills-text">{ Non-exhaustive list }</p>
 				<div class="skills-section">
 					<h2>Front-end</h2>
 					<div class="skills-wrapper col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-						<h1>{</h1>
+						<h1 data-animation="leftBracketAnim">{</h1>
 						<div class="wrapper-icon">
 							<div>
 								<img class="skill-icon" src="/img/icons/white/javascript_icon.png" alt="Javascript" draggable="false" />
@@ -146,13 +146,13 @@
 							</div>
 							<label>Bootstrap</label>
 						</div>
-						<h1>}</h1>
+						<h1 data-animation="rightBracketAnim">}</h1>
 					</div>
 
 					<div class="skills-section">
 						<h2>Back-end</h2>
 						<div class="skills-wrapper col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-							<h1>{</h1>
+							<h1 data-animation="leftBracketAnim">{</h1>
 							<div class="wrapper-icon">
 								<div>
 									<img class="skill-icon" src="/img/icons/white/nodejs_icon.png" alt="NodeJS" draggable="false" />
@@ -183,14 +183,14 @@
 								</div>
 								<label>S3</label>
 							</div>
-							<h1>}</h1>
+							<h1 data-animation="rightBracketAnim">}</h1>
 						</div>
 					</div>
 
 					<div class="skills-section">
 						<h2>Misc</h2>
 						<div class="skills-wrapper col-lg-8 offset-lg-2">
-							<h1>{</h1>
+							<h1 data-animation="leftBracketAnim">{</h1>
 							<div class="wrapper-icon">
 								<div>
 									<img class="skill-icon" src="/img/icons/white/git_icon.png" alt="Git" draggable="false" />
@@ -210,7 +210,7 @@
 								</div>
 								<label>Shell</label>
 							</div>
-							<h1>}</h1>
+							<h1 data-animation="rightBracketAnim">}</h1>
 						</div>
 					</div>
 				</div>
@@ -221,7 +221,7 @@
 
 	<section class="section main-section even" id="contact-section" data-anchor="contact">
 		<div class="bg-clipper">
-			<h1 class="hero-title mt-2" data-animation="heroAnim">Contact</h1>
+			<h1 class="hero-title mt-2" data-animation="dropDownAnim">Contact</h1>
 
 			<form class="col-md-6 col-sm-8 offset-sm-2" id="contact-form" method="POST" data-animation="formAnim" action="/api/contact/">
 				<div class="row">
