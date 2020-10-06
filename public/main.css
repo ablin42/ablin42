@@ -116,6 +116,7 @@ body {
   background-color: #f1f1f1;
   overflow-x: hidden;
   z-index: 0;
+  min-width: 400px;
 }
 
 .submit-btn-wrapper {
@@ -1549,6 +1550,21 @@ select:-webkit-autofill {
 }
 
 @media (max-width: 540px) {
+  .fp-controlArrow.fp-prev {
+    border-width: 16.5px 14px 16.5px 0 !important;
+  }
+  .fp-controlArrow.fp-next {
+    border-width: 16.5px 0 16.5px 14px !important;
+  }
+  #skills-section .bg-clipper {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 10% 95%, -13% 92%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 10% 95%, -13% 92%) !important;
+  }
+  #skills-section .skill-content {
+    position: initial;
+    -webkit-transform: none;
+            transform: none;
+  }
   #skills-section .skills-text {
     display: none !important;
   }
@@ -1569,6 +1585,18 @@ select:-webkit-autofill {
   #landing-section .scroll-indicator {
     width: 100%;
     margin: auto;
+  }
+  #portfolio-section .portfolio-item .skill-call-wrapper {
+    margin-bottom: 2em;
+  }
+  #portfolio-section .bg-clipper {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 97%, 73% 99%, 53% 99%, 0 100%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 73% 99%, 53% 99%, 0 100%) !important;
+  }
+  #contact-section .bg-clipper {
+    height: 102%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(95%, #f1f1f1), color-stop(5%, #151515));
+    background: linear-gradient(to bottom, #f1f1f1 95%, #151515 5%);
   }
 }
 

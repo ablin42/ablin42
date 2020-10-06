@@ -9,17 +9,19 @@ new fullpage("#fullPage", {
 	navigationPosition: "right",
 	navigationTooltips: ["Landing", "Portfolio", "Skills", "Contact"],
 	showActiveTooltip: false,
-	responsiveWidth: 540,
+	responsiveWidth: 500,
 
 	//lockAnchors: true,
 	//animateAnchor: false,
 	//recordHistory: false,
 
-	afterRender: function () {
+	/*	afterRender: function () {
+		console.log(isReady);
 		setTimeout(() => {
 			isReady = true;
-		}, 1000);
-	},
+			console.log(isReady);
+		}, 10);
+	},*/
 
 	afterLoad: function (origin, destination, direction) {
 		if (origin.anchor == "landing" && direction == null) {
@@ -31,7 +33,8 @@ new fullpage("#fullPage", {
 		let sectionId = destination.anchor.toLowerCase() + "-section";
 
 		console.log(sectionId);
-		if (isReady) triggerAnimations(sectionId);
+		//if (isReady)
+		triggerAnimations(sectionId);
 	},
 
 	afterResponsive: function (isResponsive) {
