@@ -450,8 +450,9 @@ select:-webkit-autofill {
 
 .scroll-indicator {
   height: 100px;
-  position: absolute;
-  left: 31.5%;
+  position: relative;
+  left: 0;
+  width: 250px;
 }
 
 .scroll-indicator::before {
@@ -729,9 +730,7 @@ select:-webkit-autofill {
 #portfolio-section h1 {
   text-align: center;
   font-weight: normal !important;
-  margin: 0 0 0 0 !important;
-  position: absolute;
-  top: 5%;
+  margin: 2rem 0 1rem 0 !important;
 }
 
 #portfolio-section a {
@@ -744,62 +743,6 @@ select:-webkit-autofill {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
           clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
   height: 118%;
-}
-
-#portfolio-section .phone-wrapper {
-  display: inline-block;
-  margin: 30px 30px 30px 30px;
-  background-color: #f8f8f8;
-  border: 1px solid #c0c0c0;
-  padding: 0 10px 0 10px;
-  border-radius: 25px;
-  max-width: 100% !important;
-}
-
-#portfolio-section .phone-black {
-  background-color: #151515;
-  border-color: #282828;
-}
-
-#portfolio-section .phone-screenshot {
-  max-width: 260px;
-  border: 1px solid #000000;
-}
-
-#portfolio-section .phone-small-round-top {
-  margin: 10px auto;
-  width: 5px;
-  height: 5px;
-  background-color: #c0c0c0;
-  border-radius: 50%;
-}
-
-#portfolio-section .phone-round-top-left {
-  float: left;
-  margin-left: 65px;
-  margin-top: -2px;
-  width: 9px;
-  height: 9px;
-  background-color: #c0c0c0;
-  border-radius: 50%;
-}
-
-#portfolio-section .phone-speaker {
-  margin: 15px auto;
-  margin-top: 10px;
-  width: 30px;
-  height: 5px;
-  background-color: #c0c0c0;
-  border-radius: 3px;
-}
-
-#portfolio-section .phone-button {
-  border-radius: 50%;
-  margin: 10px auto;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #c0c0c0;
-  background: none !important;
 }
 
 #portfolio-section .iphone-class {
@@ -816,6 +759,10 @@ select:-webkit-autofill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex: 0 0 45%;
+  -webkit-box-flex: 0;
+          flex: 0 0 45%;
+  max-width: 45%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -825,16 +772,6 @@ select:-webkit-autofill {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  /*a {
-			display: flex;
-			padding: 10px;
-			background-color: color(light-gray);
-		}
-
-		img {
-			margin: auto;
-			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
-		}*/
 }
 
 #portfolio-section .portfolio-thumbnail-wrapper a {
@@ -843,6 +780,10 @@ select:-webkit-autofill {
 }
 
 #portfolio-section .portfolio-thumbnail-wrapper .skills-used-small {
+  display: none;
+}
+
+#portfolio-section .portfolio-thumbnail-wrapper .iphoneSide {
   display: none;
 }
 
@@ -896,7 +837,7 @@ select:-webkit-autofill {
 #portfolio-section .portfolio-item p {
   text-align: left;
   font-size: 19px;
-  margin: 0px 2.2em 20px 2.2em;
+  margin: 0px 3em 20px 3em;
   text-indent: 50px;
 }
 
@@ -911,10 +852,11 @@ select:-webkit-autofill {
 }
 
 #portfolio-section .portfolio-item .portfolio-info {
-  height: 95% !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex: 0 0 35%;
+  -webkit-box-flex: 0;
+          flex: 0 0 35%;
+  max-width: 35%;
+  height: 95%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1348,6 +1290,8 @@ select:-webkit-autofill {
 .iphoneAnim {
   -webkit-animation: iphoneAnim 0.85s 1 0s ease-in-out;
           animation: iphoneAnim 0.85s 1 0s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 @-webkit-keyframes leftBracketAnim {
@@ -1418,21 +1362,48 @@ select:-webkit-autofill {
 	animation: bgAnim 0.5s 1 0s ease;
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
-@media (max-width: 1450px) {
-  .skills-used-small {
-    display: block !important;
-  }
-  .skills-used-large {
-    display: none;
+@media (max-width: 1700px) {
+  /*	.skills-used-small {
+		display: block !important;
+	}
+	.skills-used-large {
+		display: none;
+	}*/
+  .portfolio-info {
+    -ms-flex: 0 0 45% !important;
+    -webkit-box-flex: 0 !important;
+            flex: 0 0 45% !important;
+    max-width: 45% !important;
   }
 }
 
 @media (max-width: 1200px) {
+  #landing-section .hero-secondary-title {
+    margin-top: 1rem;
+  }
+  #landing-section .portfolio-link {
+    margin-top: 4rem;
+  }
+  #landing-section .freelancer-svg {
+    top: 50% !important;
+  }
   #contact-section .contact-svg {
     margin-top: 5%;
   }
   #portfolio-section .portfolio-item p {
     font-size: 18px;
+  }
+  #portfolio-section .portfolio-info {
+    -ms-flex: 0 0 55% !important;
+    -webkit-box-flex: 0 !important;
+            flex: 0 0 55% !important;
+    max-width: 55% !important;
+  }
+  #portfolio-section .portfolio-thumbnail-wrapper {
+    -ms-flex: 0 0 35% !important;
+    -webkit-box-flex: 0 !important;
+            flex: 0 0 35% !important;
+    max-width: 35% !important;
   }
 }
 
@@ -1473,12 +1444,12 @@ select:-webkit-autofill {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 3em;
   }
   #portfolio-section .portfolio-thumbnail-wrapper a {
     width: 70%;
   }
   #portfolio-section .portfolio-item p {
+    margin: 0px 3em 20px 0em;
     font-size: 18px;
   }
   #portfolio-section .portfolio-item .portfolio-info {
@@ -1496,19 +1467,51 @@ select:-webkit-autofill {
     margin-top: -15px;
     text-indent: 20px;
   }
-  .hero .portfolio-link {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero .scroll-indicator {
-    position: relative;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .hero h3 {
     text-indent: 25px;
     margin-left: 0;
+  }
+  .skills-list {
+    display: none !important;
+  }
+  .fp-controlArrow.fp-prev {
+    left: 10px !important;
+  }
+  .fp-controlArrow.fp-next {
+    right: 10px !important;
+  }
+  #portfolio-section .portfolio-thumbnail-wrapper {
+    -ms-flex: 0 0 100% !important;
+    -webkit-box-flex: 0 !important;
+            flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  #portfolio-section .portfolio-thumbnail-wrapper .iphoneVert {
+    display: none;
+  }
+  #portfolio-section .portfolio-thumbnail-wrapper .iphoneSide {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 100% !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #portfolio-section .portfolio-item ul {
+    display: none !important;
+  }
+  #portfolio-section .portfolio-item .portfolio-info {
+    -ms-flex: 0 0 80% !important;
+    -webkit-box-flex: 0 !important;
+            flex: 0 0 80% !important;
+    max-width: 80% !important;
+  }
+  #portfolio-section .portfolio-item .portfolio-info h1 {
+    margin: 0 !important;
+  }
+  #portfolio-section .portfolio-item .portfolio-info p {
+    margin: 0px 0em 10px 0em;
   }
   #contact-section .bg-clipper {
     height: 105%;
@@ -1546,8 +1549,32 @@ select:-webkit-autofill {
 }
 
 @media (max-width: 540px) {
+  #skills-section .skills-text {
+    display: none !important;
+  }
   #skills-section .skills-section h2 {
     font-size: 1.25em;
+  }
+  #landing-section .freelancer-svg {
+    display: none !important;
+  }
+  #landing-section .hero-title {
+    margin-left: 0% !important;
+    text-align: center;
+  }
+  #landing-section .portfolio-link {
+    margin-top: 2rem !important;
+    margin: auto;
+  }
+  #landing-section .scroll-indicator {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-height: 900px) {
+  #landing-section .bg-clipper {
+    height: 110% !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -471,8 +471,9 @@ select:-webkit-autofill {
 
 .scroll-indicator {
 	height: 100px;
-	position: absolute;
-	left: 31.5%;
+	position: relative;
+	left: 0;
+	width: 250px;
 }
 
 .scroll-indicator::before {
@@ -682,9 +683,7 @@ select:-webkit-autofill {
 	h1 {
 		text-align: center;
 		font-weight: normal !important;
-		margin: 0 0 0 0 !important;
-		position: absolute;
-		top: 5%;
+		margin: 2rem 0 1rem 0 !important;
 	}
 
 	a {
@@ -699,62 +698,6 @@ select:-webkit-autofill {
 		height: 118%;
 	}
 
-	.phone-wrapper {
-		display: inline-block;
-		margin: 30px 30px 30px 30px;
-		background-color: #f8f8f8;
-		border: 1px solid #c0c0c0;
-		padding: 0 10px 0 10px;
-		border-radius: 25px;
-		max-width: 100% !important;
-	}
-
-	.phone-black {
-		background-color: color(dark-shade);
-		border-color: color(dark-shade-light);
-	}
-
-	.phone-screenshot {
-		max-width: 260px;
-		border: 1px solid #000000;
-	}
-
-	.phone-small-round-top {
-		margin: 10px auto;
-		width: 5px;
-		height: 5px;
-		background-color: #c0c0c0;
-		border-radius: 50%;
-	}
-
-	.phone-round-top-left {
-		float: left;
-		margin-left: 65px;
-		margin-top: -2px;
-		width: 9px;
-		height: 9px;
-		background-color: #c0c0c0;
-		border-radius: 50%;
-	}
-
-	.phone-speaker {
-		margin: 15px auto;
-		margin-top: 10px;
-		width: 30px;
-		height: 5px;
-		background-color: #c0c0c0;
-		border-radius: 3px;
-	}
-
-	.phone-button {
-		border-radius: 50%;
-		margin: 10px auto;
-		width: 30px;
-		height: 30px;
-		border: 2px solid #c0c0c0;
-		background: none !important;
-	}
-
 	.iphone-class {
 		width: 100%;
 		min-width: 175px;
@@ -764,8 +707,12 @@ select:-webkit-autofill {
 	.hero-title {
 		margin-bottom: -45px;
 	}
+
 	.portfolio-thumbnail-wrapper {
 		display: flex;
+		-ms-flex: 0 0 45%;
+		flex: 0 0 45%;
+		max-width: 45%;
 		justify-content: flex-end;
 		align-items: center;
 		height: fit-content;
@@ -773,17 +720,10 @@ select:-webkit-autofill {
 			width: 45%;
 			min-width: 275px;
 		}
-		/*a {
-			display: flex;
-			padding: 10px;
-			background-color: color(light-gray);
-		}
-
-		img {
-			margin: auto;
-			clip-path: polygon(calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px), 0 0);
-		}*/
 		.skills-used-small {
+			display: none;
+		}
+		.iphoneSide {
 			display: none;
 		}
 	}
@@ -824,7 +764,7 @@ select:-webkit-autofill {
 		p {
 			text-align: left;
 			font-size: 19px;
-			margin: 0px 2.2em 20px 2.2em;
+			margin: 0px 3em 20px 3em;
 			text-indent: 50px;
 		}
 
@@ -839,8 +779,10 @@ select:-webkit-autofill {
 		}
 
 		.portfolio-info {
-			height: 95% !important;
-			display: flex;
+			-ms-flex: 0 0 35%;
+			flex: 0 0 35%;
+			max-width: 35%;
+			height: 95%;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -1057,6 +999,7 @@ select:-webkit-autofill {
 
 .iphoneAnim {
 	animation: iphoneAnim 0.85s 1 0s ease-in-out;
+	animation-iteration-count: 1;
 }
 
 @keyframes leftBracketAnim {
@@ -1100,16 +1043,39 @@ select:-webkit-autofill {
 }*/
 /* END KEYFRAMES & ANIMATION CLASSES */
 
-@media (max-width: 1450px) {
-	.skills-used-small {
+@media (max-width: 1700px) {
+	/*	.skills-used-small {
 		display: block !important;
 	}
 	.skills-used-large {
 		display: none;
+	}*/
+
+	.portfolio-info {
+		-ms-flex: 0 0 45% !important;
+		flex: 0 0 45% !important;
+		max-width: 45% !important;
 	}
 }
 
 @media (max-width: 1200px) {
+	#landing-section {
+		.hero-secondary-title {
+			margin-top: 1rem;
+		}
+
+		.portfolio-link {
+			margin-top: 4rem;
+		}
+
+		.freelancer-svg {
+			top: 50% !important;
+		}
+
+		.scroll-indicator {
+		}
+	}
+
 	#contact-section {
 		.contact-svg {
 			margin-top: 5%;
@@ -1121,6 +1087,18 @@ select:-webkit-autofill {
 			p {
 				font-size: 18px;
 			}
+		}
+
+		.portfolio-info {
+			-ms-flex: 0 0 55% !important;
+			flex: 0 0 55% !important;
+			max-width: 55% !important;
+		}
+
+		.portfolio-thumbnail-wrapper {
+			-ms-flex: 0 0 35% !important;
+			flex: 0 0 35% !important;
+			max-width: 35% !important;
 		}
 	}
 }
@@ -1175,10 +1153,10 @@ select:-webkit-autofill {
 				width: 70%;
 			}
 			display: flex;
-			margin-bottom: 3em;
 		}
 		.portfolio-item {
 			p {
+				margin: 0px 3em 20px 0em;
 				font-size: 18px;
 			}
 
@@ -1202,21 +1180,57 @@ select:-webkit-autofill {
 			text-indent: 20px;
 		}
 
-		.portfolio-link {
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.scroll-indicator {
-			position: relative;
-			left: 0;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
 		h3 {
 			text-indent: 25px;
 			margin-left: 0;
+		}
+	}
+
+	.skills-list {
+		display: none !important;
+	}
+
+	.fp-controlArrow.fp-prev {
+		left: 10px !important;
+	}
+
+	.fp-controlArrow.fp-next {
+		right: 10px !important;
+	}
+
+	#portfolio-section {
+		.portfolio-thumbnail-wrapper {
+			-ms-flex: 0 0 100% !important;
+			flex: 0 0 100% !important;
+			max-width: 100% !important;
+
+			.iphoneVert {
+				display: none;
+			}
+
+			.iphoneSide {
+				display: flex !important;
+				width: 100% !important;
+				justify-content: center;
+			}
+		}
+		.portfolio-item {
+			ul {
+				display: none !important;
+			}
+			.portfolio-info {
+				-ms-flex: 0 0 80% !important;
+				flex: 0 0 80% !important;
+				max-width: 80% !important;
+
+				h1 {
+					margin: 0 !important;
+				}
+
+				p {
+					margin: 0px 0em 10px 0em;
+				}
+			}
 		}
 	}
 
@@ -1260,10 +1274,42 @@ select:-webkit-autofill {
 
 @media (max-width: 540px) {
 	#skills-section {
+		.skills-text {
+			display: none !important;
+		}
 		.skills-section {
 			h2 {
 				font-size: 1.25em;
 			}
+		}
+	}
+
+	#landing-section {
+		.freelancer-svg {
+			display: none !important;
+		}
+
+		.hero-title {
+			margin-left: 0% !important;
+			text-align: center;
+		}
+
+		.portfolio-link {
+			margin-top: 2rem !important;
+			margin: auto;
+		}
+
+		.scroll-indicator {
+			width: 100%;
+			margin: auto;
+		}
+	}
+}
+
+@media (max-height: 900px) {
+	#landing-section {
+		.bg-clipper {
+			height: 110% !important;
 		}
 	}
 }
