@@ -13,6 +13,7 @@ $colors: (
 	//#751fff(purple),
 	//#f34023(purple),
 	main-light: lighten(#ec5454, 10%),
+	main-l: lighten(#ec5454, 5%),
 	main-dark: darken(#ec5454, 10%),
 	maral: #233bde,
 	maral-light: lighten(#233bde, 10%),
@@ -522,7 +523,14 @@ select:-webkit-autofill {
 	//font-size: calc(75px + 4vw); //128px
 	/*font-weight: bold;*/
 	font-family: "Noir" !important;
-	color: color(main);
+	//color: color(main);
+
+	background: linear-gradient(145deg, color(main), color(main-l));
+	background: -webkit-gradient(145deg, color(main), color(main-l));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding-right: 10px;
+
 	margin-left: 10%;
 	margin-top: -35px;
 	font-style: italic;
@@ -540,7 +548,7 @@ select:-webkit-autofill {
 
 .hero-secondary-title {
 	color: #000000 !important;
-	opacity: 0.6;
+	opacity: 0.85;
 	//font-size: 4vw !important;
 	//font-size: clamp(40px, 5vw, 75px) !important;
 	@include fluid-type($min_width, $max_width, 40px, 75px);
@@ -555,7 +563,8 @@ select:-webkit-autofill {
 
 	.bg-clipper {
 		height: 102%;
-		background-color: color(dark-shade);
+		//background-color: color(dark-shade);
+		background: url("./bg/cartographer.png");
 		clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
 	}
 
@@ -628,22 +637,25 @@ select:-webkit-autofill {
 }
 
 #landing-section {
-	background-color: color(light-shade);
-
+	//background-color: color(light-shade);
+	//	background: url("./svg/idk2.svg");
+	background: url("./bg/topography.png");
 	.bg-clipper {
 		height: 100%;
-		background-color: color(dark-shade);
+		//background-color: color(dark-shade);background: url("./bg/cartographer.png");
+		background: url("./bg/cartographer.png");
+		//background-size: cover;
 		clip-path: polygon(0px 0px, 100% 0px, 100% 98%, 89% 95%, 31% 85%, 0px 78%);
 	}
 }
 
 #contact-section {
 	background: linear-gradient(to bottom, color(light-shade) 50%, color(dark-shade) 50%);
-
 	.bg-clipper {
 		height: 107%;
 		clip-path: polygon(0 0, 100% 0, 100% 87%, 86% 98%, 19% 98%, 0 86%);
 		background: linear-gradient(to bottom, color(light-shade) 88%, color(dark-shade) 12%);
+		background: url("./bg/topography.png");
 	}
 
 	#contact-form {
@@ -697,10 +709,13 @@ select:-webkit-autofill {
 		color: color(main);
 		text-decoration: none;
 	}
-	background: linear-gradient(to bottom, color(light-shade) 50%, color(dark-shade) 50%);
 
+	//background: linear-gradient(to bottom, color(light-shade) 50%, color(dark-shade) 50%);
+	background: url("./bg/cartographer.png");
 	.bg-clipper {
-		background-color: color(light-shade);
+		//background-color: color(light-shade);
+		background: url("./bg/topography.png");
+
 		clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
 		height: 118%;
 	}
@@ -800,8 +815,13 @@ select:-webkit-autofill {
 	}
 
 	#maral {
-		h1,
-		h1 a,
+		h1 {
+			background: linear-gradient(145deg, color(maral), color(maral-light));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			padding-right: 10px;
+		}
+
 		b a,
 		b,
 		a {

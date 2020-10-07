@@ -125,11 +125,8 @@ app.use(expressSanitizer());
 app.use(flash());
 
 app.post("/report-violation", (req, res) => {
-	if (req.body) {
-		console.log("CSP Violation: ", req.ip, req.body);
-	} else {
-		console.log("CSP Violation: No data received!", req.ip);
-	}
+	if (req.body) console.log("CSP Violation: ", req.ip, req.body);
+	else console.log("CSP Violation: No data received!", req.ip);
 
 	res.status(204).end();
 });
