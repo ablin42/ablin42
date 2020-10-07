@@ -30,7 +30,6 @@ new fullpage("#fullPage", {
 	onLeave: function (origin, destination, direction) {
 		let sectionId = destination.anchor.toLowerCase() + "-section";
 
-		console.log(sectionId);
 		if (isReady) triggerAnimations(sectionId);
 	},
 
@@ -47,16 +46,6 @@ new fullpage("#fullPage", {
 	}
 });
 
-/*
-function removeAnimations() {
-	let allAnims = document.querySelectorAll("[data-animation]");
-
-	allAnims.forEach(item => {
-		let animationName = item.dataset.animation;
-		item.classList.remove(animationName);
-	});
-}*/
-
 function triggerAnimations(sectionId) {
 	let toAnimate = document.querySelectorAll(`#${sectionId} [data-animation]`);
 
@@ -69,10 +58,3 @@ function triggerAnimations(sectionId) {
 		item.classList.add(animationName);
 	});
 }
-
-let contactBtn = document.querySelector("#infoContactBtn");
-if (contactBtn)
-	contactBtn.addEventListener("mouseon", function () {
-		//trigger hover anim
-		//trigger box popup
-	});

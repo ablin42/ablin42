@@ -99,11 +99,11 @@ html[data-theme="dark"] {
 
 a,
 b {
-  color: #5a00eb;
+  color: #e72626;
 }
 
 a:hover {
-  color: #9452ff;
+  color: #f18282;
 }
 
 body,
@@ -124,8 +124,8 @@ body {
   margin: 5px auto 0 auto;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  background-image: -webkit-gradient(linear, right top, left top, from(#751fff), to(#9452ff));
-  background-image: linear-gradient(270deg, #751fff, #9452ff);
+  background-image: -webkit-gradient(linear, right top, left top, from(#ec5454), to(#f18282));
+  background-image: linear-gradient(270deg, #ec5454, #f18282);
   z-index: 6;
   text-decoration: none;
   color: #f1f1f1 !important;
@@ -156,8 +156,8 @@ body {
   display: block;
   padding: 10px 0;
   border: none !important;
-  background-image: -webkit-gradient(linear, left top, right top, from(#751fff), to(#9452ff));
-  background-image: linear-gradient(90deg, #751fff, #9452ff);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ec5454), to(#e72626));
+  background-image: linear-gradient(90deg, #ec5454, #e72626);
   color: #f1f1f1 !important;
   outline: none;
   cursor: pointer;
@@ -188,8 +188,8 @@ body {
   display: block;
   padding: 10px 0;
   border: none !important;
-  background: -webkit-gradient(linear, left top, right top, from(#751fff), to(#9452ff));
-  background: linear-gradient(90deg, #751fff, #9452ff);
+  background: -webkit-gradient(linear, left top, right top, from(#ec5454), to(#e72626));
+  background: linear-gradient(90deg, #ec5454, #e72626);
   color: #f1f1f1 !important;
   outline: none;
   cursor: pointer;
@@ -207,8 +207,8 @@ body {
 
 .action-link:before {
   border-radius: inherit;
-  background-image: -webkit-gradient(linear, right top, left top, from(#751fff), to(#9452ff));
-  background-image: linear-gradient(270deg, #751fff, #9452ff);
+  background-image: -webkit-gradient(linear, right top, left top, from(#ec5454), to(#f18282));
+  background-image: linear-gradient(270deg, #ec5454, #f18282);
   content: "";
   display: block;
   height: 100%;
@@ -263,7 +263,7 @@ body {
 .fp-controlArrow.fp-next:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  border-color: transparent transparent transparent #751fff;
+  border-color: transparent transparent transparent #ec5454;
   opacity: 0.9;
 }
 
@@ -277,7 +277,7 @@ body {
 .fp-controlArrow.fp-prev:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  border-color: transparent #751fff transparent transparent;
+  border-color: transparent #ec5454 transparent transparent;
   opacity: 0.9;
 }
 
@@ -287,7 +287,7 @@ input[type="password"],
 textarea {
   background-color: #e0dede !important;
   font-weight: bold;
-  color: #751fff;
+  color: #ec5454;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 2px solid transparent !important;
@@ -319,7 +319,7 @@ select:-webkit-autofill:focus {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-text-fill-color: #751fff !important;
+  -webkit-text-fill-color: #ec5454 !important;
   border: 2px solid transparent !important;
   box-shadow: 0 0 0 30px #e6e6e6 inset !important;
   -webkit-box-shadow: 0 0 0 30px #e6e6e6 inset !important;
@@ -347,7 +347,7 @@ select:-webkit-autofill {
 }
 
 .navbar-brand:hover {
-  color: #751fff !important;
+  color: #ec5454 !important;
 }
 
 .navbar-dark {
@@ -378,7 +378,7 @@ select:-webkit-autofill {
 }
 
 .navbar-nav li a i:hover {
-  color: #751fff;
+  color: #ec5454;
 }
 
 /* END NAVBAR */
@@ -436,13 +436,13 @@ select:-webkit-autofill {
 
 .hero h3 b {
   font-size: 1.25em;
-  color: #9452ff;
+  color: #f18282;
 }
 
 .hero h3 i {
   font-size: 1.9em;
   font-style: normal;
-  color: #751fff;
+  color: #ec5454;
 }
 
 .hero .portfolio-link {
@@ -493,7 +493,7 @@ select:-webkit-autofill {
 .hero-title {
   /*font-weight: bold;*/
   font-family: "Noir" !important;
-  color: #751fff;
+  color: #ec5454;
   margin-left: 10%;
   margin-top: -35px;
   font-style: italic;
@@ -522,7 +522,7 @@ select:-webkit-autofill {
 }
 
 .main-section.even .hero-title {
-  color: #751fff;
+  color: #ec5454;
 }
 
 .hero-secondary-title {
@@ -576,14 +576,14 @@ select:-webkit-autofill {
 
 #skills-section .skills-section h2 {
   font-size: 2rem;
-  color: #9452ff;
+  color: #f18282;
   opacity: 0.95;
   margin-left: 3.5em;
 }
 
 #skills-section .skills-text {
   text-align: center;
-  color: #9452ff;
+  color: #f18282;
   opacity: 0.75;
   font-size: 2em;
   -webkit-transform: rotate(90deg);
@@ -720,7 +720,7 @@ select:-webkit-autofill {
 }
 
 #contact-section .contact-footer li i {
-  color: #751fff;
+  color: #ec5454;
 }
 
 #portfolio-section {
@@ -735,7 +735,7 @@ select:-webkit-autofill {
 }
 
 #portfolio-section a {
-  color: #751fff;
+  color: #ec5454;
   text-decoration: none;
 }
 
@@ -883,13 +883,13 @@ select:-webkit-autofill {
 }
 
 #portfolio-section #maral .action-link {
-  background-image: -webkit-gradient(linear, left top, right top, from(#1b2eb3), to(#233bde)) !important;
-  background-image: linear-gradient(90deg, #1b2eb3, #233bde) !important;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4f63e5), to(#233bde)) !important;
+  background-image: linear-gradient(90deg, #4f63e5, #233bde) !important;
 }
 
 #portfolio-section #maral .action-link:before {
-  background-image: -webkit-gradient(linear, right top, left top, from(#1b2eb3), to(#233bde)) !important;
-  background-image: linear-gradient(270deg, #1b2eb3, #233bde) !important;
+  background-image: -webkit-gradient(linear, right top, left top, from(#4f63e5), to(#233bde)) !important;
+  background-image: linear-gradient(270deg, #4f63e5, #233bde) !important;
 }
 
 /* KEYFRAMES & ANIMATION CLASSES */
