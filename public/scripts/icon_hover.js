@@ -4,7 +4,6 @@ icons.forEach(item => {
 	let icon = item;
 
 	item.addEventListener("mouseover", function () {
-		console.log("x");
 		icon.src = icon.src.replace("white/", "color/");
 		icon.classList.add("icon-hovered");
 	});
