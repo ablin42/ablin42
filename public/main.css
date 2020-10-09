@@ -1245,7 +1245,7 @@ section {
   }
 }
 
-.contactSvgAnimx {
+.contactSvgAnim {
   opacity: 0;
   -webkit-animation: contactSvgAnim 1s 1 0.2s ease forwards;
           animation: contactSvgAnim 1s 1 0.2s ease forwards;
