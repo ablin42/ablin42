@@ -1024,12 +1024,10 @@ section {
 
 @keyframes contactSvgAnim {
 	0% {
-		filter: blur(0.5rem);
 		transform: translateX(100%);
 		opacity: 0;
 	}
 	100% {
-		filter: blur(0);
 		transform: translateX(0);
 		opacity: 0.7;
 	}
