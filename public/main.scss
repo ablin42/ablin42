@@ -5,16 +5,16 @@ $colors: (
 	//#0c0c0c,
 	dark-shade-light: lighten(#151515, 7.5%),
 	dark-shade-lighter: lighten(#151515, 12%),
-	main: #ec5454,
+	main: #10ac84,
 	//#ec5454(pale red),
 	//#f44336(orange),
 	//#ff3939(red),
 	//#3dd86d(green ++),
 	//#751fff(purple),
 	//#f34023(purple),
-	main-light: lighten(#ec5454, 10%),
-	main-l: lighten(#ec5454, 5%),
-	main-dark: darken(#ec5454, 10%),
+	main-light: lighten(#10ac84, 10%),
+	main-l: lighten(#10ac84, 5%),
+	main-dark: darken(#10ac84, 10%),
 	maral: #233bde,
 	maral-light: lighten(#233bde, 10%),
 	maral-dark: darken(#233bde, 10%),
@@ -440,6 +440,20 @@ select:-webkit-autofill {
 	background-color: color(light-shade);
 }
 
+h1,
+h2,
+h3,
+.action-link,
+.action-btn,
+.wrapper-icon,
+.skills-text,
+.skills-used-large ul li {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .hero {
 	position: relative;
 
@@ -819,7 +833,6 @@ select:-webkit-autofill {
 		}
 	}
 
-	/*
 	#maral {
 		li:hover {
 			transform: scale(1.3);
@@ -877,7 +890,6 @@ select:-webkit-autofill {
 			}
 		}
 	}
-	*/
 }
 
 /* KEYFRAMES & ANIMATION CLASSES */
