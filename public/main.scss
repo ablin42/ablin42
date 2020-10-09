@@ -27,10 +27,6 @@ $colors: (
 	@return map-get($colors, $colorName);
 }
 
-section {
-	margin-top: -1px !important;
-}
-
 .dark-mode {
 	filter: invert(1) hue-rotate(180deg);
 
@@ -579,12 +575,16 @@ h3,
 	line-height: clamp(35px, 4vw, 60px);
 }
 
+section {
+	margin-top: -1px !important;
+}
+
 #skills-section {
-	margin-top: -1px;
 	//background: linear-gradient(to bottom, color(dark-shade) 50%, color(light-shade) 50%);
 	background: url("./bg/topography.png");
 
 	.bg-clipper {
+		margin-top: -1px;
 		height: 102vh;
 		//background-color: color(dark-shade);
 		background: url("./bg/cartographer.png");
@@ -673,6 +673,7 @@ h3,
 }
 
 #contact-section {
+	height: 100.1vh !important;
 	background: linear-gradient(to bottom, color(light-shade) 50%, color(dark-shade) 50%);
 	.bg-clipper {
 		height: 107%;
