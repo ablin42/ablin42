@@ -2,7 +2,7 @@ let isReady = false;
 
 new fullpage("#fullPage", {
 	autoScrolling: true,
-	scrollingSpeed: 1000,
+	scrollingSpeed: 800,
 
 	anchors: ["landing", "portfolio", "skills", "contact"],
 	navigation: true,
@@ -40,7 +40,7 @@ new fullpage("#fullPage", {
 			fullpage_api.setRecordHistory(false);
 		} else {
 			fullpage_api.setAutoScrolling(true);
-			fullpage_api.setScrollingSpeed(1000);
+			fullpage_api.setScrollingSpeed(800);
 			fullpage_api.setRecordHistory(true);
 		}
 	}
