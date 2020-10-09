@@ -531,6 +531,7 @@ select:-webkit-autofill {
 	background: linear-gradient(145deg, color(main), color(main-l));
 	background: -webkit-gradient(145deg, color(main), color(main-l));
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding-right: 10px;
 
@@ -562,7 +563,8 @@ select:-webkit-autofill {
 
 #skills-section {
 	margin-top: -1px;
-	background: linear-gradient(to bottom, color(dark-shade) 50%, color(light-shade) 50%);
+	//background: linear-gradient(to bottom, color(dark-shade) 50%, color(light-shade) 50%);
+	background: url("./bg/topography.png");
 
 	.bg-clipper {
 		height: 102%;
@@ -817,6 +819,7 @@ select:-webkit-autofill {
 		}
 	}
 
+	/*
 	#maral {
 		li:hover {
 			transform: scale(1.3);
@@ -826,6 +829,7 @@ select:-webkit-autofill {
 		h1 {
 			background: linear-gradient(145deg, color(maral), color(maral-light));
 			-webkit-background-clip: text;
+			background-clip: text;
 			-webkit-text-fill-color: transparent;
 			padding-right: 10px;
 		}
@@ -854,6 +858,7 @@ select:-webkit-autofill {
 		h1 {
 			background: linear-gradient(145deg, color(xs-url), color(xs-url-light));
 			-webkit-background-clip: text;
+			background-clip: text;
 			-webkit-text-fill-color: transparent;
 			padding-right: 10px;
 		}
@@ -872,6 +877,7 @@ select:-webkit-autofill {
 			}
 		}
 	}
+	*/
 }
 
 /* KEYFRAMES & ANIMATION CLASSES */
@@ -1134,9 +1140,6 @@ select:-webkit-autofill {
 		.freelancer-svg {
 			top: 50% !important;
 		}
-
-		.scroll-indicator {
-		}
 	}
 
 	#contact-section {
@@ -1236,6 +1239,10 @@ select:-webkit-autofill {
 }
 
 @media (max-width: 768px) {
+	#fp-nav.fp-right {
+		right: -5px !important;
+	}
+
 	.hero {
 		.hero-title {
 			margin-left: 5%;
@@ -1263,6 +1270,7 @@ select:-webkit-autofill {
 
 	#portfolio-section {
 		.portfolio-thumbnail-wrapper {
+			margin-top: 1.5em;
 			-ms-flex: 0 0 100% !important;
 			flex: 0 0 100% !important;
 			max-width: 100% !important;
