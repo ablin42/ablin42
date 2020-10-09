@@ -285,7 +285,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-  background-color: #e0dede !important;
+  background-color: #f1f1f1 !important;
   font-weight: bold;
   color: #ec5454;
   -webkit-box-sizing: border-box;
@@ -836,7 +836,7 @@ select:-webkit-autofill {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   background-color: transparent;
-  color: #233bde;
+  color: #ec5454;
 }
 
 #portfolio-section .portfolio-item p {
@@ -878,6 +878,13 @@ select:-webkit-autofill {
   margin-top: 1rem;
 }
 
+#portfolio-section #maral li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  background-color: transparent;
+  color: #233bde;
+}
+
 #portfolio-section #maral h1 {
   background: linear-gradient(145deg, #233bde, #4f63e5);
   -webkit-background-clip: text;
@@ -899,6 +906,36 @@ select:-webkit-autofill {
 #portfolio-section #maral .action-link:before {
   background-image: -webkit-gradient(linear, right top, left top, from(#4f63e5), to(#233bde)) !important;
   background-image: linear-gradient(270deg, #4f63e5, #233bde) !important;
+}
+
+#portfolio-section #xs-url li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  background-color: transparent;
+  color: #08ad5f;
+}
+
+#portfolio-section #xs-url h1 {
+  background: linear-gradient(145deg, #08ad5f, #0ade7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 10px;
+}
+
+#portfolio-section #xs-url b a,
+#portfolio-section #xs-url b,
+#portfolio-section #xs-url a {
+  color: #08ad5f;
+}
+
+#portfolio-section #xs-url .action-link {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0ade7a), to(#08ad5f)) !important;
+  background-image: linear-gradient(90deg, #0ade7a, #08ad5f) !important;
+}
+
+#portfolio-section #xs-url .action-link:before {
+  background-image: -webkit-gradient(linear, right top, left top, from(#0ade7a), to(#08ad5f)) !important;
+  background-image: linear-gradient(270deg, #0ade7a, #08ad5f) !important;
 }
 
 /* KEYFRAMES & ANIMATION CLASSES */

@@ -17,7 +17,10 @@ $colors: (
 	main-dark: darken(#ec5454, 10%),
 	maral: #233bde,
 	maral-light: lighten(#233bde, 10%),
-	maral-dark: darken(#233bde, 10%)
+	maral-dark: darken(#233bde, 10%),
+	xs-url: #08ad5f,
+	xs-url-light: #0ade7a,
+	xs-url-dark: darken(#08ad5f, 10%)
 );
 
 @function color($colorName) {
@@ -336,7 +339,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-	background-color: #e0dede !important;
+	background-color: #f1f1f1 !important;
 	font-weight: bold;
 	color: color(main);
 	box-sizing: border-box;
@@ -779,7 +782,7 @@ select:-webkit-autofill {
 			li:hover {
 				transform: scale(1.3);
 				background-color: transparent;
-				color: color(maral);
+				color: color(main);
 			}
 		}
 
@@ -815,6 +818,11 @@ select:-webkit-autofill {
 	}
 
 	#maral {
+		li:hover {
+			transform: scale(1.3);
+			background-color: transparent;
+			color: color(maral);
+		}
 		h1 {
 			background: linear-gradient(145deg, color(maral), color(maral-light));
 			-webkit-background-clip: text;
@@ -833,6 +841,34 @@ select:-webkit-autofill {
 
 			&:before {
 				background-image: linear-gradient(270deg, color(maral-light), color(maral)) !important;
+			}
+		}
+	}
+
+	#xs-url {
+		li:hover {
+			transform: scale(1.3);
+			background-color: transparent;
+			color: color(xs-url);
+		}
+		h1 {
+			background: linear-gradient(145deg, color(xs-url), color(xs-url-light));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			padding-right: 10px;
+		}
+
+		b a,
+		b,
+		a {
+			color: color(xs-url);
+		}
+
+		.action-link {
+			background-image: linear-gradient(90deg, color(xs-url-light), color(xs-url)) !important;
+
+			&:before {
+				background-image: linear-gradient(270deg, color(xs-url-light), color(xs-url)) !important;
 			}
 		}
 	}
