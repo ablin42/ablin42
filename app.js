@@ -43,7 +43,7 @@ if (process.env.ENVIRONMENT === "prod")
 
 if (process.env.ENVIRONMENT === "prod")
 	app.use(function (req, res, next) {
-		if (req.protocol == "http") return res.redirect("https://" + req.headers.host + req.url);
+		if (req.protocol == "http") return res.redirect("https://www." + req.headers.host + req.url);
 		else return next();
 	});
 
