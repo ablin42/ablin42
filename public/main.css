@@ -1358,8 +1358,6 @@ section {
 .iphoneAnim {
   -webkit-animation: iphoneAnim 0.85s 1 0s ease-in-out;
           animation: iphoneAnim 0.85s 1 0s ease-in-out;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 
 @-webkit-keyframes leftBracketAnim {
