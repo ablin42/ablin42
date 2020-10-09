@@ -7,6 +7,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+section {
+  margin-top: -1px !important;
+}
+
 .dark-mode {
   -webkit-filter: invert(1) hue-rotate(180deg);
           filter: invert(1) hue-rotate(180deg);
@@ -574,7 +578,7 @@ h3,
 }
 
 #skills-section .bg-clipper {
-  height: 102%;
+  height: 102vh;
   background: url("./bg/cartographer.png");
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
           clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
@@ -652,8 +656,8 @@ h3,
   height: clamp(50px, 5vw, 80px);
   width: clamp(50px, 5vw, 80px);
   margin: auto;
-  -webkit-transition: ease-in 0.2s;
-  transition: ease-in 0.2s;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 
 #skills-section .skills-wrapper .wrapper-icon .icon-hovered {
@@ -761,7 +765,7 @@ h3,
   background: url("./bg/topography.png");
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
           clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
-  height: 118%;
+  height: 120vh;
 }
 
 #portfolio-section .iphone-class {
@@ -1623,8 +1627,8 @@ h3,
     border-width: 16.5px 0 16.5px 14px !important;
   }
   #skills-section .bg-clipper {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 10% 95%, -13% 92%) !important;
-    clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 10% 95%, -13% 92%) !important;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 75% 94%, 10% 91%, -13% 89%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 75% 94%, 10% 91%, -13% 89%) !important;
   }
   #skills-section .skill-content {
     position: initial;
@@ -1656,13 +1660,15 @@ h3,
     margin-bottom: 2em;
   }
   #portfolio-section .bg-clipper {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 97%, 73% 99%, 53% 99%, 0 100%) !important;
-    clip-path: polygon(0 0, 100% 0, 100% 97%, 73% 99%, 53% 99%, 0 100%) !important;
+    height: 105vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 80% 95%, 50% 95%, 0 93%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 80% 95%, 50% 95%, 0 93%) !important;
   }
   #contact-section .bg-clipper {
-    height: 102%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(95%, #f1f1f1), color-stop(5%, #151515));
-    background: linear-gradient(to bottom, #f1f1f1 95%, #151515 5%);
+    height: 107%;
+    /*
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(95%, #f1f1f1), color-stop(5%, #151515));
+			background: linear-gradient(to bottom, #f1f1f1 95%, #151515 5%);*/
   }
 }
 

@@ -9,10 +9,11 @@ icons.forEach(item => {
 	});
 
 	item.addEventListener("mouseout", function () {
-		icon.classList.remove("icon-hovered");
-
 		setTimeout(() => {
-			icon.src = icon.src.replace("color/", "white/");
+			icon.classList.remove("icon-hovered");
+			setTimeout(() => {
+				icon.src = icon.src.replace("color/", "white/");
+			}, 200);
 		}, 200);
 	});
 });

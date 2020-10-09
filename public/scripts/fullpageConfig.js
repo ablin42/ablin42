@@ -2,7 +2,7 @@ let isReady = false;
 
 new fullpage("#fullPage", {
 	autoScrolling: true,
-	scrollingSpeed: 1000,
+	scrollingSpeed: 10000,
 
 	anchors: ["landing", "portfolio", "skills", "contact"],
 	navigation: true,

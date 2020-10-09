@@ -27,6 +27,10 @@ $colors: (
 	@return map-get($colors, $colorName);
 }
 
+section {
+	margin-top: -1px !important;
+}
+
 .dark-mode {
 	filter: invert(1) hue-rotate(180deg);
 
@@ -581,7 +585,7 @@ h3,
 	background: url("./bg/topography.png");
 
 	.bg-clipper {
-		height: 102%;
+		height: 102vh;
 		//background-color: color(dark-shade);
 		background: url("./bg/cartographer.png");
 		clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 22% 93%, 0 90%);
@@ -645,7 +649,7 @@ h3,
 				height: clamp(50px, 5vw, 80px);
 				width: clamp(50px, 5vw, 80px);
 				margin: auto;
-				transition: ease-in 0.2s;
+				transition: ease-in-out 0.2s;
 			}
 
 			.icon-hovered {
@@ -736,7 +740,7 @@ h3,
 		background: url("./bg/topography.png");
 
 		clip-path: polygon(0 0, 100% 0, 100% 73%, 71% 77%, 29% 79%, 0 81%);
-		height: 118%;
+		height: 120vh;
 	}
 
 	.iphone-class {
@@ -1366,8 +1370,8 @@ h3,
 
 	#skills-section {
 		.bg-clipper {
-			-webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 10% 95%, -13% 92%) !important;
-			clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 10% 95%, -13% 92%) !important;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 75% 94%, 10% 91%, -13% 89%) !important;
+			clip-path: polygon(0 0, 100% 0, 100% 96%, 75% 94%, 10% 91%, -13% 89%) !important;
 		}
 		.skill-content {
 			position: initial;
@@ -1411,16 +1415,18 @@ h3,
 			}
 		}
 		.bg-clipper {
-			-webkit-clip-path: polygon(0 0, 100% 0, 100% 97%, 73% 99%, 53% 99%, 0 100%) !important;
-			clip-path: polygon(0 0, 100% 0, 100% 97%, 73% 99%, 53% 99%, 0 100%) !important;
+			height: 105vh;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 80% 95%, 50% 95%, 0 93%) !important;
+			clip-path: polygon(0 0, 100% 0, 100% 96%, 80% 95%, 50% 95%, 0 93%) !important;
 		}
 	}
 
 	#contact-section {
 		.bg-clipper {
-			height: 102%;
+			height: 107%;
+			/*
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(95%, #f1f1f1), color-stop(5%, #151515));
-			background: linear-gradient(to bottom, #f1f1f1 95%, #151515 5%);
+			background: linear-gradient(to bottom, #f1f1f1 95%, #151515 5%);*/
 		}
 	}
 }
