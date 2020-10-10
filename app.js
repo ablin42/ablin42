@@ -37,12 +37,14 @@ app.set("trust proxy", 1);
 
 if (process.env.ENVIRONMENT === "prod")
 	app.use(function (req, res, next) {
+		console.log(req.headers.host);
 		if (req.protocol == "http") return res.redirect("https://www." + req.headers.host + req.url);
 		else return next();
 	});
 
 if (process.env.ENVIRONMENT === "prod")
 	app.use(function (req, res, next) {
+		console.log(req.headers.host);
 		if (req.headers.host === "ablin42.herokuapp.com" || req.headers.host === "ablin.dev")
 			return res.status(301).redirect("https://www." + process.env.HOST + req.url);
 		else return next();
