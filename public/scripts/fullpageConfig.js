@@ -9,7 +9,8 @@ new fullpage("#fullPage", {
 	navigationPosition: "right",
 	navigationTooltips: ["Landing", "Portfolio", "Skills", "Contact"],
 	showActiveTooltip: false,
-	responsiveWidth: 540,
+	responsiveWidth: 600,
+	//responsiveHeight: 800,
 
 	//lockAnchors: true,
 	//animateAnchor: false,

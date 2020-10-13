@@ -472,7 +472,7 @@ h3,
 		@include fluid-type($min_width, $max_width, 16px, 22px);
 		color: color(light-shade);
 		opacity: 0.9;
-		margin-top: 7%;
+		margin-top: 6%;
 		margin-left: 13%;
 		margin-bottom: 15px;
 
@@ -1141,7 +1141,79 @@ section {
 	}
 }
 
+@media (max-height: 800px) {
+	.hero {
+		h3 {
+			margin-top: 2.5% !important;
+		}
+
+		h2 {
+			margin-top: 2.5rem !important;
+		}
+	}
+
+	#portfolio-section {
+		h1 {
+			margin: 0rem 0 0.5rem 0 !important;
+		}
+
+		.portfolio-item ul li {
+			padding: 5px 10px !important;
+			font-size: 15px !important;
+		}
+
+		.portfolio-info {
+			p.last {
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+
+	#content {
+		height: 150px;
+	}
+
+	.iphone-class.vertical {
+		max-height: 90vh !important;
+		width: auto !important;
+		max-width: 100% !important;
+	}
+
+	#skills-section {
+		.action-link {
+			margin-top: 1em !important;
+		}
+		.skills-section {
+			h2 {
+				margin: 0 auto 10px auto !important;
+				width: fit-content !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.portfolio-thumbnail-wrapper {
+		flex: 0 0 40% !important;
+		max-width: 40% !important;
+	}
+
+	.portfolio-info {
+		flex: 0 0 55% !important;
+		max-width: 55% !important;
+	}
+
+	.skills-wrapper {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+	}
+}
+
 @media (max-width: 1200px) {
+	.skills-text {
+		right: -10% !important;
+	}
 	#landing-section {
 		.hero-secondary-title {
 			margin-top: 1rem;
@@ -1221,7 +1293,7 @@ section {
 		.skills-text {
 			transform: rotate(0);
 			font-size: 1.5em;
-			text-align: left;
+			text-align: center;
 			margin-bottom: 0;
 			position: initial !important;
 		}
@@ -1252,7 +1324,13 @@ section {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 650px) {
+	.skills-text {
+		display: none !important;
+	}
+}
+
+@media (max-width: 780px) {
 	#fp-nav.fp-right {
 		right: -5px !important;
 	}
@@ -1313,6 +1391,7 @@ section {
 				}
 
 				p {
+					font-size: 17px !important;
 					margin: 0px 0em 10px 0em;
 				}
 			}
@@ -1357,7 +1436,7 @@ section {
 	}
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 	.fp-controlArrow.fp-prev {
 		border-width: 16.5px 14px 16.5px 0 !important;
 	}
@@ -1421,11 +1500,35 @@ section {
 
 	#contact-section {
 		.bg-clipper {
-			height: 107%;
+			//height: 106vh;
+			position: relative;
 			/*
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(95%, #f1f1f1), color-stop(5%, #151515));
 			background: linear-gradient(to bottom, #f1f1f1 95%, #151515 5%);*/
 		}
+
+		.contact-footer {
+			position: absolute;
+			bottom: 0%;
+			margin-bottom: 1%;
+		}
+
+		#contact-form {
+			padding-bottom: 2em;
+		}
+	}
+
+	.bg-clipper {
+		height: auto !important;
+	}
+
+	#skills-section .action-link {
+		margin-top: 0 !important;
+		margin-bottom: 2.5em !important;
+	}
+
+	.portfolio-info {
+		margin-bottom: 2em !important;
 	}
 }
 
