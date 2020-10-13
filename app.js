@@ -163,5 +163,5 @@ app.get("/", (req, res) => {
 });
 
 let port = process.env.PORT;
-if (process.env.ENVIRONMENT === "prod") port = "/tmp/nginx.socket";
+//if (process.env.ENVIRONMENT === "prod") port = "/tmp/nginx.socket";
 app.listen(port, () => console.log(`Listening on port ${port}...`));
