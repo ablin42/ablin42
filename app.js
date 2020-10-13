@@ -30,7 +30,7 @@ mongoose.connect(
 // Express
 const app = express();
 
-app.use(express.static(__dirname + "/public"));
+if (process.env.ENVIRONMENT === "local") app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.set("trust proxy", 1);
@@ -61,7 +61,7 @@ app.use(
 		secret: process.env.SESSION_SECRET,
 		resave: true,
 		//proxy: true,
-		saveUninitialized: true,
+		saveUninitialized: false,
 		cookie: {
 			path: "/",
 			maxAge: 14 * 24 * 60 * 60 * 1000,
@@ -109,7 +109,6 @@ app.use(
 				"cdnjs.cloudflare.com",
 				"stackpath.bootstrapcdn.com",
 				"kit.fontawesome.com"
-				//"'unsafe-eval'"
 			],
 			frameSrc: [],
 			imgSrc: ["'self'"]
@@ -163,5 +162,6 @@ app.get("/", (req, res) => {
 	}
 });
 
-const port = process.env.PORT;
+let port = process.env.PORT;
+if (process.env.ENVIRONMENT === "prod") port = "/tmp/nginx.socket";
 app.listen(port, () => console.log(`Listening on port ${port}...`));
