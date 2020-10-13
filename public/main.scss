@@ -696,7 +696,7 @@ section {
 
 		ul {
 			margin-top: 0.5rem;
-			margin-bottom: 0.6rem;
+			margin-bottom: 1rem;
 			list-style: none;
 			display: flex;
 			justify-content: space-evenly;
@@ -1193,6 +1193,9 @@ section {
 }
 
 @media (max-width: 1300px) {
+	.skills-text {
+		right: -10% !important;
+	}
 	.portfolio-thumbnail-wrapper {
 		flex: 0 0 40% !important;
 		max-width: 40% !important;

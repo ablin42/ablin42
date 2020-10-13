@@ -706,7 +706,7 @@ section {
 
 #contact-section .contact-footer ul {
   margin-top: 0.5rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1472,6 +1472,9 @@ section {
 }
 
 @media (max-width: 1300px) {
+  .skills-text {
+    right: -10% !important;
+  }
   .portfolio-thumbnail-wrapper {
     -webkit-box-flex: 0 !important;
         -ms-flex: 0 0 40% !important;
