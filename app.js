@@ -98,9 +98,16 @@ app.use(
 	helmet.contentSecurityPolicy({
 		directives: {
 			reportUri: "/report-violation",
-			defaultSrc: ["'self'"],
-			styleSrc: ["'self'", "stackpath.bootstrapcdn.com", "kit-free.fontawesome.com", "fonts.googleapis.com"],
-			fontSrc: ["'self'", "fonts.googleapis.com", "kit-free.fontawesome.com", "fonts.gstatic.com"],
+			defaultSrc: ["'self'", "ka-f.fontawesome.com"],
+			styleSrc: [
+				"'self'",
+				"stackpath.bootstrapcdn.com",
+				"kit-free.fontawesome.com",
+				"fonts.googleapis.com",
+				"'sha256-AQe0kMnttwVvXWV4LutnFsTIDltiV/z7MUyXkuK3q8s='",
+				"'sha256-z/+epQIZWnuW/jjeypGIpZt1je7sws1OeK6n2RHmOMY='"
+			],
+			fontSrc: ["'self'", "fonts.googleapis.com", "kit-free.fontawesome.com", "fonts.gstatic.com", "ka-f.fontawesome.com"],
 			scriptSrc: [
 				"'self'",
 				"kit.fontawesome.com",
