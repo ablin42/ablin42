@@ -74,9 +74,9 @@ app.use(
 );
 
 // Body-Parser
-app.use(bodyParser.urlencoded({ extended: true, limit: 25000000 }));
+app.use(express.urlencoded({ extended: true, limit: 25000000 }));
 app.use(
-	bodyParser.json({
+	express.json({
 		limit: 25000000
 	})
 );
@@ -160,7 +160,6 @@ app.use("/api/contact", contactRoute);
 
 app.get("/", (req, res) => {
 	try {
-		console.log("agligli agnounou");
 		let obj = { csrfToken: req.csrfToken() };
 
 		return res.status(200).render("index", obj);
