@@ -160,6 +160,7 @@ app.use("/api/contact", contactRoute);
 
 app.get("/", (req, res) => {
 	try {
+		console.log("agligli agnounou");
 		let obj = { csrfToken: req.csrfToken() };
 
 		return res.status(200).render("index", obj);
