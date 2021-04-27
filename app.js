@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 //const cors = require("cors");
 const helmet = require("helmet");
@@ -157,6 +156,10 @@ const contactRoute = require("./controllers/contact");
 app.use("/api/contact", contactRoute);
 
 /* MAIN ROUTE */
+
+app.get("/issou", (req, res) => {
+	return res.status(200).send("???");
+});
 
 app.get("/", (req, res) => {
 	try {
