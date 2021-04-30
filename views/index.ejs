@@ -17,10 +17,10 @@
 			</nav>
 
 			<h3 class="col-md-8" data-animation="dropDownAnim">
-				Hi, Im a <b> <i>{</i>fullstack web developer<i>}</i> </b> and my name is
+				<%= locals.text.pres1 %> <b> <i>{</i><%= locals.text.pres2 %><i>}</i> </b> <%= locals.text.pres3 %>
 			</h3>
 			<h1 class="hero-title" data-animation="dropDownAnim">Andréas Blin</h1>
-			<h2 class="hero-secondary-title col-xl-6 offset-xl-1"><i>❝I will build the website you've been dreaming of❞</i></h2>
+			<h2 class="hero-secondary-title col-xl-6 offset-xl-1"><i>❝<%= locals.text.quote %>❞</i></h2>
 
 			<div class="call-wrapper offset-md-3 offset-sm-2 offset-xs-1">
 				<a href="#portfolio" class="action-link portfolio-link" data-animation="portfolioLinkAnim">Portfolio</a>
@@ -47,22 +47,19 @@
 					<div class="portfolio-info">
 						<h1 class="hero-title mt-4 mb-0 col-12" data-animation="dropDownAnim"><a href="http://www.xs-url.fr" target="_blank">Xs Url</a></h1>
 
-						<p>A straightforward and easy to use <b>URL shortener</b> service allowing users to redirect to an URL while <b>spoofing</b> its original <b>URL</b>.</p>
-						<p>
-							For this small scale project I did not use any CSS templating service, only <b>custom CSS</b>. Regarding the back-end, I used <b>NodeJS</b> to create an <b>API</b> to generate shorter
-							URLs and access them easily.
-						</p>
-						<p class="last">For your eye's sake I implemented both a <b>light-mode</b> and a <b>dark-mode</b> that you can toggle whenever you like it best!</p>
+						<p><%= locals.text.xs.p1 %> <b>URL shortener</b><%= locals.text.xs.p2 %> <b>spoofing</b> <%= locals.text.xs.p3 %> <b>URL</b>.</p>
+						<p><%= locals.text.xs.p4 %> <b><%= locals.text.CustomCSS %></b>. <%= locals.text.xs.p5 %> <b>NodeJS</b> <%= locals.text.xs.p6 %> <b>API</b> <%= locals.text.xs.p7 %>.</p>
+						<p class="last"><%= locals.text.xs.last %> <b>light-mode</b> <%= locals.text.xs.last2 %> <b>dark-mode</b> <%= locals.text.xs.last3 %>!</p>
 
 						<div class="skills-used-large">
 							<ul>
 								<li>NodeJS</li>
 								<li>API</li>
-								<li>Custom CSS</li>
+								<li><%= locals.text.CustomCSS %></li>
 								<li>Javascript</li>
 							</ul>
 							<div class="skill-call-wrapper">
-								<a href="#skills" class="action-link m-auto">Skills</a>
+								<a href="#skills" class="action-link m-auto"> <%= locals.text.skills %> </a>
 							</div>
 						</div>
 					</div>
@@ -119,7 +116,7 @@
 
 					<div class="portfolio-info">
 						<h1 class="hero-title mt-4 mb-0 col-12" data-animation="dropDownAnim"><a href="http://www.xs-url.fr" target="_blank">Covid Tracker</a></h1>
-						<h2 class="text-center">Coming soon..?</h2>
+						<h2 class="text-center"><%= locals.text.coming %>..?</h2>
 
 						<div class="skills-used-large"></div>
 					</div>
@@ -130,10 +127,10 @@
 
 	<section class="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
 		<div class="bg-clipper">
-			<h1 class="hero-title pt-5 mb-0" data-animation="dropDownAnim">Skills</h1>
+			<h1 class="hero-title pt-5 mb-0" data-animation="dropDownAnim"><%= locals.text.skills %></h1>
 
 			<div class="skill-content col-md-10 p-3">
-				<p class="skills-text">{ Non-exhaustive list }</p>
+				<p class="skills-text">{ <%= locals.text.contactTab.contactMe %> }</p>
 				<div class="skills-section">
 					<h2>Front-end</h2>
 					<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 skills-wrapper">
@@ -248,35 +245,35 @@
 						<h1 data-animation="rightBracketAnim">}</h1>
 					</div>
 				</div>
-				<a href="#contact" class="action-link m-auto">Contact me !</a>
+				<a href="#contact" class="action-link m-auto"><%= locals.text.contactTab.contactMe %> !</a>
 			</div>
 		</div>
 	</section>
 
 	<section class="section main-section even fp-auto-height-responsive" id="contact-section" data-anchor="contact">
 		<div class="bg-clipper">
-			<h1 class="hero-title pt-5" data-animation="dropDownAnim">Contact</h1>
+			<h1 class="hero-title pt-5" data-animation="dropDownAnim"><%= locals.text.contactTab.contact %></h1>
 
 			<form class="col-md-6 col-sm-8 offset-sm-2" id="contact-form" method="POST" data-animation="formAnim" action="/api/contact/">
 				<div class="row">
 					<div class="col-md-12">
-						<label class="control-label">Email</label>
-						<input placeholder="johndoe@gmail.com" type="email" name="email" id="email" required />
+						<label class="control-label"><%= locals.text.contactTab.email %></label>
+						<input placeholder="<%= locals.text.contactTab.placeholderEmail %>" type="email" name="email" id="email" required />
 					</div>
 				</div>
 				<div class="row mt-2">
 					<div class="col-md-12">
-						<label class="control-label">Object</label>
-						<input placeholder="Hello..." type="text" name="title" id="title" required />
+						<label class="control-label"><%= locals.text.contactTab.object %></label>
+						<input placeholder="<%= locals.text.contactTab.placeholderObject %>" type="text" name="title" id="title" required />
 					</div>
 					<div class="col-md-12 mt-2">
-						<label class="control-label">Message</label>
-						<textarea class="mb-0" id="content" rows="8" name="content" placeholder="Write your message here..." required></textarea>
+						<label class="control-label"><%= locals.text.contactTab.message %></label>
+						<textarea class="mb-0" id="content" rows="8" name="content" placeholder="<%= locals.text.contactTab.placeholderMessage %>" required></textarea>
 					</div>
 				</div>
 
 				<div class="submit-btn-wrapper">
-					<span>Send</span>
+					<span><%= locals.text.contactTab.send %></span>
 					<input type="submit" class="action-btn" value="Send" id="submit-contact" />
 				</div>
 				<input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />

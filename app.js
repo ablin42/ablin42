@@ -9,6 +9,7 @@ const csrf = require("csurf");
 const expressSanitizer = require("express-sanitizer");
 const sanitize = require("mongo-sanitize");
 const path = require("path");
+const english = require("./languages/en.json");
 require("dotenv").config();
 
 //Connect to DB
@@ -156,14 +157,9 @@ const contactRoute = require("./controllers/contact");
 app.use("/api/contact", contactRoute);
 
 /* MAIN ROUTE */
-
-app.get("/issou", (req, res) => {
-	return res.status(200).send("???");
-});
-
 app.get("/", (req, res) => {
 	try {
-		let obj = { csrfToken: req.csrfToken() };
+		let obj = { csrfToken: req.csrfToken(), text: english };
 
 		return res.status(200).render("index", obj);
 	} catch (err) {

@@ -1,0 +1,56 @@
+{
+	"lightmode": "light-mode",
+	"darkmode": "dark-mode",
+	"CustomCSS": "Custom CSS",
+	"coming": "Coming soon",
+	"pres1": "Hi, Im a",
+	"pres2": "fullstack web developer",
+	"pres3": "and my name is",
+	"quote": "I will build the website you've been dreaming of",
+	"skills": "Skills",
+	"shortener": "URL shortener",
+	"spoofing": "spoofing",
+
+	"xs": {
+		"p1": "A straightforward and easy to use",
+		"p2": "service allowing users to redirect to an URL while",
+		"p3": "its original",
+		"p4": "For this small scale project I did not use any CSS templating service, only",
+		"p5": "Regarding the back-end, I used",
+		"p6": "to create an",
+		"p7": "to generate shorter URLs and access them easily",
+		"last": "For your eye's sake I implemented both a",
+		"last2": "and a",
+		"last3": "that you can toggle whenever you like it best"
+	},
+
+	"maral": {
+		"p1": "A straightforward and easy to use",
+		"p2": "service allowing users to redirect to an URL while",
+		"p3": "its original",
+		"p4": "For this small scale project I did not use any CSS templating service, only",
+		"p5": "Regarding the back-end, I used",
+		"p6": "to create an",
+		"p7": "to generate shorter URLs and access them easily",
+		"last": "For your eye's sake I implemented both a",
+		"last2": "and a",
+		"last3": "that you can toggle whenever you like it best"
+	},
+
+	"skillsTab": {
+		"nonExhaustive": "Non-exhaustive list",
+		"misc": "Misc"
+	},
+
+	"contactTab": {
+		"contactMe": "Contact me",
+		"contact": "Contact",
+		"email": "Email",
+		"object": "Object",
+		"message": "Message",
+		"placeholderEmail": "severus.snape@gmail.com",
+		"placeholderObject": "Hello...",
+		"placeholderMessage": "Write your message here...",
+		"send": "Send"
+	}
+}
