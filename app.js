@@ -10,6 +10,7 @@ const expressSanitizer = require("express-sanitizer");
 const sanitize = require("mongo-sanitize");
 const path = require("path");
 const english = require("./languages/en.json");
+const french = require("./languages/fr.json");
 require("dotenv").config();
 
 //Connect to DB
