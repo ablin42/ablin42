@@ -12,10 +12,10 @@ const limiter = rateLimit({
 	store: new MongoStore({
 		uri: process.env.DB_CONNECTION,
 		collectionName: "contactRateLimit",
-		expireTimeMs: 6 * 60 * 60 * 1000
+		expireTimeMs: 7 * 24 * 60 * 60 * 1000
 	}),
-	windowMs: 6 * 60 * 60 * 1000,
-	max: 5,
+	windowMs: 7 * 24 * 60 * 60 * 1000
+	max: 2,
 	handler: function (req, res) {
 		res.status(200).json({ error: true, message: "Too many requests, please try again later" });
 	}
