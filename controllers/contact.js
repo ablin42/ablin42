@@ -14,7 +14,7 @@ const limiter = rateLimit({
 		collectionName: "contactRateLimit",
 		expireTimeMs: 7 * 24 * 60 * 60 * 1000
 	}),
-	windowMs: 7 * 24 * 60 * 60 * 1000
+	windowMs: 7 * 24 * 60 * 60 * 1000,
 	max: 2,
 	handler: function (req, res) {
 		res.status(200).json({ error: true, message: "Too many requests, please try again later" });
