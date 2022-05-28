@@ -28,7 +28,7 @@ router.post("/", limiter, vContact, async (req, res) => {
 		const content = req.body.content;
 		await utils.checkValidity(req);
 		
-		if (content.includes("gaifs.battletech-newsletter.de/gotodate/promo")) throw new Error("Spam detected");
+		if (content.includes("battletech")) throw new Error("Spam detected");
 		if (await mailer(process.env.EMAIL, subject, content)) throw new Error("An error occured while sending the mail");
 
 		return res.status(200).json({ error: false, message: "Your mail has been sent, I will reply as soon as possible!" });
