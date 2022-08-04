@@ -1,4 +1,4 @@
-const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
+// const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
 let form = document.querySelector("#contact-form");
 
 if (form)
@@ -17,8 +17,8 @@ async function submitContact(e) {
 		method: "POST",
 		headers: {
 			"Accept": "application/json, text/plain, */*",
-			"Content-Type": "application/json",
-			"CSRF-Token": csrfToken
+			"Content-Type": "application/json"
+			// "CSRF-Token": csrfToken
 		},
 		body: JSON.stringify({ email: email, title: title, content: content })
 	});

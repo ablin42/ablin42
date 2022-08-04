@@ -7,7 +7,7 @@ const MongoStore = require("rate-limit-mongo");
 const mailer = require("./helpers/mailer");
 require("dotenv").config();
 const utils = require("./helpers/utils");
-const blacklist = require("../blacklist.json")
+const blacklist = require("../../blacklist.json");
 
 const limiter = rateLimit({
 	store: new MongoStore({
@@ -28,7 +28,7 @@ router.post("/", limiter, vContact, async (req, res) => {
 		const subject = `Contact mail received FROM [${req.body.email}] - ${req.body.title}`;
 		const content = req.body.content;
 		await utils.checkValidity(req);
-		
+
 		if (blacklist.some(item => content.includes(item))) throw new Error("Spam detected");
 		if (await mailer(process.env.EMAIL, subject, content)) throw new Error("An error occured while sending the mail");
 
