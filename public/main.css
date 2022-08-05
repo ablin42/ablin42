@@ -1140,6 +1140,7 @@ section {
 
 #contact-section {
   height: 100.1vh !important;
+  width: 101%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f1f1f1), color-stop(50%, #151515));
   background: linear-gradient(to bottom, #f1f1f1 50%, #151515 50%);
 }
