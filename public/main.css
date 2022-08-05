@@ -7,12 +7,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+.dark-mode {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode .invert {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
+}
+
+/*********************************************/
 .container-decorated {
   border-radius: 15px 150px 15px 150px;
   padding: 24px 24px 12px 24px;
   background: url("./bg/topography.png");
   margin-top: 5% !important;
   border: 7px solid #1a1a1a !important;
+}
+
+.clickable-icon {
+  cursor: pointer;
+}
+
+.clickable-icon:hover {
+  color: #f1f1f1;
 }
 
 #introduction .profile-img {
@@ -24,16 +43,7 @@
   color: black !important;
 }
 
-.dark-mode {
-  -webkit-filter: invert(1) hue-rotate(180deg);
-          filter: invert(1) hue-rotate(180deg);
-}
-
-.dark-mode .invert {
-  -webkit-filter: invert(1) hue-rotate(180deg);
-          filter: invert(1) hue-rotate(180deg);
-}
-
+/*********************************************/
 /* BOOTSTRAP CONFIG */
 :root {
   --bs-light-shade: #f1f1f1;
@@ -807,13 +817,14 @@ select:-webkit-autofill {
 }
 
 .project-item h1 {
-  font-size: 20px;
-  margin: 0 10px;
+  font-size: 24px;
+  margin: 10px 0 5px 0;
 }
 
 .project-item p {
   font-size: 15px;
   opacity: 0.9;
+  text-indent: 5px;
 }
 
 .project-item .badge-group {
@@ -1899,6 +1910,36 @@ section {
   .skills-text {
     display: none !important;
   }
+}
+
+#fp-nav {
+  height: 100% !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#fp-nav ul {
+  height: 70% !important;
+}
+
+#fp-nav ul li {
+  height: 25% !important;
+}
+
+#fp-nav ul li a {
+  background-color: #d7d7d7 !important;
+}
+
+#fp-nav ul li .active {
+  background-color: #33a1fd !important;
+}
+
+#fp-nav ul li span {
+  background: none;
 }
 
 @media (max-width: 780px) {
