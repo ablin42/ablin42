@@ -8,7 +8,7 @@ const Skills = () => {
 		<>
 			<section className="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
 				<div className="bg-clipper">
-					<h1 className="hero-title pt-5 mb-0" data-animation="dropDownAnim">
+					{/* <h1 className="hero-title pt-5 mb-0" data-animation="dropDownAnim">
 						?%= text.skills %?
 					</h1>
 
@@ -148,7 +148,7 @@ const Skills = () => {
 						<a href="#contact" className="action-link m-auto">
 							?%= text.contactTab.contactMe %? !
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</section>
 		</>
