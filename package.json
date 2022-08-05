@@ -20,7 +20,12 @@
 	},
 	"homepage": "https://github.com/ablin42/ablin42#readme",
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.1.2",
+		"@fortawesome/free-brands-svg-icons": "^6.1.2",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@fullpage/react-fullpage": "^0.1.26",
 		"body-parser": "^1.19.0",
+		"bootstrap": "^5.2.0",
 		"connect-mongo": "^3.2.0",
 		"cors": "^2.8.5",
 		"csurf": "^1.11.0",
@@ -34,13 +39,16 @@
 		"express-validator": "^6.6.1",
 		"flash": "^1.1.0",
 		"helmet": "^4.1.0",
+		"i18next": "^21.8.16",
 		"mongo-sanitize": "^1.1.0",
 		"mongoose": "^5.12.5",
 		"next": "^12.2.3",
 		"nodemailer": "^6.4.13",
 		"rate-limit-mongo": "^2.2.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-i18next": "^11.18.3",
+		"styled-components": "^5.3.5"
 	},
 	"devDependencies": {
 		"@types/express": "^4.17.8",
