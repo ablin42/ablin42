@@ -57,7 +57,7 @@ const Landing = () => {
 					<div className="container">
 						<div className="col-8 m-auto container-decorated shadow-lg" id="introduction">
 							<h1 className="mb-3 text-main">
-								0xHarb <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack Developer
+								~/0xHarb <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack Developer
 							</h1>
 							<div className="row">
 								<p className="ms-1">Im a software engineer &amp; crypto enjoyooor that loves to experiment</p>
