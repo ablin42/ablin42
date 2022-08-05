@@ -101,6 +101,9 @@ const Landing = () => {
 								</div>
 							</div>
 						</div>
+						<div className="d-flex justify-content-center mt-3">
+							<img src="/scroll-indicator.gif" alt="try scrolling" width="75px" />
+						</div>
 					</div>
 
 					{/* <h3 className="col-md-8" data-animation="dropDownAnim">

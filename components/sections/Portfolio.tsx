@@ -1,6 +1,6 @@
 // @EXTERNALS
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { StyledComponent } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
@@ -12,24 +12,61 @@ const ProjectItem = styled.div`
 	color: white;
 	background-color: #181818;
 	height: 260px;
-	padding: 20px 30px;
+	padding: 20px 30px 20px 35px;
 	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%) !important;
 	border: 5px solid #1a1a1a !important;
+	position: relative;
+`;
+const Menu: StyledComponent<any> = styled.div`
+	position: absolute;
+	right: ${({ attachRight }: any) => (attachRight ? "-30px" : "auto")};
+	left: ${({ attachRight }: any) => (attachRight ? "auto" : "-30px")};
+	padding: 5px;
+	background-color: #33a1fd;
+	border-radius: 15px;
 `;
 
 const Portfolio = () => {
+	const [open, setOpen] = useState<number | null>(null);
+
 	return (
 		<>
 			<section className="section main-section even fp-auto-height-responsive" id="portfolio-section" data-anchor="portfolio">
 				<div className="bg-clipper">
 					<div className="">
 						<div className="container test mt-5 pt-5 pb-5">
-							<div className="col-7 m-auto mt-5">
+							<div className="col-8 m-auto mt-5">
 								<div className="row mb-4">
 									<div className="col-6">
 										<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 50px 10px" }}>
-											<div className="d-flex align-items-center mb-3">
-												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+											<Menu className="d-flex flex-column shadow-sm">
+												<FontAwesomeIcon
+													className="fa-icon clickable-icon p-2"
+													fontSize={25}
+													icon={faLayerGroup}
+													color="#121212"
+													onClick={() => setOpen(open === 1 ? null : 1)}
+												/>
+												{open === 1 && (
+													<>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faArrowUpRightFromSquare}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faCodeBranch}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+													</>
+												)}
+											</Menu>
+											<div className="d-flex align-items-center mb-1">
 												<h1>Dungeon Defenders</h1>
 											</div>
 											<p>
@@ -43,30 +80,51 @@ const Portfolio = () => {
 													<span className="badge bg-primary m-1">Node</span>
 													<span className="badge bg-primary m-1">Solidity</span>
 												</div>
-												<div>
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
-												</div>
 											</div>
 										</ProjectItem>
 									</div>
 									<div className="col-6">
 										<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 10px 50px" }}>
-											<div className="d-flex align-items-center mb-3">
-												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+											<Menu className="d-flex flex-column shadow-sm" attachRight>
+												<FontAwesomeIcon
+													className="fa-icon clickable-icon p-2"
+													fontSize={25}
+													icon={faLayerGroup}
+													color="#121212"
+													onClick={() => setOpen(open === 2 ? null : 2)}
+												/>
+												{open === 2 && (
+													<>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faArrowUpRightFromSquare}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faCodeBranch}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+													</>
+												)}
+											</Menu>
+											<div className="d-flex align-items-center mb-1">
 												<h1>chaproulette</h1>
 											</div>
-											<p>An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet</p>
+											<p>
+												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+											</p>
 
-											<div className="d-flex justify-content-between align-items-center mt-5 pt-4">
+											<div className="d-flex justify-content-between align-items-center">
 												<div>
 													<span className="badge bg-primary m-1">React</span>
 													<span className="badge bg-primary m-1">Node</span>
 													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
-												<div>
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
 												</div>
 											</div>
 										</ProjectItem>
@@ -75,29 +133,80 @@ const Portfolio = () => {
 								<div className="row">
 									<div className="col-6">
 										<ProjectItem className="project-item" style={{ borderRadius: "10px 50px 10px 10px" }}>
-											<div className="d-flex align-items-center mb-3">
-												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+											<Menu className="d-flex flex-column shadow-sm">
+												<FontAwesomeIcon
+													className="fa-icon clickable-icon p-2"
+													fontSize={25}
+													icon={faLayerGroup}
+													color="#121212"
+													onClick={() => setOpen(open === 3 ? null : 3)}
+												/>
+												{open === 3 && (
+													<>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faArrowUpRightFromSquare}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faCodeBranch}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+													</>
+												)}
+											</Menu>
+											<div className="d-flex align-items-center mb-1">
 												<h1>bullvsbear</h1>
 											</div>
-											<p>An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet</p>
+											<p>
+												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+											</p>
 
-											<div className="d-flex justify-content-between align-items-center mt-5 pt-4">
+											<div className="d-flex justify-content-between align-items-center">
 												<div>
 													<span className="badge bg-primary m-1">React</span>
 													<span className="badge bg-primary m-1">Node</span>
 													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
-												<div>
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
 												</div>
 											</div>
 										</ProjectItem>
 									</div>
 									<div className="col-6">
 										<ProjectItem className="project-item" style={{ borderRadius: "50px 10px 10px 10px" }}>
-											<div className="d-flex align-items-center mb-3">
-												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+											<Menu className="d-flex flex-column shadow-sm" attachRight>
+												<FontAwesomeIcon
+													className="fa-icon clickable-icon p-2"
+													fontSize={25}
+													icon={faLayerGroup}
+													color="#121212"
+													onClick={() => setOpen(open === 4 ? null : 4)}
+												/>
+												{open === 4 && (
+													<>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faArrowUpRightFromSquare}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+														<FontAwesomeIcon
+															className="fa-icon  clickable-icon p-2"
+															fontSize={25}
+															icon={faCodeBranch}
+															style={{ cursor: "pointer" }}
+															color="#121212"
+														/>
+													</>
+												)}
+											</Menu>
+											<div className="d-flex align-items-center mb-1">
 												<h1>xs-url</h1>
 											</div>
 											<p>
@@ -110,10 +219,6 @@ const Portfolio = () => {
 													<span className="badge bg-primary m-1">React</span>
 													<span className="badge bg-primary m-1">Node</span>
 													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
-												<div>
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
-													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
 												</div>
 											</div>
 										</ProjectItem>
