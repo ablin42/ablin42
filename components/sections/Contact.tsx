@@ -8,7 +8,7 @@ const Contact = () => {
 		<>
 			<section className="section main-section even fp-auto-height-responsive" id="contact-section" data-anchor="contact">
 				<div className="bg-clipper">
-					<h1 className="hero-title pt-5" data-animation="dropDownAnim">
+					{/* <h1 className="hero-title pt-5" data-animation="dropDownAnim">
 						?%= text.contactTab.contact %?
 					</h1>
 
@@ -71,7 +71,7 @@ const Contact = () => {
 								<i className="fas fa-envelope"></i>
 							</li>
 						</ul>
-					</div>
+					</div> */}
 				</div>
 			</section>
 		</>

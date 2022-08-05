@@ -1,14 +1,137 @@
 // @EXTERNALS
 import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
+import { faFolder } from "@fortawesome/free-regular-svg-icons";
 // @COMPONENTS
 // @MISC
+
+const ProjectItem = styled.div`
+	color: white;
+	background-color: #181818;
+	height: 260px;
+	padding: 20px 30px;
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%) !important;
+	border: 5px solid #1a1a1a !important;
+`;
 
 const Portfolio = () => {
 	return (
 		<>
 			<section className="section main-section even fp-auto-height-responsive" id="portfolio-section" data-anchor="portfolio">
 				<div className="bg-clipper">
-					<div className="slide" id="xs-url">
+					<div className="">
+						<div className="container test mt-5 pt-5 pb-5">
+							<div className="col-7 m-auto mt-5">
+								<div className="row mb-4">
+									<div className="col-6">
+										<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 50px 10px" }}>
+											<div className="d-flex align-items-center mb-3">
+												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+												<h1>Dungeon Defenders</h1>
+											</div>
+											<p>
+												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+											</p>
+
+											<div className="d-flex justify-content-between align-items-center mt-4">
+												<div>
+													<span className="badge bg-primary m-1">React</span>
+													<span className="badge bg-primary m-1">Node</span>
+													<span className="badge bg-primary m-1">Solidity</span>
+												</div>
+												<div>
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
+												</div>
+											</div>
+										</ProjectItem>
+									</div>
+									<div className="col-6">
+										<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 10px 50px" }}>
+											<div className="d-flex align-items-center mb-3">
+												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+												<h1>chaproulette</h1>
+											</div>
+											<p>An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet</p>
+
+											<div className="d-flex justify-content-between align-items-center mt-5 pt-4">
+												<div>
+													<span className="badge bg-primary m-1">React</span>
+													<span className="badge bg-primary m-1">Node</span>
+													<span className="badge bg-primary m-1">Solidity</span>
+												</div>
+												<div>
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
+												</div>
+											</div>
+										</ProjectItem>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-6">
+										<ProjectItem className="project-item" style={{ borderRadius: "10px 50px 10px 10px" }}>
+											<div className="d-flex align-items-center mb-3">
+												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+												<h1>bullvsbear</h1>
+											</div>
+											<p>An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet</p>
+
+											<div className="d-flex justify-content-between align-items-center mt-5 pt-4">
+												<div>
+													<span className="badge bg-primary m-1">React</span>
+													<span className="badge bg-primary m-1">Node</span>
+													<span className="badge bg-primary m-1">Solidity</span>
+												</div>
+												<div>
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
+												</div>
+											</div>
+										</ProjectItem>
+									</div>
+									<div className="col-6">
+										<ProjectItem className="project-item" style={{ borderRadius: "50px 10px 10px 10px" }}>
+											<div className="d-flex align-items-center mb-3">
+												<FontAwesomeIcon className="fa-icon" fontSize={35} icon={faLayerGroup} color="#121212" />
+												<h1>xs-url</h1>
+											</div>
+											<p>
+												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+											</p>
+
+											<div className="d-flex justify-content-between align-items-center mt-4">
+												<div>
+													<span className="badge bg-primary m-1">React</span>
+													<span className="badge bg-primary m-1">Node</span>
+													<span className="badge bg-primary m-1">Solidity</span>
+												</div>
+												<div>
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faArrowUpRightFromSquare} />
+													<FontAwesomeIcon className="fa-icon m-1" fontSize={25} icon={faCodeBranch} />
+												</div>
+											</div>
+										</ProjectItem>
+									</div>
+									{/* <div className="col-4">
+									<ProjectItem className="shadow-lg rounded-2">
+										<h1>Dungeon Defenders</h1>
+									</ProjectItem>
+								</div>
+								<div className="col-4">
+									<ProjectItem className="shadow-lg rounded-2">
+										<h1>Dungeon Defenders</h1>
+									</ProjectItem>
+								</div> */}
+								</div>
+							</div>
+						</div>
+						{/* <div className="slide" id="xs-url">
 						<div className="portfolio-item row">
 							<div className="portfolio-thumbnail-wrapper p-0">
 								<a href="http://www.xs-url.fr" target="_blank" data-animation="iphoneAnim" className="iphoneVert">
@@ -65,9 +188,9 @@ const Portfolio = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 
-					<div className="slide" id="maral">
+						{/* <div className="slide" id="maral">
 						<div className="portfolio-item row">
 							<div className="portfolio-thumbnail-wrapper p-0">
 								<a href="https://www.maral.fr" target="_blank" data-animation="iphoneAnim" className="iphoneVert">
@@ -160,6 +283,7 @@ const Portfolio = () => {
 								<div className="skills-used-large"></div>
 							</div>
 						</div>
+					</div> */}
 					</div>
 				</div>
 			</section>
