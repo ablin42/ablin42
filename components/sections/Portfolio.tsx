@@ -33,197 +33,196 @@ const Portfolio = () => {
 		<>
 			<section className="section main-section even fp-auto-height-responsive" id="portfolio-section" data-anchor="portfolio">
 				<div className="bg-clipper">
-					<div className="">
-						<div className="container test mt-5 pt-5 pb-5">
-							<div className="col-8 m-auto mt-5">
-								<div className="row mb-4">
-									<div className="col-6">
-										<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 50px 10px" }}>
-											<Menu className="d-flex flex-column shadow-sm">
-												<FontAwesomeIcon
-													className="fa-icon clickable-icon p-2"
-													fontSize={25}
-													icon={faLayerGroup}
-													color="#121212"
-													onClick={() => setOpen(open === 1 ? null : 1)}
-												/>
-												{open === 1 && (
-													<>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faArrowUpRightFromSquare}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faCodeBranch}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-													</>
-												)}
-											</Menu>
-											<div className="d-flex align-items-center mb-1">
-												<h1>Dungeon Defenders</h1>
-											</div>
-											<p>
-												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
-												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-											</p>
+					<div className="container test mt-5 pt-5 pb-5">
+						<div className="col-8 m-auto mt-5">
+							<div className="row mb-4">
+								<div className="col-6">
+									<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 50px 10px" }}>
+										<Menu className="d-flex flex-column shadow-sm">
+											<FontAwesomeIcon
+												className="fa-icon clickable-icon p-2"
+												fontSize={25}
+												icon={faLayerGroup}
+												color="#121212"
+												onClick={() => setOpen(open === 1 ? null : 1)}
+											/>
+											{open === 1 && (
+												<>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faArrowUpRightFromSquare}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faCodeBranch}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+												</>
+											)}
+										</Menu>
+										<div className="d-flex align-items-center mb-1">
+											<h1>Dungeon Defenders</h1>
+										</div>
+										<p>
+											An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+											dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+										</p>
 
-											<div className="d-flex justify-content-between align-items-center mt-4">
-												<div>
-													<span className="badge bg-primary m-1">React</span>
-													<span className="badge bg-primary m-1">Node</span>
-													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
+										<div className="d-flex justify-content-between align-items-center mt-4">
+											<div>
+												<span className="badge bg-primary m-1">React</span>
+												<span className="badge bg-primary m-1">Node</span>
+												<span className="badge bg-primary m-1">Solidity</span>
 											</div>
-										</ProjectItem>
-									</div>
-									<div className="col-6">
-										<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 10px 50px" }}>
-											<Menu className="d-flex flex-column shadow-sm" attachRight>
-												<FontAwesomeIcon
-													className="fa-icon clickable-icon p-2"
-													fontSize={25}
-													icon={faLayerGroup}
-													color="#121212"
-													onClick={() => setOpen(open === 2 ? null : 2)}
-												/>
-												{open === 2 && (
-													<>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faArrowUpRightFromSquare}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faCodeBranch}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-													</>
-												)}
-											</Menu>
-											<div className="d-flex align-items-center mb-1">
-												<h1>chaproulette</h1>
-											</div>
-											<p>
-												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
-												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-											</p>
-
-											<div className="d-flex justify-content-between align-items-center">
-												<div>
-													<span className="badge bg-primary m-1">React</span>
-													<span className="badge bg-primary m-1">Node</span>
-													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
-											</div>
-										</ProjectItem>
-									</div>
+										</div>
+									</ProjectItem>
 								</div>
-								<div className="row">
-									<div className="col-6">
-										<ProjectItem className="project-item" style={{ borderRadius: "10px 50px 10px 10px" }}>
-											<Menu className="d-flex flex-column shadow-sm">
-												<FontAwesomeIcon
-													className="fa-icon clickable-icon p-2"
-													fontSize={25}
-													icon={faLayerGroup}
-													color="#121212"
-													onClick={() => setOpen(open === 3 ? null : 3)}
-												/>
-												{open === 3 && (
-													<>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faArrowUpRightFromSquare}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faCodeBranch}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-													</>
-												)}
-											</Menu>
-											<div className="d-flex align-items-center mb-1">
-												<h1>bullvsbear</h1>
-											</div>
-											<p>
-												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
-												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-											</p>
+								<div className="col-6">
+									<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 10px 50px" }}>
+										<Menu className="d-flex flex-column shadow-sm" attachRight>
+											<FontAwesomeIcon
+												className="fa-icon clickable-icon p-2"
+												fontSize={25}
+												icon={faLayerGroup}
+												color="#121212"
+												onClick={() => setOpen(open === 2 ? null : 2)}
+											/>
+											{open === 2 && (
+												<>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faArrowUpRightFromSquare}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faCodeBranch}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+												</>
+											)}
+										</Menu>
+										<div className="d-flex align-items-center mb-1">
+											<h1>chaproulette</h1>
+										</div>
+										<p>
+											An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+											dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+										</p>
 
-											<div className="d-flex justify-content-between align-items-center">
-												<div>
-													<span className="badge bg-primary m-1">React</span>
-													<span className="badge bg-primary m-1">Node</span>
-													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
+										<div className="d-flex justify-content-between align-items-center">
+											<div>
+												<span className="badge bg-primary m-1">React</span>
+												<span className="badge bg-primary m-1">Node</span>
+												<span className="badge bg-primary m-1">Solidity</span>
 											</div>
-										</ProjectItem>
-									</div>
-									<div className="col-6">
-										<ProjectItem className="project-item" style={{ borderRadius: "50px 10px 10px 10px" }}>
-											<Menu className="d-flex flex-column shadow-sm" attachRight>
-												<FontAwesomeIcon
-													className="fa-icon clickable-icon p-2"
-													fontSize={25}
-													icon={faLayerGroup}
-													color="#121212"
-													onClick={() => setOpen(open === 4 ? null : 4)}
-												/>
-												{open === 4 && (
-													<>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faArrowUpRightFromSquare}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-														<FontAwesomeIcon
-															className="fa-icon  clickable-icon p-2"
-															fontSize={25}
-															icon={faCodeBranch}
-															style={{ cursor: "pointer" }}
-															color="#121212"
-														/>
-													</>
-												)}
-											</Menu>
-											<div className="d-flex align-items-center mb-1">
-												<h1>xs-url</h1>
-											</div>
-											<p>
-												An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
-												dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-											</p>
+										</div>
+									</ProjectItem>
+								</div>
+							</div>
+							<div className="row">
+								<div className="col-6">
+									<ProjectItem className="project-item" style={{ borderRadius: "10px 50px 10px 10px" }}>
+										<Menu className="d-flex flex-column shadow-sm">
+											<FontAwesomeIcon
+												className="fa-icon clickable-icon p-2"
+												fontSize={25}
+												icon={faLayerGroup}
+												color="#121212"
+												onClick={() => setOpen(open === 3 ? null : 3)}
+											/>
+											{open === 3 && (
+												<>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faArrowUpRightFromSquare}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faCodeBranch}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+												</>
+											)}
+										</Menu>
+										<div className="d-flex align-items-center mb-1">
+											<h1>bullvsbear</h1>
+										</div>
+										<p>
+											An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+											dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+										</p>
 
-											<div className="d-flex justify-content-between align-items-center mt-4">
-												<div>
-													<span className="badge bg-primary m-1">React</span>
-													<span className="badge bg-primary m-1">Node</span>
-													<span className="badge bg-primary m-1">Solidity</span>
-												</div>
+										<div className="d-flex justify-content-between align-items-center">
+											<div>
+												<span className="badge bg-primary m-1">React</span>
+												<span className="badge bg-primary m-1">Node</span>
+												<span className="badge bg-primary m-1">Solidity</span>
 											</div>
-										</ProjectItem>
-									</div>
-									{/* <div className="col-4">
+										</div>
+									</ProjectItem>
+								</div>
+								<div className="col-6">
+									<ProjectItem className="project-item" style={{ borderRadius: "50px 10px 10px 10px" }}>
+										<Menu className="d-flex flex-column shadow-sm" attachRight>
+											<FontAwesomeIcon
+												className="fa-icon clickable-icon p-2"
+												fontSize={25}
+												icon={faLayerGroup}
+												color="#121212"
+												onClick={() => setOpen(open === 4 ? null : 4)}
+											/>
+											{open === 4 && (
+												<>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faArrowUpRightFromSquare}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+													<FontAwesomeIcon
+														className="fa-icon  clickable-icon p-2"
+														fontSize={25}
+														icon={faCodeBranch}
+														style={{ cursor: "pointer" }}
+														color="#121212"
+													/>
+												</>
+											)}
+										</Menu>
+										<div className="d-flex align-items-center mb-1">
+											<h1>xs-url</h1>
+										</div>
+										<p>
+											An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+											dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+										</p>
+
+										<div className="d-flex justify-content-between align-items-center mt-4">
+											<div>
+												<span className="badge bg-primary m-1">React</span>
+												<span className="badge bg-primary m-1">Node</span>
+												<span className="badge bg-primary m-1">Solidity</span>
+											</div>
+										</div>
+									</ProjectItem>
+								</div>
+								{/* <div className="col-4">
 									<ProjectItem className="shadow-lg rounded-2">
 										<h1>Dungeon Defenders</h1>
 									</ProjectItem>
@@ -233,10 +232,10 @@ const Portfolio = () => {
 										<h1>Dungeon Defenders</h1>
 									</ProjectItem>
 								</div> */}
-								</div>
 							</div>
 						</div>
-						{/* <div className="slide" id="xs-url">
+					</div>
+					{/* <div className="slide" id="xs-url">
 						<div className="portfolio-item row">
 							<div className="portfolio-thumbnail-wrapper p-0">
 								<a href="http://www.xs-url.fr" target="_blank" data-animation="iphoneAnim" className="iphoneVert">
@@ -295,7 +294,7 @@ const Portfolio = () => {
 						</div>
 					</div> */}
 
-						{/* <div className="slide" id="maral">
+					{/* <div className="slide" id="maral">
 						<div className="portfolio-item row">
 							<div className="portfolio-thumbnail-wrapper p-0">
 								<a href="https://www.maral.fr" target="_blank" data-animation="iphoneAnim" className="iphoneVert">
@@ -389,7 +388,6 @@ const Portfolio = () => {
 							</div>
 						</div>
 					</div> */}
-					</div>
 				</div>
 			</section>
 		</>
