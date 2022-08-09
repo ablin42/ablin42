@@ -42,6 +42,7 @@
 		"flash": "^1.1.0",
 		"helmet": "^4.1.0",
 		"i18next": "^21.8.16",
+		"i18next-browser-languagedetector": "^6.1.4",
 		"mongo-sanitize": "^1.1.0",
 		"mongoose": "^5.12.5",
 		"next": "^12.2.3",
