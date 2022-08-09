@@ -6,3 +6,4 @@
 /tmp
 .next
 next-env.d.ts
+yarn-error.log

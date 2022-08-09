@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 .dark-mode {
   -webkit-filter: invert(1) hue-rotate(180deg);
           filter: invert(1) hue-rotate(180deg);
@@ -565,7 +565,7 @@ html[data-theme="dark"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
-  font-family: "Inter", "Roboto", "sans-serif";
+  font-family: "Inter", "Source Sans Pro", "Roboto", "sans-serif";
   overflow-wrap: break-word;
   scroll-behavior: smooth;
 }
