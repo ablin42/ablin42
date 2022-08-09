@@ -10,10 +10,6 @@ import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 // @COMPONENTS
 // @MISC
 
-{
-	/* <Trans>Welcome to React</Trans> */
-}
-
 const Landing = () => {
 	const handleClipboard = (ADDRESS: string) => {
 		const tooltip = document.querySelector(`#harb > .tooltiptextSpecial`);
@@ -60,7 +56,9 @@ const Landing = () => {
 								~/0xHarb <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack Developer
 							</h1>
 							<div className="row">
-								<p className="ms-1">Im a software engineer &amp; crypto enjoyooor that loves to experiment</p>
+								<p className="ms-1">
+									<Trans>OneLiner</Trans>
+								</p>
 							</div>
 							<div className="row">
 								<div className="row align-items-center">
@@ -70,11 +68,7 @@ const Landing = () => {
 
 									<div className="col-lg-8">
 										<p className="paragraph">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus posuere metus, tincidunt
-											pellentesque quam mattis vitae. Donec ullamcorper ipsum nibh, vel efficitur ante congue eget. Duis ut ligula
-											ipsum. Ut eu pellentesque orci. Sed accumsan iaculis ex, ut venenatis lectus tristique congue. Cras
-											venenatis sit amet sem vel tincidunt. Aenean facilisis in sem in pretium. Pellentesque quis quam id diam
-											aliquam accumsan ac a ante. Nam vel placerat ipsum.
+											<Trans>Intro</Trans>
 										</p>
 									</div>
 								</div>
@@ -94,7 +88,9 @@ const Landing = () => {
 												onClick={() => handleClipboard("0xCC61d2bb1A215f19922eCF81613bEa3253713371")}
 											/>
 											<div className="tooltipSpecial" id="harb">
-												<span className="tooltiptextSpecial">Copied to clipboard!</span>
+												<span className="tooltiptextSpecial">
+													<Trans>Clipboard</Trans>
+												</span>
 											</div>
 										</a>
 									</div>
@@ -105,36 +101,6 @@ const Landing = () => {
 							<img src="/scroll-indicator.gif" alt="try scrolling" width="75px" />
 						</div>
 					</div>
-
-					{/* <h3 className="col-md-8" data-animation="dropDownAnim">
-						?%= text.pres1 %?{" "}
-						<b>
-							{" "}
-							<i>{`{`}</i>?%= text.pres2 %?<i>{"}"}</i>{" "}
-						</b>{" "}
-						?%= text.pres3 %?
-					</h3>
-					<h1 className="hero-title" data-animation="dropDownAnim">
-						Andréas Blin
-					</h1>
-					<h2 className="hero-secondary-title col-xl-6 offset-xl-1">
-						<i>❝?%= text.quote %?❞</i>
-					</h2>
-
-					<div className="call-wrapper offset-md-3 offset-sm-2 offset-xs-1">
-						<a href="#portfolio" className="action-link portfolio-link" data-animation="portfolioLinkAnim">
-							Portfolio
-						</a>
-						<div className="scroll-indicator" data-animation="indicatorAnim"></div>
-					</div>
-
-					<img
-						src="/svg/undraw_freelancer.svg"
-						className="freelancer-svg"
-						alt="Freelance Illustration For Fullstack Web Developer"
-						data-animation="freelancerAnim"
-						draggable="false"
-					/> */}
 				</div>
 			</section>
 		</>

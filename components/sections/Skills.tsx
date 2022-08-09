@@ -1,9 +1,8 @@
 // @EXTERNALS
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
-import { faFolder } from "@fortawesome/free-regular-svg-icons";
+import { faArrowUpRightFromSquare, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
+import { Trans } from "react-i18next";
 // @COMPONENTS
 // @MISC
 
@@ -40,21 +39,21 @@ const PROJECTS = [
 	{
 		name: "maral.fr",
 		stack: ["nodejs", "mongodb"],
-		description: "blablablablablablablablalblalblaldlalps alsp lalsp aslpapsl paqsl apsla psl apslap sl ",
+		description: <Trans>MaralSmallDescription</Trans>,
 		github: "https://github.com",
 		link: ""
 	},
 	{
 		name: "xs-url.fr",
 		stack: ["nodejs", "mongodb", "react", "sass"],
-		description: "A really cool project to spoof & shorten your URLs ",
+		description: <Trans>XsUrlSmallDescription</Trans>,
 		github: "https://github.com",
 		link: ""
 	},
 	{
 		name: "maral.fr",
 		stack: ["nodejs", "mongodb"],
-		description: "blablablablablablablablalblalblaldlalps alsp lalsp aslpapsl paqsl apsla psl apslap sl ",
+		description: <Trans>MaralSmallDescription</Trans>,
 		github: "https://github.com",
 		link: ""
 	}
@@ -64,8 +63,8 @@ const SKILLS_LIST = TAGS.map(tag => tag.name);
 
 const Skills = () => {
 	const [search, setSearch] = useState("");
-	const [suggestions, setSuggestions] = useState([]);
-	const [tags, setTags] = useState(TAGS);
+	const [suggestions, setSuggestions] = useState<Array<string>>([]);
+	const [tags, setTags] = useState<Array<any>>(TAGS);
 	const [matchingProjects, setMatchingProjects] = useState(PROJECTS);
 
 	const removeTag = (index: number) => {
@@ -149,7 +148,6 @@ const Skills = () => {
 									))}
 								</div>
 							</div>
-							{/* <input type="text" className="form-control" placeholder="input" /> */}
 							<div className="mt-3">
 								<div className="row">
 									{matchingProjects.map(project => {
@@ -193,148 +191,6 @@ const Skills = () => {
 							</div>
 						</div>
 					</div>
-
-					{/* <h1 className="hero-title pt-5 mb-0" data-animation="dropDownAnim">
-						?%= text.skills %?
-					</h1>
-
-					<div className="skill-content col-md-10 p-3">
-						<p className="skills-text">
-							{`{`} ?%= text.skillsTab.nonExhaustive %? {`}`}
-						</p>
-						<div className="skills-section">
-							<h2>Front-end</h2>
-							<div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 skills-wrapper">
-								<h1 data-animation="leftBracketAnim">{`{`}</h1>
-								<div className="wrapper-icon">
-									<div>
-										<img
-											className="skill-icon"
-											src="/img/icons/white/javascript_icon.png"
-											alt="Javascript JS"
-											draggable="false"
-										/>
-									</div>
-									<label>Javascript</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/jquery_icon.png" alt="JQuery" draggable="false" />
-									</div>
-									<label>JQuery</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/html_icon.png" alt="HTML5 HTML" draggable="false" />
-									</div>
-									<label>HTML5</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/css_icon.png" alt="CSS3 CSS" draggable="false" />
-									</div>
-									<label>CSS3</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/sass_icon.png" alt="SASS" draggable="false" />
-									</div>
-									<label>SASS</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/vuejs_icon.png" alt="Vuejs Vue.js" draggable="false" />
-									</div>
-									<label>Vue.js</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/bootstrap_icon.png" alt="Bootstrap" draggable="false" />
-									</div>
-									<label>Bootstrap</label>
-								</div>
-								<h1 data-animation="rightBracketAnim">{"}"}</h1>
-							</div>
-						</div>
-
-						<div className="skills-section">
-							<h2>Back-end</h2>
-							<div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 skills-wrapper">
-								<h1 data-animation="leftBracketAnim">{`{`}</h1>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/nodejs_icon.png" alt="NodeJS Node.js" draggable="false" />
-									</div>
-									<label>NodeJS</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/php_icon.png" alt="PHP" draggable="false" />
-									</div>
-									<label>PHP</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img
-											className="skill-icon"
-											src="/img/icons/white/database_icon.png"
-											alt="Database SQL NoSQL"
-											draggable="false"
-										/>
-									</div>
-									<label>SQL / noSQL</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/api_icon.png" alt="API" draggable="false" />
-									</div>
-									<label>API</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img
-											className="skill-icon"
-											src="/img/icons/white/s3_icon.png"
-											alt="AWS AMAZON WEB SERVICE S3"
-											draggable="false"
-										/>
-									</div>
-									<label>S3</label>
-								</div>
-								<h1 data-animation="rightBracketAnim">{"}"}</h1>
-							</div>
-						</div>
-
-						<div className="skills-section">
-							<h2>?%= text.skillsTab.misc %?</h2>
-							<div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 skills-wrapper">
-								<h1 data-animation="leftBracketAnim">{`{`}</h1>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/git_icon.png" alt="Git" draggable="false" />
-									</div>
-									<label>Git</label>
-								</div>
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/docker_icon.png" alt="Docker" draggable="false" />
-									</div>
-									<label>Docker</label>
-								</div>
-
-								<div className="wrapper-icon">
-									<div>
-										<img className="skill-icon" src="/img/icons/white/console_icon.png" alt="Shell" draggable="false" />
-									</div>
-									<label>Shell</label>
-								</div>
-								<h1 data-animation="rightBracketAnim">{"}"}</h1>
-							</div>
-						</div>
-						<a href="#contact" className="action-link m-auto">
-							?%= text.contactTab.contactMe %? !
-						</a>
-					</div> */}
 				</div>
 			</section>
 		</>

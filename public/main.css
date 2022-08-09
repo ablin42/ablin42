@@ -781,9 +781,14 @@ textarea {
   margin: 5px;
 }
 
-.test {
-  background-image: url("blob.svg");
-  background-size: cover;
+.centered-blob {
+  position: absolute !important;
+  top: 0%;
+  left: 25%;
+  width: 700px;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0.8;
 }
 
 #landing-section {
