@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-// the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
@@ -9,7 +9,7 @@ const resources = {
 		translation: {
 			Clipboard: "Copied to clipboard!",
 
-			OneLiner: "Im a software engineer &amp; crypto enjoyooor that loves to experiment",
+			OneLiner: "Im a software engineer crypto enjoyooor that loves to experiment",
 			Intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus posuere metus, tincidunt
 					pellentesque quam mattis vitae. Donec ullamcorper ipsum nibh, vel efficitur ante congue eget. Duis ut ligula
 					ipsum. Ut eu pellentesque orci. Sed accumsan iaculis ex, ut venenatis lectus tristique congue. Cras
@@ -33,7 +33,7 @@ const resources = {
 		translation: {
 			Clipboard: "Copié dans le presse-papier !",
 
-			OneLiner: "Im a software engineer &amp; crypto enjoyooor that loves to experiment",
+			OneLiner: "french Im a software engineer & crypto enjoyooor that loves to experiment",
 			Intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus posuere metus, tincidunt
 					pellentesque quam mattis vitae. Donec ullamcorper ipsum nibh, vel efficitur ante congue eget. Duis ut ligula
 					ipsum. Ut eu pellentesque orci. Sed accumsan iaculis ex, ut venenatis lectus tristique congue. Cras
@@ -56,10 +56,16 @@ const resources = {
 };
 
 i18n
-	.use(initReactI18next) // passes i18n down to react-i18next
+	// detect user language
+	// learn more: https://github.com/i18next/i18next-browser-languageDetector
+	.use(LanguageDetector)
+	// pass the i18n instance to react-i18next.
+	.use(initReactI18next)
 	.init({
+		debug: true,
+		fallbackLng: "en",
 		resources,
-		lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+		// lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
 		// you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
 		// if you're using a language detector, do not define the lng option
 

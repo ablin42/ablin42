@@ -1,7 +1,6 @@
 // @EXTERNALS
 import React from "react";
 import Head from "next/head";
-import Script from "next/script";
 import ReactFullpage from "@fullpage/react-fullpage";
 // @COMPONENTS
 import Landing from "../components/sections/Landing";
@@ -25,7 +24,7 @@ const Home = () => {
 				anchors={["landing", "portfolio", "skills", "contact"]}
 				navigation={true}
 				navigationPosition={"right"}
-				navigationTooltips={["Landing", "Portfolio", "Skills", "Contact"]}
+				navigationTooltips={["Landing", "Portfolio", "Skills" /*, "Contact"*/]}
 				showActiveTooltip={false}
 				responsiveWidth={600}
 				//responsiveHeight: 800,
@@ -44,9 +43,6 @@ const Home = () => {
 					);
 				}}
 			/>
-			{/* <Script src="/scripts/fullpageConfig.js" strategy="afterInteractive"></Script> */}
-			<Script src="/scripts/icon_hover.js" strategy="afterInteractive"></Script>
-			<Script src="/scripts/submit_contact.js" strategy="afterInteractive"></Script>
 		</>
 	);
 };
