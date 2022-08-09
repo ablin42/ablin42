@@ -7,12 +7,50 @@ import { initReactI18next } from "react-i18next";
 const resources = {
 	en: {
 		translation: {
-			"Welcome to React": "Welcome to React and react-i18next"
+			Clipboard: "Copied to clipboard!",
+
+			OneLiner: "Im a software engineer &amp; crypto enjoyooor that loves to experiment",
+			Intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus posuere metus, tincidunt
+					pellentesque quam mattis vitae. Donec ullamcorper ipsum nibh, vel efficitur ante congue eget. Duis ut ligula
+					ipsum. Ut eu pellentesque orci. Sed accumsan iaculis ex, ut venenatis lectus tristique congue. Cras
+					venenatis sit amet sem vel tincidunt. Aenean facilisis in sem in pretium. Pellentesque quis quam id diam
+					aliquam accumsan ac a ante. Nam vel placerat ipsum.`,
+
+			BullvsBearDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+			DungeonDefendersDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+			ChaprouletteDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+			XsUrlDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+
+			MaralSmallDescription: `blablablablablablablablalblalblaldlalps alsp lalsp aslpapsl paqsl apsla psl apslap sl`,
+			XsUrlSmallDescription: `"A really cool project to spoof & shorten your URLs`
 		}
 	},
 	fr: {
 		translation: {
-			"Welcome to React": "Bienvenue à React et react-i18next"
+			Clipboard: "Copié dans le presse-papier !",
+
+			OneLiner: "Im a software engineer &amp; crypto enjoyooor that loves to experiment",
+			Intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus posuere metus, tincidunt
+					pellentesque quam mattis vitae. Donec ullamcorper ipsum nibh, vel efficitur ante congue eget. Duis ut ligula
+					ipsum. Ut eu pellentesque orci. Sed accumsan iaculis ex, ut venenatis lectus tristique congue. Cras
+					venenatis sit amet sem vel tincidunt. Aenean facilisis in sem in pretium. Pellentesque quis quam id diam
+					aliquam accumsan ac a ante. Nam vel placerat ipsum.`,
+
+			BullvsBearDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+			DungeonDefendersDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+			ChaprouletteDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+			XsUrlDescription: `An awesome project involving blockchain, gaming, and awesome devs lorem ipsum dolor sit amet lorem ipsum
+									dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet`,
+
+			MaralSmallDescription: `blablablablablablablablalblalblaldlalps alsp lalsp aslpapsl paqsl apsla psl apslap sl`,
+			XsUrlSmallDescription: `"A really cool project to spoof & shorten your URLs`
 		}
 	}
 };

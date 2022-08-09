@@ -39,7 +39,7 @@ const Home = () => {
 							<Landing />
 							<Portfolio />
 							<Skills />
-							<Contact />
+							{/* <Contact /> */}
 						</ReactFullpage.Wrapper>
 					);
 				}}

@@ -56,10 +56,6 @@ $colors: (
 	}
 }
 
-// .testt {
-// 	background-image: url("/blob.svg");
-// }
-
 #introduction {
 	.profile-img {
 		border-radius: 50%;
@@ -384,9 +380,13 @@ textarea {
 	}
 }
 
-.test {
-	background-image: url("blob.svg");
-	background-size: cover;
+.centered-blob {
+	position: absolute !important;
+	top: 0%;
+	left: 25%;
+	width: 700px;
+	filter: blur(3px);
+	opacity: 0.8;
 }
 
 #landing-section {
@@ -502,10 +502,6 @@ h3,
 	font-style: italic;
 	display: inline-block;
 	opacity: 1;
-
-	a {
-		// font-family: "Noir" !important;
-	}
 }
 
 .main-section.even .hero-title {
