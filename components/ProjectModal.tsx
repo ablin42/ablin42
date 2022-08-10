@@ -9,9 +9,10 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 // @MISC
 
 interface ModalProps {
-	repoLink: string;
-	externalLink: string;
+	repoLink?: string;
+	externalLink?: string;
 	attachRight?: boolean;
+	setOpen: any;
 }
 
 const FloatWrapper = styled.div<{ top: string; right: string }>`
@@ -21,28 +22,27 @@ const FloatWrapper = styled.div<{ top: string; right: string }>`
 	top: ${({ top }) => top};
 `;
 
-const ProjectModal = ({ repoLink, externalLink, attachRight }: ModalProps) => {
-	const [open, setOpen] = useState<boolean>(false);
-
+const ProjectModal = ({ repoLink, externalLink, attachRight, setOpen }: ModalProps) => {
 	// TODO display content passed as props
 	return (
 		<>
-			{open !== null ? (
-				<div className="overlay" onClick={() => setOpen(false)}>
-					<div className="shadow-lg prepare-modal" onClick={e => e.stopPropagation()}>
-						<FloatWrapper top="5px" right="15px">
-							<FontAwesomeIcon
-								icon={faXmark}
-								fontSize={30}
-								color="#ff5959"
-								className="mr-3"
-								onClick={() => setOpen(false)}
-								style={{ cursor: "pointer" }}
-							/>
-						</FloatWrapper>
-					</div>
+			{/* {open !== null ? ( */}
+			<div className="overlay" onClick={() => setOpen(false)}>
+				<div className="shadow-lg project-modal" onClick={e => e.stopPropagation()}>
+					XDD
+					<FloatWrapper top="5px" right="15px">
+						<FontAwesomeIcon
+							icon={faXmark}
+							fontSize={30}
+							color="#ff5959"
+							className="mr-3"
+							onClick={() => setOpen(false)}
+							style={{ cursor: "pointer" }}
+						/>
+					</FloatWrapper>
 				</div>
-			) : null}
+			</div>
+			{/* ) : null} */}
 		</>
 	);
 };
