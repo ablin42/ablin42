@@ -18,7 +18,7 @@ const Home = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<ReactFullpage
-				licenseKey={"YOUR_KEY_HERE"}
+				licenseKey={"gplv3-license"}
 				autoScrolling={true}
 				scrollingSpeed={800}
 				anchors={["landing", "portfolio", "skills", "contact"]}

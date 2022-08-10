@@ -7,6 +7,7 @@ import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from "@fortaweso
 import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { Trans } from "react-i18next";
 // @COMPONENTS
+import ProjectMenu from "../ProjectMenu";
 // @MISC
 
 const ProjectItem = styled.div`
@@ -18,7 +19,7 @@ const ProjectItem = styled.div`
 	border: 5px solid #1a1a1a !important;
 	position: relative;
 `;
-const Menu: StyledComponent<any> = styled.div`
+const Menu: StyledComponent<any, any> = styled.div`
 	position: absolute;
 	right: ${({ attachRight }: any) => (attachRight ? "-30px" : "auto")};
 	left: ${({ attachRight }: any) => (attachRight ? "auto" : "-30px")};
@@ -27,15 +28,21 @@ const Menu: StyledComponent<any> = styled.div`
 	border-radius: 15px;
 `;
 
-const Portfolio = () => {
-	const [open, setOpen] = useState<number | null>(null);
+const LinkText = (props: any) => {
+	return (
+		<a href={props.to || "#"} target="_blank" title={props.title || ""}>
+			{props.children}
+		</a>
+	);
+};
 
+const Portfolio = () => {
 	return (
 		<>
 			<section className="section main-section even fp-auto-height-responsive" id="portfolio-section" data-anchor="portfolio">
 				<div className="bg-clipper">
 					<div className="container mt-5 pt-5 pb-5" style={{ position: "relative" }}>
-						<div class="tk-blob centered-blob" style={{ "--fill": "#2e7bbb" }}>
+						<div className="tk-blob centered-blob" style={{ fill: "#2e7bbb" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
 								<path d="M260.2 41.4c20 29.2 14.6 74.5 7.2 124.4-7.3 49.9-16.6 104.5-49.2 126-32.5 21.6-88.4 10.2-132-15.2s-75-64.7-83.6-107.8C-6.1 125.7 8 79 36.3 47.8 64.5 16.7 107 1.3 150.9.1c43.9-1.1 89.3 12 109.3 41.3z"></path>
 							</svg>
@@ -44,33 +51,10 @@ const Portfolio = () => {
 							<div className="row mb-4">
 								<div className="col-6">
 									<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 50px 10px" }}>
-										<Menu className="d-flex flex-column shadow-sm">
-											<FontAwesomeIcon
-												className="fa-icon clickable-icon p-2"
-												fontSize={25}
-												icon={faLayerGroup}
-												color="#121212"
-												onClick={() => setOpen(open === 1 ? null : 1)}
-											/>
-											{open === 1 && (
-												<>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faArrowUpRightFromSquare}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faCodeBranch}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-												</>
-											)}
-										</Menu>
+										<ProjectMenu
+											externalLink="https://dungeondefenders.xyz/"
+											repoLink="https://github.com/ablin42/dungeon-defenders"
+										/>
 										<div className="d-flex align-items-center mb-1">
 											<h1>Dungeon Defenders</h1>
 										</div>
@@ -89,35 +73,13 @@ const Portfolio = () => {
 								</div>
 								<div className="col-6">
 									<ProjectItem className="project-item" style={{ borderRadius: "10px 10px 10px 50px" }}>
-										<Menu className="d-flex flex-column shadow-sm" attachRight>
-											<FontAwesomeIcon
-												className="fa-icon clickable-icon p-2"
-												fontSize={25}
-												icon={faLayerGroup}
-												color="#121212"
-												onClick={() => setOpen(open === 2 ? null : 2)}
-											/>
-											{open === 2 && (
-												<>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faArrowUpRightFromSquare}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faCodeBranch}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-												</>
-											)}
-										</Menu>
+										<ProjectMenu
+											externalLink="https://chaproulette.lol/"
+											repoLink="https://github.com/ablin42/chaproulette"
+											attachRight
+										/>
 										<div className="d-flex align-items-center mb-1">
-											<h1>chaproulette</h1>
+											<h1>Chaproulette</h1>
 										</div>
 										<p>
 											<Trans>ChaprouletteDescription</Trans>
@@ -136,38 +98,18 @@ const Portfolio = () => {
 							<div className="row">
 								<div className="col-6">
 									<ProjectItem className="project-item" style={{ borderRadius: "10px 50px 10px 10px" }}>
-										<Menu className="d-flex flex-column shadow-sm">
-											<FontAwesomeIcon
-												className="fa-icon clickable-icon p-2"
-												fontSize={25}
-												icon={faLayerGroup}
-												color="#121212"
-												onClick={() => setOpen(open === 3 ? null : 3)}
-											/>
-											{open === 3 && (
-												<>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faArrowUpRightFromSquare}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faCodeBranch}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-												</>
-											)}
-										</Menu>
+										<ProjectMenu externalLink="https://www.bullvsbear.pro/" repoLink="https://github.com/ablin42/bullvsbear" />
 										<div className="d-flex align-items-center mb-1">
-											<h1>bullvsbear</h1>
+											<h1>BullvsBear</h1>
 										</div>
 										<p>
-											<Trans>BullvsBearDescription</Trans>
+											<Trans
+												components={{
+													pcsLink: <LinkText to={"https://pancakeswap.finance/prediction"} title="Pancakeswap Predictions" />
+												}}
+											>
+												BullvsBearDescription
+											</Trans>
 										</p>
 
 										<div className="d-flex justify-content-between align-items-center">
@@ -181,35 +123,13 @@ const Portfolio = () => {
 								</div>
 								<div className="col-6">
 									<ProjectItem className="project-item" style={{ borderRadius: "50px 10px 10px 10px" }}>
-										<Menu className="d-flex flex-column shadow-sm" attachRight>
-											<FontAwesomeIcon
-												className="fa-icon clickable-icon p-2"
-												fontSize={25}
-												icon={faLayerGroup}
-												color="#121212"
-												onClick={() => setOpen(open === 4 ? null : 4)}
-											/>
-											{open === 4 && (
-												<>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faArrowUpRightFromSquare}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faCodeBranch}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-												</>
-											)}
-										</Menu>
+										<ProjectMenu
+											externalLink="http://xs-url.fr/"
+											repoLink="https://github.com/ablin42/url-shortener"
+											attachRight
+										/>
 										<div className="d-flex align-items-center mb-1">
-											<h1>xs-url</h1>
+											<h1>Xs-url</h1>
 										</div>
 										<p>
 											<Trans>XsUrlDescription</Trans>

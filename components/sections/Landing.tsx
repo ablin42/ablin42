@@ -1,12 +1,11 @@
 // @EXTERNALS
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import { Trans } from "react-i18next";
-import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
-
 // @COMPONENTS
 // @MISC
 
@@ -27,6 +26,7 @@ const Landing = () => {
 
 		navigator.clipboard.writeText(ADDRESS);
 	};
+
 	return (
 		<>
 			<section className="section main-section hero fp-auto-height-responsive" id="landing-section" data-anchor="landing">
@@ -35,19 +35,6 @@ const Landing = () => {
 						<a className="navbar-brand" href="#">
 							ablin@dev
 						</a>
-
-						<ul className="navbar-nav">
-							<li className="nav-item">
-								<a className="nav-link" href="https://www.linkedin.com/in/ablin42/" target="_blank">
-									<i className="fa fa-linkedin" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="https://www.github.com/ablin42" target="_blank">
-									<i className="fa fa-github" aria-hidden="true"></i>
-								</a>
-							</li>
-						</ul>
 					</nav>
 
 					<div className="container">
@@ -56,7 +43,7 @@ const Landing = () => {
 								~/0xHarb <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack Developer
 							</h1>
 							<div className="row">
-								<p className="ms-1">
+								<p className="ms-1 one-liner">
 									<Trans>OneLiner</Trans>
 								</p>
 							</div>
