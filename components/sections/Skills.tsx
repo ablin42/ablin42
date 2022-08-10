@@ -3,61 +3,10 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
 import { Trans } from "react-i18next";
+import SkillCard from "../SkillCard";
 // @COMPONENTS
+import { TAGS, PROJECTS } from "../../SKILLS-OBJECTS";
 // @MISC
-
-const TAGS = [
-	{
-		name: "react",
-		type: "frontend",
-		isFavorite: false
-	},
-	{
-		name: "nextjs",
-		type: "frontend",
-		isFavorite: true
-	},
-
-	{
-		name: "nodejs",
-		type: "backend",
-		isFavorite: true
-	},
-	{
-		name: "mongodb",
-		type: "data",
-		isFavorite: true
-	},
-	{
-		name: "sass",
-		type: "frontend",
-		isFavorite: false
-	}
-];
-
-const PROJECTS = [
-	{
-		name: "maral.fr",
-		stack: ["nodejs", "mongodb"],
-		description: <Trans>MaralSmallDescription</Trans>,
-		github: "https://github.com",
-		link: ""
-	},
-	{
-		name: "xs-url.fr",
-		stack: ["nodejs", "mongodb", "react", "sass"],
-		description: <Trans>XsUrlSmallDescription</Trans>,
-		github: "https://github.com",
-		link: ""
-	},
-	{
-		name: "maral.fr",
-		stack: ["nodejs", "mongodb"],
-		description: <Trans>MaralSmallDescription</Trans>,
-		github: "https://github.com",
-		link: ""
-	}
-];
 
 const SKILLS_LIST = TAGS.map(tag => tag.name);
 
@@ -153,38 +102,14 @@ const Skills = () => {
 									{matchingProjects.map(project => {
 										const { name, stack, description, github, link } = project;
 										return (
-											<div key={name} className="col-4 ">
-												<div className="rounded-2 p-3 " style={{ backgroundColor: "white" }}>
-													<b>{name}</b>
-													<p>{description}</p>
-
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faArrowUpRightFromSquare}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-													<FontAwesomeIcon
-														className="fa-icon  clickable-icon p-2"
-														fontSize={25}
-														icon={faCodeBranch}
-														style={{ cursor: "pointer" }}
-														color="#121212"
-													/>
-													<div className="d-flex justify-content-between align-items-center mt-4">
-														<div>
-															{stack.map(item => {
-																return (
-																	<span key={item} className="badge bg-primary m-1">
-																		{item}
-																	</span>
-																);
-															})}
-														</div>
-													</div>
-												</div>
-											</div>
+											<SkillCard
+												key={name}
+												name={name}
+												description={description}
+												stack={stack}
+												externalLink={link}
+												repoLink={github}
+											/>
 										);
 									})}
 								</div>
