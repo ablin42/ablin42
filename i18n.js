@@ -12,7 +12,7 @@ const resources = {
 			OneLiner: "Software Engineer & Crypto enjoyooor that loves to experiment through code",
 			Intro: `I'm a self-taught dev as passionate as it gets: I started learning to code when I was in my teens & never stopped since then. On a daily basis I'm spending 
 				the majority of my free time building side projects and researching anything Crypto related, both from a technical and a personal perspective. I believe permissionless 
-				distributed systems are one of the most amazing thing there are, and that we -devs- should strive to improve them & live to the ethos of decentralization`,
+				distributed systems are one of the most amazing thing there are, and that we -devs- should strive to improve them & live to the ethos of decentralization. I also happen to be really fond of UI/UX`,
 
 			BullvsBearDescription: `An useful app to have an edge on other players on <pcsLink>Pancakeswap Predictions</pcsLink>.
 			It compiles scraped data from their website to provide a nice graphical & intuitive representation of the bets going on there`,
