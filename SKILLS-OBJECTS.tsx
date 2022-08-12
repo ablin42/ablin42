@@ -37,11 +37,6 @@ export const TAGS = [
     isFavorite: false,
   },
   {
-    name: 'nextjs',
-    type: 'frontend',
-    isFavorite: false,
-  },
-  {
     name: 'php',
     type: 'backend',
     isFavorite: false,
@@ -195,7 +190,7 @@ export const PROJECTS = [
   },
   {
     name: 'Dungeon Defenders',
-    stack: ['Solidity', 'React', 'Typescript', 'NFT'],
+    stack: ['Solidity', 'React', 'Typescript', 'NFT', 'Nodejs'],
     description: <Trans>DungeonDefendersSmallDescription</Trans>,
     github: 'https://github.com/ablin42/dungeon-defenders',
     link: 'https://dungeondefenders.xyz/',

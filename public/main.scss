@@ -161,9 +161,22 @@ a:hover {
 
 /* END NAVBAR */
 
+.badge-group {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  margin-top: 10px;
+
+  span {
+    margin: 5px;
+  }
+}
+
 .project-item {
   // background-image: url('/bg/cartographer.png');
-  background-color: color(dark-shade);
+  background-color: #1e1e1e;
+  position: relative;
 
   h1 {
     font-size: 24px;
@@ -175,15 +188,6 @@ a:hover {
     opacity: 0.9;
     text-indent: 5px;
     font-weight: 300;
-  }
-
-  .badge-group {
-    display: flex;
-    justify-content: space-between;
-
-    span {
-      margin: 5px;
-    }
   }
 }
 
@@ -241,6 +245,31 @@ a:hover {
   &:hover {
     color: color(light-shade);
   }
+}
+
+input.form-control {
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+  height: 40px;
+}
+
+div.form-control {
+  border: none;
+  padding: 15px 20px;
+  background-color: #33a1fd0f;
+  border-radius: 10px;
+}
+
+.skill-card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px 20px;
+  border: 5px solid #1a1a1a !important;
+  position: relative;
+  margin: 10px 0;
+  height: 100%;
+  border-radius: 10px;
 }
 
 #introduction {

@@ -1,55 +1,67 @@
 // @EXTERNALS
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
-import { faFolder } from "@fortawesome/free-regular-svg-icons";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
+import { faFolder } from '@fortawesome/free-regular-svg-icons';
+import styled from 'styled-components';
 // @COMPONENTS
 // @MISC
 
 interface CardProps {
-	name: string;
-	description: string | React.ReactNode;
-	stack: string[];
-	repoLink: string;
-	externalLink: string;
+  name: string;
+  description: string | React.ReactNode;
+  stack: string[];
+  repoLink: string;
+  externalLink: string;
 }
 
-const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardProps) => {
-	return (
-		<div className="col-4">
-			<div className="rounded-2 p-3 " style={{ backgroundColor: "white" }}>
-				<b>{name}</b>
-				<p>{description}</p>
+const SkillHeader = styled.div`
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+`;
 
-				<FontAwesomeIcon
-					className="fa-icon  clickable-icon p-2"
-					fontSize={25}
-					icon={faArrowUpRightFromSquare}
-					style={{ cursor: "pointer" }}
-					color="#121212"
-				/>
-				<FontAwesomeIcon
-					className="fa-icon  clickable-icon p-2"
-					fontSize={25}
-					icon={faCodeBranch}
-					style={{ cursor: "pointer" }}
-					color="#121212"
-				/>
-				<div className="d-flex justify-content-between align-items-center mt-4">
-					<div>
-						{stack.map(item => {
-							return (
-								<span key={item} className="badge bg-primary m-1">
-									{item}
-								</span>
-							);
-						})}
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardProps) => {
+  return (
+    <div className="col-4 mt-2 mb-2">
+      <div className="skill-card shadow">
+        <SkillHeader>
+          <b>{name}</b>
+          <div style={{ position: 'absolute', right: 0 }}>
+            <FontAwesomeIcon
+              className="fa-icon clickable-icon p-2"
+              fontSize={25}
+              icon={faArrowUpRightFromSquare}
+              style={{ cursor: 'pointer' }}
+              color="#181818"
+            />
+            <FontAwesomeIcon
+              className="fa-icon clickable-icon p-2"
+              fontSize={25}
+              icon={faCodeBranch}
+              style={{ cursor: 'pointer' }}
+              color="#181818"
+            />
+          </div>
+        </SkillHeader>
+
+        <p className="mb-5">{description}</p>
+        <div className="d-flex justify-content-between align-items-center badge-group">
+          <div>
+            {stack.map((item) => {
+              return (
+                <span key={item} className="badge bg-primary m-1">
+                  {item}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SkillCard;

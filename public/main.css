@@ -580,8 +580,25 @@ a:hover {
 }
 
 /* END NAVBAR */
+.badge-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  margin-top: 10px;
+}
+
+.badge-group span {
+  margin: 5px;
+}
+
 .project-item {
-  background-color: #151515;
+  background-color: #1e1e1e;
+  position: relative;
 }
 
 .project-item h1 {
@@ -594,19 +611,6 @@ a:hover {
   opacity: 0.9;
   text-indent: 5px;
   font-weight: 300;
-}
-
-.project-item .badge-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.project-item .badge-group span {
-  margin: 5px;
 }
 
 .centered-blob {
@@ -659,6 +663,31 @@ a:hover {
 
 .clickable-icon:hover {
   color: #efefef;
+}
+
+input.form-control {
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+  height: 40px;
+}
+
+div.form-control {
+  border: none;
+  padding: 15px 20px;
+  background-color: #33a1fd0f;
+  border-radius: 10px;
+}
+
+.skill-card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px 20px;
+  border: 5px solid #1a1a1a !important;
+  position: relative;
+  margin: 10px 0;
+  height: 100%;
+  border-radius: 10px;
 }
 
 #introduction .profile-img {

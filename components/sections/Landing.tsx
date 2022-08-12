@@ -10,8 +10,8 @@ import { faTerminal, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 // @MISC
 
 const Landing = () => {
-  const handleClipboard = (ADDRESS: string, target?: string = 'harb') => {
-    const tooltip = document.querySelector(`#${target} > .tooltiptextSpecial`);
+  const handleClipboard = (ADDRESS: string) => {
+    const tooltip = document.querySelector(`#harb > .tooltiptextSpecial`);
 
     if (tooltip && !tooltip.classList.contains('tooltip-visible')) {
       tooltip.classList.add('tooltipAnim');
