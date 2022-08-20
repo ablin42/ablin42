@@ -20,6 +20,7 @@ $colors: (
   darkest-shade: #151515,
   main-lightest: #33a1fd,
   main-light: #ace6f6,
+  // color: #3eabfd,//!dark
   main: #33a1fd,
   main-dark: #446491,
   main-darkest: #33a1fd
@@ -300,6 +301,7 @@ div.form-control {
 
   .email {
     color: color(main-dark);
+    // color: #85a7c6;//!dark
     font-weight: 700;
     text-decoration: none;
 
@@ -774,6 +776,7 @@ div.form-control {
 
       a {
         background-color: #d7d7d7 !important;
+        // #2f3234//!dark
       }
 
       .active {
