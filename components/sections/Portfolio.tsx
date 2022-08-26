@@ -80,10 +80,11 @@ const Portfolio = () => {
                     </ProjectItem>
                   </div>
                   <div className="col-6">
-                    <ProjectItem className="project-item" style={{ borderRadius: '10px 30px 10px 10px' }} attachRight>
+                    <ProjectItem className="project-item" style={{ borderRadius: '10px 30px 10px 10px' }}>
                       <ProjectMenu
                         externalLink="https://www.bullvsbear.pro/"
                         repoLink="https://github.com/ablin42/bullvsbear"
+                        attachRight
                       />
                       <div className="d-flex align-items-center mb-1">
                         <h1>BullvsBear</h1>
@@ -116,7 +117,7 @@ const Portfolio = () => {
                       <ProjectMenu
                         externalLink="https://chaproulette.lol/"
                         repoLink="https://github.com/ablin42/chaproulette"
-                        attachRight
+                        
                       />
                       <div className="d-flex align-items-center mb-1">
                         <h1>Chaproulette</h1>
@@ -135,7 +136,7 @@ const Portfolio = () => {
                   </div>
 
                   <div className="col-6">
-                    <ProjectItem className="project-item" style={{ borderRadius: '30px 10px 10px 10px' }} attachRight>
+                    <ProjectItem className="project-item" style={{ borderRadius: '30px 10px 10px 10px' }}>
                       <ProjectMenu
                         externalLink="http://xs-url.fr/"
                         repoLink="https://github.com/ablin42/url-shortener"
