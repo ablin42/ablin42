@@ -30,20 +30,22 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardPro
         <SkillHeader>
           <b>{name}</b>
           <div style={{ position: 'absolute', right: 0 }}>
+            <a href={externalLink} target="_blank">
             <FontAwesomeIcon
               className="fa-icon clickable-icon p-2"
               fontSize={25}
               icon={faArrowUpRightFromSquare}
               style={{ cursor: 'pointer' }}
               color="#181818"
-            />
+            /><a/>
+               <a href={repoLink} target="_blank">
             <FontAwesomeIcon
               className="fa-icon clickable-icon p-2"
               fontSize={25}
               icon={faCodeBranch}
               style={{ cursor: 'pointer' }}
               color="#181818"
-            />
+            /><a/>
           </div>
         </SkillHeader>
 
