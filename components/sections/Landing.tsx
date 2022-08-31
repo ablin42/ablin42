@@ -6,6 +6,7 @@ import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEthereum, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faTerminal, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Toggler from '../Toggler';
 // @COMPONENTS
 // @MISC
 
@@ -40,6 +41,7 @@ const Landing = () => {
               <a className="navbar-brand" href="#">
                 ablin@dev
               </a>
+              <Toggler />
             </nav>
 
             <div className="container">

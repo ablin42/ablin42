@@ -68,7 +68,7 @@ const Skills = () => {
     <>
       <section className="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
         <div className="bg-clipper">
-          <div className="container mb-5">
+          <div className="container-fluid mb-5">
             <div className="col-8 m-auto mt-5">
               <div className="form-control shadow-sm">
                 <input
