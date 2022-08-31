@@ -17,7 +17,7 @@ const ProjectItem: StyledComponent<any, any> = styled.div`
   height: 300px;
   padding: ${({ attachRight }: any) => (!attachRight ? '20px 30px 20px 40px' : '20px 40px 20px 35px')};
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%) !important;
-  border: 5px solid #1a1a1a !important;
+  border: 3px solid #1a1a1a !important;
   position: relative;
 `;
 
@@ -45,7 +45,13 @@ const Portfolio = () => {
           <div className="bg-clipper">
             <div
               className="container mt-5 pt-4 pb-5 shadow"
-              style={{ position: 'relative', backgroundColor: '#33a1fd0f', borderRadius: '50px', height: '90%' }}
+              style={{
+                position: 'relative',
+                backgroundColor: '#33a1fd0f',
+                borderRadius: '50px',
+                height: '90%',
+                border: '2px solid #152c3f99',
+              }}
             >
               {/* <div className="tk-blob centered-blob" style={{ fill: "#2e7bbb" }}>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
@@ -117,7 +123,6 @@ const Portfolio = () => {
                       <ProjectMenu
                         externalLink="https://chaproulette.lol/"
                         repoLink="https://github.com/ablin42/chaproulette"
-                        
                       />
                       <div className="d-flex align-items-center mb-1">
                         <h1>Chaproulette</h1>

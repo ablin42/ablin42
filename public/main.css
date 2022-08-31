@@ -1,17 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+html {
+  --main-dark: #4291d3;
+  --main: #33a1fd;
+  --main-light: #ace6f6;
+  --light-shade: #ebebeb;
+  --lighter-shade: #f0f0f0;
+  --lightest-shade: #f7f7f7;
+  --dark-border: #1a1a1a;
+  --dark-shade: #1c1c1c;
+  --darker-shade: #1e1e1e;
+  --darkest-shade: #151515;
+}
+
+html[data-theme='dark'] {
+  --main-dark: #4291d3;
+  --main: #33a1fd;
+  --main-light: #ace6f6;
+  --dark-shade: #ebebeb;
+  --darker-shade: #f0f0f0;
+  --darkest-shade: #f7f7f7;
+  --dark-border: #efefef;
+  --light-shade: #1c1c1c;
+  --lighter-shade: #1e1e1e;
+  --lightest-shade: #151515;
+}
+
 /* BOOTSTRAP CONFIG */
 :root {
-  --bs-light-shade: #efefef;
-  --bs-lighter-shade: #f1f1f1;
-  --bs-lightest-shade: #f1f1f1;
-  --bs-dark-shade: #151515;
-  --bs-darker-shade: #151515;
-  --bs-darkest-shade: #151515;
-  --bs-main-lightest: #33a1fd;
-  --bs-main-light: #ace6f6;
-  --bs-main: #33a1fd;
-  --bs-main-dark: #446491;
-  --bs-main-darkest: #33a1fd;
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -474,11 +503,11 @@ fieldset:disabled .btn {
 body,
 html {
   height: 100vh;
-  background-color: #151515;
+  background-color: var(--darkest-shade);
 }
 
 body {
-  background-color: #efefef;
+  background-color: var(--light-shade);
   overflow-x: hidden;
   z-index: 0;
   min-width: 400px;
@@ -486,11 +515,15 @@ body {
 
 a,
 b {
-  color: #446491;
+  color: var(--main-dark);
 }
 
 a:hover {
-  color: #ace6f6;
+  color: var(--main-light);
+}
+
+p {
+  color: var(--lighter-shade);
 }
 
 /* END GLOBAL */
@@ -504,7 +537,7 @@ a:hover {
 }
 
 .project-modal {
-  background-color: #efefef;
+  background-color: var(--light-shade);
   position: absolute;
   padding: 20px 40px;
   top: 50%;
@@ -532,7 +565,7 @@ a:hover {
 
 .fp-controlArrow.fp-next {
   right: 50px;
-  border-color: transparent transparent transparent #151515;
+  border-color: transparent transparent transparent var(--darkest-shade);
   -webkit-transition: ease-in 0.15s;
   transition: ease-in 0.15s;
 }
@@ -540,13 +573,13 @@ a:hover {
 .fp-controlArrow.fp-next:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  border-color: transparent transparent transparent #33a1fd;
+  border-color: transparent transparent transparent var(--main);
   opacity: 0.9;
 }
 
 .fp-controlArrow.fp-prev {
   left: 50px;
-  border-color: transparent #151515 transparent transparent;
+  border-color: transparent var(--darkest-shade) transparent transparent;
   -webkit-transition: ease-in 0.15s;
   transition: ease-in 0.15s;
 }
@@ -554,7 +587,7 @@ a:hover {
 .fp-controlArrow.fp-prev:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  border-color: transparent #33a1fd transparent transparent;
+  border-color: transparent var(--main) transparent transparent;
   opacity: 0.9;
 }
 
@@ -564,7 +597,7 @@ a:hover {
   font-weight: bold;
   font-size: 1.5em;
   margin-left: 3%;
-  color: #efefef !important;
+  color: var(--light-shade) !important;
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
   /* causes brand to slide in */
@@ -572,7 +605,7 @@ a:hover {
 }
 
 .navbar-brand:hover {
-  color: #33a1fd !important;
+  color: var(--main) !important;
 }
 
 .navbar-dark {
@@ -590,6 +623,8 @@ a:hover {
   position: absolute;
   bottom: 15px;
   margin-top: 10px;
+  margin-right: 15px;
+  left: 15px;
 }
 
 .badge-group span {
@@ -597,18 +632,18 @@ a:hover {
 }
 
 .project-item {
-  background-color: #1e1e1e;
+  background-color: var(--darker-shade);
   position: relative;
 }
 
 .project-item h1 {
-  font-size: 24px;
+  font-size: 26px;
   margin: 10px 0 5px 0;
 }
 
 .project-item p {
-  font-size: 15px;
-  opacity: 0.9;
+  font-size: 16px;
+  opacity: 0.95;
   text-indent: 5px;
   font-weight: 300;
 }
@@ -625,21 +660,21 @@ a:hover {
 
 #landing-section {
   background-repeat: no-repeat;
-  background-color: #151515;
+  background-color: var(--darkest-shade);
   z-index: 2;
 }
 
 .main-section {
-  background-color: #151515;
+  background-color: var(--darkest-shade);
   height: 100vh;
 }
 
 .main-section.even {
-  background-color: #efefef;
+  background-color: var(--light-shade);
 }
 
 .text-main {
-  color: #33a1fd;
+  color: var(--main);
 }
 
 .badge {
@@ -649,10 +684,10 @@ a:hover {
 /*********************************************/
 .container-decorated {
   border-radius: 15px 100px 15px 100px;
-  border: 5px solid #33a1fd42;
+  border: 5px solid rgba(2, 89, 162, 0.26);
   padding: 24px 24px 12px 24px;
   background: url("/svg/topography_low_opacity.svg");
-  background-color: #1c1c1c;
+  background-color: var(--darker-shade);
   margin-top: 5% !important;
   color: white;
 }
@@ -662,32 +697,41 @@ a:hover {
 }
 
 .clickable-icon:hover {
-  color: #efefef;
+  color: var(--light-shade);
 }
 
 input.form-control {
-  background-color: #1e1e1e;
+  background-color: var(--darker-shade);
   border: none;
   color: white;
   height: 40px;
 }
 
 div.form-control {
-  border: none;
   padding: 15px 20px;
   background-color: #33a1fd0f;
+  border: 2px solid #152c3f99;
   border-radius: 10px;
 }
 
 .skill-card {
-  background-color: #1e1e1e;
+  background-color: var(--darker-shade);
   color: white;
   padding: 15px 20px;
-  border: 5px solid #1a1a1a !important;
+  border: 3px solid var(--dark-border) !important;
   position: relative;
   margin: 10px 0;
   height: 100%;
   border-radius: 10px;
+}
+
+.skill-card p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.skill-card b {
+  font-size: 18px;
 }
 
 #introduction .profile-img {
@@ -698,7 +742,7 @@ div.form-control {
 #introduction .paragraph {
   text-indent: 10px;
   font-size: 16px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 #introduction .one-liner {
@@ -708,13 +752,13 @@ div.form-control {
 }
 
 #introduction .email {
-  color: #446491;
+  color: var(--main-dark);
   font-weight: 700;
   text-decoration: none;
 }
 
 #introduction .email:hover {
-  color: #ace6f6;
+  color: var(--main-light);
 }
 
 /*********************************************/
@@ -735,20 +779,18 @@ div.form-control {
 /********************************************/
 /********************************************/
 .bg-blur {
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
   height: 100%;
 }
 
 #landing-section {
   background: url("/svg/topography.svg");
-  background-color: #1c1c1c;
+  background-color: var(--darker-shade);
 }
 
 #landing-section .bg-clipper {
   height: 100%;
-  background-color: #151515;
-  background-image: url("/water.jpg");
+  background-color: var(--darkest-shade);
+  background-image: url("/bg.png");
   background-size: cover;
   /*
 			Width:700
@@ -763,12 +805,12 @@ div.form-control {
 
 #portfolio-section {
   background: url("/svg/topography.svg");
-  background-color: #1c1c1c;
+  background-color: var(--darker-shade);
 }
 
 #portfolio-section .bg-clipper {
   background: url("/svg/topography.svg");
-  background-color: #1c1c1c;
+  background-color: var(--darker-shade);
   -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 95.65%, 1% 95.64%, 2% 95.61%, 3% 95.55%, 4% 95.48%, 5% 95.38%, 6% 95.26%, 7% 95.12%, 8% 94.96%, 9% 94.78%, 10% 94.59%, 11% 94.38%, 12% 94.15%, 13% 93.91%, 14% 93.65%, 15% 93.39%, 16% 93.11%, 17% 92.82%, 18% 92.53%, 19% 92.23%, 20% 91.92%, 21% 91.61%, 22% 91.3%, 23% 90.99%, 24% 90.68%, 25% 90.38%, 26% 90.08%, 27% 89.78%, 28% 89.5%, 29% 89.22%, 30% 88.95%, 31% 88.7%, 32% 88.45%, 33% 88.23%, 34% 88.02%, 35% 87.82%, 36% 87.64%, 37% 87.49%, 38% 87.35%, 39% 87.23%, 40% 87.13%, 41% 87.05%, 42% 87%, 43% 86.97%, 44% 86.96%, 45% 86.97%, 46% 87%, 47% 87.06%, 48% 87.13%, 49% 87.23%, 50% 87.35%, 51% 87.49%, 52% 87.65%, 53% 87.83%, 54% 88.02%, 55% 88.23%, 56% 88.46%, 57% 88.7%, 58% 88.96%, 59% 89.23%, 60% 89.51%, 61% 89.79%, 62% 90.09%, 63% 90.39%, 64% 90.69%, 65% 91%, 66% 91.31%, 67% 91.62%, 68% 91.93%, 69% 92.24%, 70% 92.54%, 71% 92.83%, 72% 93.12%, 73% 93.4%, 74% 93.66%, 75% 93.92%, 76% 94.16%, 77% 94.39%, 78% 94.6%, 79% 94.79%, 80% 94.97%, 81% 95.13%, 82% 95.26%, 83% 95.38%, 84% 95.48%, 85% 95.56%, 86% 95.61%, 87% 95.64%, 88% 95.65%, 89% 95.64%, 90% 95.61%, 91% 95.55%, 92% 95.47%, 93% 95.37%, 94% 95.25%, 95% 95.11%, 96% 94.96%, 97% 94.78%, 98% 94.58%, 99% 94.37%, 100% 94.14%);
           clip-path: polygon(100% 0%, 0% 0%, 0% 95.65%, 1% 95.64%, 2% 95.61%, 3% 95.55%, 4% 95.48%, 5% 95.38%, 6% 95.26%, 7% 95.12%, 8% 94.96%, 9% 94.78%, 10% 94.59%, 11% 94.38%, 12% 94.15%, 13% 93.91%, 14% 93.65%, 15% 93.39%, 16% 93.11%, 17% 92.82%, 18% 92.53%, 19% 92.23%, 20% 91.92%, 21% 91.61%, 22% 91.3%, 23% 90.99%, 24% 90.68%, 25% 90.38%, 26% 90.08%, 27% 89.78%, 28% 89.5%, 29% 89.22%, 30% 88.95%, 31% 88.7%, 32% 88.45%, 33% 88.23%, 34% 88.02%, 35% 87.82%, 36% 87.64%, 37% 87.49%, 38% 87.35%, 39% 87.23%, 40% 87.13%, 41% 87.05%, 42% 87%, 43% 86.97%, 44% 86.96%, 45% 86.97%, 46% 87%, 47% 87.06%, 48% 87.13%, 49% 87.23%, 50% 87.35%, 51% 87.49%, 52% 87.65%, 53% 87.83%, 54% 88.02%, 55% 88.23%, 56% 88.46%, 57% 88.7%, 58% 88.96%, 59% 89.23%, 60% 89.51%, 61% 89.79%, 62% 90.09%, 63% 90.39%, 64% 90.69%, 65% 91%, 66% 91.31%, 67% 91.62%, 68% 91.93%, 69% 92.24%, 70% 92.54%, 71% 92.83%, 72% 93.12%, 73% 93.4%, 74% 93.66%, 75% 93.92%, 76% 94.16%, 77% 94.39%, 78% 94.6%, 79% 94.79%, 80% 94.97%, 81% 95.13%, 82% 95.26%, 83% 95.38%, 84% 95.48%, 85% 95.56%, 86% 95.61%, 87% 95.64%, 88% 95.65%, 89% 95.64%, 90% 95.61%, 91% 95.55%, 92% 95.47%, 93% 95.37%, 94% 95.25%, 95% 95.11%, 96% 94.96%, 97% 94.78%, 98% 94.58%, 99% 94.37%, 100% 94.14%);
   height: 100vh;
@@ -776,7 +818,7 @@ div.form-control {
 
 #skills-section {
   background: url("/svg/topography.svg");
-  background-color: #1c1c1c;
+  background-color: var(--darker-shade);
 }
 
 /* KEYFRAMES & ANIMATION CLASSES */
@@ -1051,11 +1093,11 @@ div.form-control {
 }
 
 #fp-nav ul li a {
-  background-color: #d7d7d7 !important;
+  background-color: var(--darkest-shade) !important;
 }
 
 #fp-nav ul li .active {
-  background-color: #0c6cbd !important;
+  background-color: var(--main-dark) !important;
 }
 
 #fp-nav ul li span {
@@ -1116,8 +1158,8 @@ div.form-control {
 
 .tooltipSpecial .tooltiptextSpecial {
   width: 120px;
-  background-color: #efefef;
-  color: #33a1fd;
+  background-color: var(--light-shade);
+  color: var(--main);
   font-weight: bold;
   text-align: center;
   padding: 5px 0;
@@ -1138,7 +1180,7 @@ div.form-control {
   margin-top: -5px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #efefef;
+  border-bottom: 10px solid var(--light-shade);
 }
 
 .tooltipSpecial .tooltip-visible {
@@ -1170,5 +1212,56 @@ div.form-control {
 .tooltipAnim {
   -webkit-animation: tooltipAnim 0.2s 1 0s ease-in-out;
   animation: tooltipAnim 0.2s 1 0s ease-in-out;
+}
+
+/* TOGGLER */
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  margin: 15px;
+  width: 52px;
+  height: 27px;
+  background: var(--darker-shade);
+  float: left;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--main);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+.toggle-container {
+  position: absolute;
+  right: 10px;
 }
 /*# sourceMappingURL=main.css.map */

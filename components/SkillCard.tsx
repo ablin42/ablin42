@@ -25,27 +25,33 @@ const SkillHeader = styled.div`
 
 const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardProps) => {
   return (
-    <div className="col-4 mt-2 mb-2">
+    <div className="col-3 mt-2 mb-2">
       <div className="skill-card shadow">
         <SkillHeader>
           <b>{name}</b>
           <div style={{ position: 'absolute', right: 0 }}>
-            <a href={externalLink} target="_blank">
-            <FontAwesomeIcon
-              className="fa-icon clickable-icon p-2"
-              fontSize={25}
-              icon={faArrowUpRightFromSquare}
-              style={{ cursor: 'pointer' }}
-              color="#181818"
-            /><a/>
-               <a href={repoLink} target="_blank">
-            <FontAwesomeIcon
-              className="fa-icon clickable-icon p-2"
-              fontSize={25}
-              icon={faCodeBranch}
-              style={{ cursor: 'pointer' }}
-              color="#181818"
-            /><a/>
+            {externalLink && (
+              <a href={externalLink} target="_blank">
+                <FontAwesomeIcon
+                  className="fa-icon clickable-icon p-2"
+                  fontSize={25}
+                  icon={faArrowUpRightFromSquare}
+                  style={{ cursor: 'pointer' }}
+                  color="#677f91"
+                />
+              </a>
+            )}
+            {repoLink && (
+              <a href={repoLink} target="_blank">
+                <FontAwesomeIcon
+                  className="fa-icon clickable-icon p-2"
+                  fontSize={25}
+                  icon={faCodeBranch}
+                  style={{ cursor: 'pointer' }}
+                  color="#677f91"
+                />
+              </a>
+            )}
           </div>
         </SkillHeader>
 
