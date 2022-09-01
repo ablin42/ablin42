@@ -17,7 +17,9 @@ html {
 
 html[data-theme='dark'] {
   --main-dark: #4291d3;
+  // ^ #4291d3 || #446491
   --main: #33a1fd;
+  // ^ #ace6f6 || #3eabfd
   --main-light: #ace6f6;
   --dark-shade: #ebebeb;
   --darker-shade: #f0f0f0;
@@ -79,7 +81,7 @@ a:hover {
 }
 
 p {
-  color: var(--lighter-shade)
+  color: var(--lighter-shade);
 }
 
 /* END GLOBAL */
