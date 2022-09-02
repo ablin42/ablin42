@@ -152,7 +152,7 @@ p {
   font-weight: bold;
   font-size: 1.5em;
   margin-left: 3%;
-  color: var(--light-shade) !important;
+  color: white !important;
   transition: ease-in-out 0.2s;
   /* causes brand to slide in */
   padding: 0;
@@ -185,7 +185,13 @@ p {
 .project-item {
   // background-image: url('/bg/cartographer.png');
   background-color: var(--darker-shade);
+  color: var(--lightest-shade);
   position: relative;
+  height: 300px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border: 3px solid var(--dark-border) !important;
+  position: relative;
+  // color: white;
 
   h1 {
     font-size: 26px;
@@ -197,6 +203,23 @@ p {
     opacity: 0.95;
     text-indent: 5px;
     font-weight: 300;
+  }
+}
+
+.project-menu {
+  padding: 5px;
+  background-color: #33a1fd;
+  border-radius: 15px;
+  text-align: center;
+  position: absolute;
+
+  .clickable-icon {
+    cursor: pointer;
+    color: var(--dark-shade);
+
+    &:hover {
+      color: var(--light-shade);
+    }
   }
 }
 
@@ -267,7 +290,7 @@ input.form-control {
 div.form-control {
   padding: 15px 20px;
   background-color: #33a1fd0f;
-  border: 2px solid #152c3f99;
+  border: 2px solid #1b88e573;
   border-radius: 10px;
 }
 
@@ -496,6 +519,14 @@ div.form-control {
   // background-color: var(--darkest-shade);
   background: url('/svg/topography.svg');
   background-color: var(--darker-shade);
+  .portfolio-container {
+    position: relative;
+    background-color: #33a1fd0f;
+    border-radius: 50px;
+    height: 90%;
+    border: 2px solid #1b88e573;
+    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .075) !important
+  }
 
   .bg-clipper {
     // background-color: var(--light-shade);
