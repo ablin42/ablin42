@@ -26,7 +26,7 @@ const SkillHeader = styled.div`
 const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardProps) => {
   return (
     <div className="col-3 mt-2 mb-2">
-      <div className="skill-card shadow">
+      <div className="skill-card shadow-sm">
         <SkillHeader>
           <b>{name}</b>
           <div style={{ position: 'absolute', right: 0 }}>

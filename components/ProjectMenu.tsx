@@ -9,13 +9,8 @@ import { faFolder } from '@fortawesome/free-regular-svg-icons';
 // @MISC
 
 const Menu: StyledComponent<any, any> = styled.div`
-  position: absolute;
   right: ${({ attachRight }: any) => (attachRight ? '-30px' : 'auto')};
   left: ${({ attachRight }: any) => (attachRight ? 'auto' : '-30px')};
-  padding: 5px;
-  background-color: #33a1fd;
-  border-radius: 15px;
-  text-align: center;
 `;
 
 interface MenuProps {
@@ -28,7 +23,7 @@ const ProjectMenu = ({ repoLink, externalLink, attachRight }: MenuProps) => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <Menu className="d-flex flex-column shadow-sm" attachRight={attachRight}>
+    <Menu className="d-flex flex-column shadow-sm project-menu" attachRight={attachRight}>
       <FontAwesomeIcon
         className="fa-icon clickable-icon p-2"
         fontSize={25}

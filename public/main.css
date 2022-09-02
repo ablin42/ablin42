@@ -597,7 +597,7 @@ p {
   font-weight: bold;
   font-size: 1.5em;
   margin-left: 3%;
-  color: var(--light-shade) !important;
+  color: white !important;
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
   /* causes brand to slide in */
@@ -633,6 +633,12 @@ p {
 
 .project-item {
   background-color: var(--darker-shade);
+  color: var(--lightest-shade);
+  position: relative;
+  height: 300px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border: 3px solid var(--dark-border) !important;
   position: relative;
 }
 
@@ -646,6 +652,23 @@ p {
   opacity: 0.95;
   text-indent: 5px;
   font-weight: 300;
+}
+
+.project-menu {
+  padding: 5px;
+  background-color: #33a1fd;
+  border-radius: 15px;
+  text-align: center;
+  position: absolute;
+}
+
+.project-menu .clickable-icon {
+  cursor: pointer;
+  color: var(--dark-shade);
+}
+
+.project-menu .clickable-icon:hover {
+  color: var(--light-shade);
 }
 
 .centered-blob {
@@ -710,7 +733,7 @@ input.form-control {
 div.form-control {
   padding: 15px 20px;
   background-color: #33a1fd0f;
-  border: 2px solid #152c3f99;
+  border: 2px solid #1b88e573;
   border-radius: 10px;
 }
 
@@ -806,6 +829,16 @@ div.form-control {
 #portfolio-section {
   background: url("/svg/topography.svg");
   background-color: var(--darker-shade);
+}
+
+#portfolio-section .portfolio-container {
+  position: relative;
+  background-color: #33a1fd0f;
+  border-radius: 50px;
+  height: 90%;
+  border: 2px solid #1b88e573;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.075) !important;
+          box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.075) !important;
 }
 
 #portfolio-section .bg-clipper {

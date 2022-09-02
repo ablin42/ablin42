@@ -80,6 +80,7 @@ const Skills = () => {
                   onKeyDown={(e) => handleKey(e)}
                 />
                 <div className="mt-2">
+                  {/* TODO */}
                   {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions </span>}
                   {suggestions.map((tag, index) => (
                     <span
@@ -95,6 +96,7 @@ const Skills = () => {
                   {tags.map((tag, index) => (
                     <span key={tag.name} className="badge bg-primary m-1">
                       {tag.name}
+                      {/* TODO */}
                       <b
                         className="ms-2"
                         style={{ color: 'white', cursor: 'pointer' }}
