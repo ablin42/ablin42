@@ -6,6 +6,7 @@ import { Trans } from 'react-i18next';
 import SkillCard from '../SkillCard';
 // @COMPONENTS
 import { TAGS, PROJECTS } from '../../SKILLS-OBJECTS';
+import { match } from 'assert';
 // @MISC
 
 const SKILLS_LIST = TAGS.map((tag) => tag.name);
@@ -47,20 +48,30 @@ const Skills = () => {
   };
 
   const getMatchingProjects = (tags: Array<any>) => {
-    const tagStack = tags
-      .map((tag) => tag.name)
-      .sort((a, b) => a.localeCompare(b))
-      .toString();
-    const match = PROJECTS.filter((project) => {
-      const projectStack = project.stack.sort((a, b) => a.localeCompare(b)).toString();
-      return projectStack === tagStack;
+    const projectsObj = PROJECTS.map((project) => {
+      return {
+        name: project.name,
+        stack: project.stack.map((tag) => tag.toLowerCase()),
+        description: project.description,
+        github: project.github,
+        link: project.link,
+        nbMatch: 0,
+      };
     });
 
+    const tagStack = tags.map((tag) => tag.name);
+
+    tagStack.forEach((tag) => {
+      projectsObj.forEach((project, index) => {
+        if (project.stack.includes(tag.toLowerCase())) projectsObj[index].nbMatch += 1;
+      });
+    });
+
+    const match = projectsObj.filter((project) => project.nbMatch > 0).sort((a, b) => b.nbMatch - a.nbMatch);
     setMatchingProjects(match);
   };
 
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    console.log(e.keyCode);
     if (e.keyCode === 13 || e.keyCode === 9) addTag(search);
   };
 
@@ -80,7 +91,6 @@ const Skills = () => {
                   onKeyDown={(e) => handleKey(e)}
                 />
                 <div className="mt-2">
-                  {/* TODO */}
                   {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions </span>}
                   {suggestions.map((tag, index) => (
                     <span
@@ -96,7 +106,6 @@ const Skills = () => {
                   {tags.map((tag, index) => (
                     <span key={tag.name} className="badge bg-primary m-1">
                       {tag.name}
-                      {/* TODO */}
                       <b
                         className="ms-2"
                         style={{ color: 'white', cursor: 'pointer' }}
@@ -110,8 +119,6 @@ const Skills = () => {
               </div>
               <div className="mt-3">
                 <div className="row">
-                  {/* TODO: sort + finish search */}
-                  {/* TODO: add context headers */}
                   {matchingProjects.map((project) => {
                     const { name, stack, description, github, link } = project;
                     return (
@@ -122,6 +129,7 @@ const Skills = () => {
                         stack={stack}
                         externalLink={link}
                         repoLink={github}
+                        tags={tags}
                       />
                     );
                   })}

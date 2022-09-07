@@ -4,7 +4,7 @@ export const TAGS = [
   {
     name: 'react',
     type: 'frontend',
-    isFavorite: false,
+    isFavorite: true,
   },
   {
     name: 'nextjs',

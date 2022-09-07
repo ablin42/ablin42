@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-regular-svg-icons';
 import styled from 'styled-components';
 // @COMPONENTS
@@ -14,6 +14,7 @@ interface CardProps {
   stack: string[];
   repoLink: string;
   externalLink: string;
+  tags: Array<any>;
 }
 
 const SkillHeader = styled.div`
@@ -23,7 +24,9 @@ const SkillHeader = styled.div`
   margin-bottom: 0.75rem;
 `;
 
-const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardProps) => {
+const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: CardProps) => {
+  const tagStack = tags.map((tag: any) => tag.name);
+
   return (
     <div className="col-3 mt-2 mb-2">
       <div className="skill-card shadow-sm">
@@ -58,13 +61,31 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink }: CardPro
         <p className="mb-5">{description}</p>
         <div className="d-flex justify-content-between align-items-center badge-group">
           <div>
-            {stack.map((item) => {
-              return (
-                <span key={item} className="badge bg-primary m-1">
-                  {item}
-                </span>
-              );
-            })}
+            {stack
+              .map((item) => {
+                return (
+                  <span key={item} className={`badge bg-${tagStack.includes(item) ? 'info' : 'primary'} m-1`}>
+                    {tags.findIndex((tag) => tag.name == item) >= 0 &&
+                      tags[tags.findIndex((tag) => tag.name == item)].isFavorite && (
+                        <FontAwesomeIcon
+                          className="fa-icon me-1"
+                          fontSize={15}
+                          icon={faStar}
+                          style={{ cursor: 'pointer' }}
+                          color="white"
+                        />
+                      )}
+                    {item}
+                  </span>
+                );
+              })
+              .sort((a, b) => {
+                return tags.findIndex((tag) => tag.name == a.key) >= 0 &&
+                  tags[tags.findIndex((tag) => tag.name == a.key)].isFavorite &&
+                  !tags[tags.findIndex((tag) => tag.name == b.key)].isFavorite
+                  ? -1
+                  : 1;
+              })}
           </div>
         </div>
       </div>
