@@ -1,16 +1,18 @@
 // @EXTERNALS
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
-import { Trans } from 'react-i18next';
 import SkillCard from '../SkillCard';
 // @COMPONENTS
 import { TAGS, PROJECTS } from '../../SKILLS-OBJECTS';
-import { match } from 'assert';
 // @MISC
 
 const SKILLS_LIST = TAGS.map((tag) => tag.name);
 
+// TODO: remove all tags
+// TODO: polish this UI
+// TODO: handle casing
+// TODO: have default suggestion
+// TODO: handle ','
+// TODO: Finish skill search NOW.3.
 const Skills = () => {
   const [search, setSearch] = useState('');
   const [suggestions, setSuggestions] = useState<Array<string>>([]);
@@ -45,6 +47,8 @@ const Skills = () => {
     newTags.push(tag);
     getMatchingProjects(newTags);
     setTags(newTags);
+    setSearch('');
+    setSuggestions([]);
   };
 
   const getMatchingProjects = (tags: Array<any>) => {
@@ -72,13 +76,16 @@ const Skills = () => {
   };
 
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.keyCode === 13 || e.keyCode === 9) addTag(search);
+    if (e.keyCode === 13 || e.keyCode === 9 || e.keyCode === 188) return addTag(search);
   };
 
   return (
     <>
       <section className="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
         <div className="bg-clipper">
+          <h1 style={{ textAlign: 'center', color: 'blue', marginTop: '30px', marginBottom: '-30px' }}>
+            Projects & Skills
+          </h1>
           <div className="container-fluid mb-5">
             <div className="col-8 m-auto mt-5">
               <div className="form-control shadow-sm">

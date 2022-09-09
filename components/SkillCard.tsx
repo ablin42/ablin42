@@ -1,12 +1,11 @@
 // @EXTERNALS
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup, faStar } from '@fortawesome/free-solid-svg-icons';
-import { faFolder } from '@fortawesome/free-regular-svg-icons';
+import { faArrowUpRightFromSquare, faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 // @COMPONENTS
 // @MISC
+import { TAGS } from '../SKILLS-OBJECTS';
 
 interface CardProps {
   name: string;
@@ -65,24 +64,22 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
               .map((item) => {
                 return (
                   <span key={item} className={`badge bg-${tagStack.includes(item) ? 'info' : 'primary'} m-1`}>
-                    {tags.findIndex((tag) => tag.name == item) >= 0 &&
-                      tags[tags.findIndex((tag) => tag.name == item)].isFavorite && (
-                        <FontAwesomeIcon
-                          className="fa-icon me-1"
-                          fontSize={15}
-                          icon={faStar}
-                          style={{ cursor: 'pointer' }}
-                          color="white"
-                        />
-                      )}
+                    {TAGS[TAGS.findIndex((tag) => tag.name == item)]?.isFavorite && (
+                      <FontAwesomeIcon
+                        className="fa-icon me-1"
+                        fontSize={15}
+                        icon={faStar}
+                        style={{ cursor: 'pointer' }}
+                        color="white"
+                      />
+                    )}
                     {item}
                   </span>
                 );
               })
               .sort((a, b) => {
-                return tags.findIndex((tag) => tag.name == a.key) >= 0 &&
-                  tags[tags.findIndex((tag) => tag.name == a.key)].isFavorite &&
-                  !tags[tags.findIndex((tag) => tag.name == b.key)].isFavorite
+                return TAGS[TAGS.findIndex((tag) => tag.name == a.key)]?.isFavorite &&
+                  !TAGS[TAGS.findIndex((tag) => tag.name == b.key)]?.isFavorite
                   ? -1
                   : 1;
               })}

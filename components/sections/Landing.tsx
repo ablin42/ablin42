@@ -1,13 +1,11 @@
 // @EXTERNALS
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEthereum, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faTerminal, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Toggler from '../Toggler';
+import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 // @COMPONENTS
+import Toggler from '../Toggler';
 // @MISC
 
 const Landing = () => {

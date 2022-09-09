@@ -2,9 +2,7 @@
 import React, { useState } from 'react';
 import styled, { StyledComponent } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare, faCodeBranch, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
-import { faFolder } from '@fortawesome/free-regular-svg-icons';
 // @COMPONENTS
 // @MISC
 
