@@ -43,7 +43,7 @@ const Landing = () => {
             </nav>
 
             <div className="container">
-              <div className="col-8 m-auto container-decorated shadow-lg" id="introduction">
+              <div className="col-md-8 col-xs-12 m-auto container-decorated shadow-lg" id="introduction">
                 <h1 className="mb-3 text-main">
                   ~/0xHarb <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack
                   Developer

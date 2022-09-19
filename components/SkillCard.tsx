@@ -27,7 +27,7 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
   const tagStack = tags.map((tag: any) => tag.name);
 
   return (
-    <div className="col-3 mt-2 mb-2">
+    <div className="col-md-3 mt-2 mb-2">
       <div className="skill-card shadow-sm">
         <SkillHeader>
           <b>{name}</b>

@@ -187,10 +187,11 @@ p {
   background-color: var(--darker-shade);
   color: var(--lightest-shade);
   position: relative;
-  height: 300px;
+  min-height: 300px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   border: 3px solid var(--dark-border) !important;
   position: relative;
+  margin: 10px 0;
   // color: white;
 
   h1 {
