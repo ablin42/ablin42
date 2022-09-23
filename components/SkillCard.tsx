@@ -58,7 +58,7 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
         </SkillHeader>
 
         <p className="mb-5">{description}</p>
-        <div className="d-flex justify-content-between align-items-center badge-group">
+        <div className="d-flex justify-content-between align-items-center badge-group" style={{ left: '15px' }}>
           <div>
             {stack
               .map((item) => {

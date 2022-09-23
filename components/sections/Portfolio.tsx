@@ -54,7 +54,7 @@ const Portfolio = () => {
                       <div className="d-flex align-items-center mb-1">
                         <h1>Dungeon Defenders</h1>
                       </div>
-                      <p>
+                      <p className="mb-5">
                         <Trans>DungeonDefendersDescription</Trans>
                       </p>
                       {/* <span onClick={() => setOpen(1)}>MODAL</span> */}
@@ -80,7 +80,7 @@ const Portfolio = () => {
                       <div className="d-flex align-items-center mb-1">
                         <h1>BullvsBear</h1>
                       </div>
-                      <p>
+                      <p className="mb-5">
                         <Trans
                           components={{
                             pcsLink: (
@@ -112,7 +112,7 @@ const Portfolio = () => {
                       <div className="d-flex align-items-center mb-1">
                         <h1>Chaproulette</h1>
                       </div>
-                      <p>
+                      <p className="mb-5">
                         <Trans>ChaprouletteDescription</Trans>
                       </p>
 
@@ -135,7 +135,7 @@ const Portfolio = () => {
                       <div className="d-flex align-items-center mb-1">
                         <h1>Xs-url</h1>
                       </div>
-                      <p>
+                      <p className="mb-5">
                         <Trans>XsUrlDescription</Trans>
                       </p>
 
