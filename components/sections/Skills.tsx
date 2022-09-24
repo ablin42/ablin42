@@ -79,65 +79,59 @@ const Skills = () => {
   return (
     <>
       <section className="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
-        <div className="bg-clipper">
-          <h1 style={{ textAlign: 'center', color: 'white', marginTop: '30px', marginBottom: '-30px' }}>
-            Projects & Skills
-          </h1>
-          <div className="container-fluid mb-5">
-            <div className="col-md-8 m-auto mt-5">
-              <div className="form-control shadow-sm">
-                <input
-                  type="text"
-                  className="form-control shadow-sm"
-                  placeholder="Search for a skill (React, Node, Javascript...)"
-                  value={search}
-                  onChange={(e) => handleSearch(e)}
-                  onKeyDown={(e) => handleKey(e)}
-                />
-                <div className="mt-2">
-                  {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions</span>}
-                  {suggestions.map((tag, index) => (
-                    <span
-                      key={tag}
-                      className="badge bg-info m-1"
-                      style={{ cursor: 'pointer' }}
-                      onClick={() => addTag(tag)}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  <br />
-                  {tags.map((tag, index) => (
-                    <span key={tag.name} className="badge bg-primary m-1">
-                      {tag.name}
-                      <b
-                        className="ms-2"
-                        style={{ color: 'white', cursor: 'pointer' }}
-                        onClick={() => removeTag(index)}
-                      >
-                        x
-                      </b>
-                    </span>
-                  ))}
-                </div>
+        <h1 style={{ textAlign: 'center', color: 'white', marginTop: '30px', marginBottom: '-30px' }}>
+          Projects & Skills
+        </h1>
+        <div className="container-fluid mb-5">
+          <div className="col-md-8 m-auto mt-5">
+            <div className="form-control shadow-sm">
+              <input
+                type="text"
+                className="form-control shadow-sm"
+                placeholder="Search for a skill (React, Node, Javascript...)"
+                value={search}
+                onChange={(e) => handleSearch(e)}
+                onKeyDown={(e) => handleKey(e)}
+              />
+              <div className="mt-2">
+                {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions</span>}
+                {suggestions.map((tag, index) => (
+                  <span
+                    key={tag}
+                    className="badge bg-info m-1"
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => addTag(tag)}
+                  >
+                    {tag}
+                  </span>
+                ))}
+                <br />
+                {tags.map((tag, index) => (
+                  <span key={tag.name} className="badge bg-primary m-1">
+                    {tag.name}
+                    <b className="ms-2" style={{ color: 'white', cursor: 'pointer' }} onClick={() => removeTag(index)}>
+                      x
+                    </b>
+                  </span>
+                ))}
               </div>
-              <div className="mt-3">
-                <div className="row">
-                  {matchingProjects.map((project) => {
-                    const { name, stack, description, github, link } = project;
-                    return (
-                      <SkillCard
-                        key={name}
-                        name={name}
-                        description={description}
-                        stack={stack}
-                        externalLink={link}
-                        repoLink={github}
-                        tags={tags}
-                      />
-                    );
-                  })}
-                </div>
+            </div>
+            <div className="mt-3">
+              <div className="row">
+                {matchingProjects.map((project) => {
+                  const { name, stack, description, github, link } = project;
+                  return (
+                    <SkillCard
+                      key={name}
+                      name={name}
+                      description={description}
+                      stack={stack}
+                      externalLink={link}
+                      repoLink={github}
+                      tags={tags}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
