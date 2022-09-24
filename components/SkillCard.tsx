@@ -1,11 +1,10 @@
 // @EXTERNALS
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 // @COMPONENTS
 // @MISC
-import { TAGS } from '../SKILLS-OBJECTS';
 
 interface CardProps {
   name: string;
@@ -61,27 +60,16 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
         <div className="d-flex justify-content-between align-items-center badge-group" style={{ left: '15px' }}>
           <div>
             {stack
+              .sort((a, b) => {
+                if (!tagStack.includes(b) && tagStack.includes(a)) return -1;
+                return 1;
+              })
               .map((item) => {
                 return (
                   <span key={item} className={`badge bg-${tagStack.includes(item) ? 'info' : 'primary'} m-1`}>
-                    {TAGS[TAGS.findIndex((tag) => tag.name == item)]?.isFavorite && (
-                      <FontAwesomeIcon
-                        className="fa-icon me-1"
-                        fontSize={15}
-                        icon={faStar}
-                        style={{ cursor: 'pointer' }}
-                        color="white"
-                      />
-                    )}
                     {item}
                   </span>
                 );
-              })
-              .sort((a, b) => {
-                return TAGS[TAGS.findIndex((tag) => tag.name == a.key)]?.isFavorite &&
-                  !TAGS[TAGS.findIndex((tag) => tag.name == b.key)]?.isFavorite
-                  ? -1
-                  : 1;
               })}
           </div>
         </div>

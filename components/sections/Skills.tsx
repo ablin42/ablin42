@@ -7,16 +7,10 @@ import { TAGS, PROJECTS } from '../../SKILLS-OBJECTS';
 
 const SKILLS_LIST = TAGS.map((tag) => tag.name);
 
-// TODO: remove all tags
-// TODO: polish this UI
-// TODO: handle casing
-// TODO: have default suggestion
-// TODO: handle ','
-// TODO: Finish skill search NOW
 const Skills = () => {
   const [search, setSearch] = useState('');
-  const [suggestions, setSuggestions] = useState<Array<string>>([]);
-  const [tags, setTags] = useState<Array<any>>(TAGS);
+  const [suggestions, setSuggestions] = useState<Array<string>>(SKILLS_LIST);
+  const [tags, setTags] = useState<Array<any>>([]);
   const [matchingProjects, setMatchingProjects] = useState(PROJECTS);
 
   const removeTag = (index: number) => {
@@ -28,16 +22,18 @@ const Skills = () => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
+    // ? Change Events dont have a keycode property, so we check like this instead
+    if (value[value.length - 1] === ',') return;
     setSearch(value);
 
-    const suggest = SKILLS_LIST.filter((skill) => skill.indexOf(value) > -1);
+    const suggest = SKILLS_LIST.filter((skill) => skill.toLowerCase().indexOf(value) > -1);
     setSuggestions(suggest);
   };
 
   const addTag = (tagName: string) => {
-    if (tags.find((tag) => tag.name === tagName.toLowerCase())) return;
+    if (tags.find((tag) => tag.name == tagName)) return;
 
-    let tag = TAGS.find((tag) => tag.name === tagName.toLowerCase());
+    let tag = TAGS.find((tag) => tag.name == tagName);
     if (!tag) {
       const suggest = SKILLS_LIST.filter((skill) => skill.indexOf(tagName) > -1);
       if (suggest.length <= 0) return;
@@ -48,7 +44,7 @@ const Skills = () => {
     getMatchingProjects(newTags);
     setTags(newTags);
     setSearch('');
-    setSuggestions([]);
+    setSuggestions(SKILLS_LIST);
   };
 
   const getMatchingProjects = (tags: Array<any>) => {
@@ -76,14 +72,15 @@ const Skills = () => {
   };
 
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.keyCode === 13 || e.keyCode === 9 || e.keyCode === 188) return addTag(search);
+    if (e.keyCode === 13 || e.keyCode === 9 || e.keyCode === 188) addTag(suggestions[0]);
+    if (e.keyCode === 188) setSearch('');
   };
 
   return (
     <>
       <section className="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
         <div className="bg-clipper">
-          <h1 style={{ textAlign: 'center', color: '#33a1fd', marginTop: '30px', marginBottom: '-30px' }}>
+          <h1 style={{ textAlign: 'center', color: 'white', marginTop: '30px', marginBottom: '-30px' }}>
             Projects & Skills
           </h1>
           <div className="container-fluid mb-5">
@@ -92,13 +89,13 @@ const Skills = () => {
                 <input
                   type="text"
                   className="form-control shadow-sm"
-                  placeholder="input"
+                  placeholder="Search for a skill (React, Node, Javascript...)"
                   value={search}
                   onChange={(e) => handleSearch(e)}
                   onKeyDown={(e) => handleKey(e)}
                 />
                 <div className="mt-2">
-                  {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions </span>}
+                  {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions</span>}
                   {suggestions.map((tag, index) => (
                     <span
                       key={tag}
