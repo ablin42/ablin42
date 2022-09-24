@@ -83,7 +83,7 @@ const Skills = () => {
           Projects & Skills
         </h1>
         <div className="container-fluid mb-5">
-          <div className="col-md-8 m-auto mt-5">
+          <div className="col-xl-8 col-lg-10 m-auto mt-5">
             <div className="form-control shadow-sm">
               <input
                 type="text"
