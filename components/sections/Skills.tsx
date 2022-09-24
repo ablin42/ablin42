@@ -98,7 +98,7 @@ const Skills = () => {
                 {suggestions.map((tag, index) => (
                   <span
                     key={tag}
-                    className="badge bg-info m-1"
+                    className="badge badge-secondary m-1"
                     style={{ cursor: 'pointer' }}
                     onClick={() => addTag(tag)}
                   >
@@ -107,9 +107,13 @@ const Skills = () => {
                 ))}
                 <br />
                 {tags.map((tag, index) => (
-                  <span key={tag.name} className="badge bg-primary m-1">
+                  <span key={tag.name} className="badge badge-primary m-1">
                     {tag.name}
-                    <b className="ms-2" style={{ color: 'white', cursor: 'pointer' }} onClick={() => removeTag(index)}>
+                    <b
+                      className="ms-2 text-white"
+                      style={{ color: 'white !important', cursor: 'pointer' }}
+                      onClick={() => removeTag(index)}
+                    >
                       x
                     </b>
                   </span>

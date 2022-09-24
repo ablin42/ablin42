@@ -66,7 +66,7 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
               })
               .map((item) => {
                 return (
-                  <span key={item} className={`badge bg-${tagStack.includes(item) ? 'info' : 'primary'} m-1`}>
+                  <span key={item} className={`badge badge-${tagStack.includes(item) ? 'secondary' : 'primary'} m-1`}>
                     {item}
                   </span>
                 );

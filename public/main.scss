@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+/* BOOTSTRAP CONFIG */
+@import '../node_modules/bootstrap/scss/functions';
+
+$primary: #33a1fd;
+$secondary: #204141;
+$info: #4c9a9a;
+$warning: #facf5a;
+$danger: #ff5959;
+$success: #2cb978;
+
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/root';
+@import '../node_modules/bootstrap/scss/buttons';
+
+
+
 html {
   --main-dark: #4291d3;
   // ^ #4291d3 || #446491
@@ -30,21 +48,13 @@ html[data-theme='dark'] {
   --lightest-shade: #151515;
 }
 
-/* BOOTSTRAP CONFIG */
-@import '../node_modules/bootstrap/scss/functions';
+.badge-primary {
+  background-color: #33a1fd;
+}
 
-$primary: #33a1fd;
-$secondary: #204141;
-$info: #4c9a9a;
-$warning: #facf5a;
-$danger: #ff5959;
-$success: #2cb978;
-
-@import '../node_modules/bootstrap/scss/variables';
-@import '../node_modules/bootstrap/scss/maps';
-@import '../node_modules/bootstrap/scss/mixins';
-@import '../node_modules/bootstrap/scss/root';
-@import '../node_modules/bootstrap/scss/buttons';
+.badge-secondary {
+  background-color: #4291d3;
+}
 
 /* GLOBAL */
 
@@ -73,15 +83,15 @@ body {
 
 a,
 b {
-  color: var(--main-dark);
+  color: var(--main-dark) !important;
 }
 
 a:hover {
-  color: var(--main-light);
+  color: var(--main-light)!important;
 }
 
 p {
-  color: var(--lighter-shade);
+  color: var(--lighter-shade)!important;
 }
 
 /* END GLOBAL */
@@ -150,12 +160,12 @@ p {
 /* NAVBAR */
 .navbar-brand {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5em !important;
   margin-left: 3%;
   color: white !important;
   transition: ease-in-out 0.2s;
   /* causes brand to slide in */
-  padding: 0;
+  padding: 5px 0;
 }
 
 .navbar-brand:hover {
@@ -262,7 +272,7 @@ p {
   padding: 24px 24px 12px 24px;
   background: url('/svg/topography_low_opacity.svg');
   background-color: var(--darker-shade); // var(--darker-shade) || #151718
-  margin-top: 5% !important;
+  margin: 5% auto 0 auto !important;
   // border: 2px solid #023f70 !important;
   color: white;
 }

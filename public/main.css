@@ -1,30 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-html {
-  --main-dark: #4291d3;
-  --main: #33a1fd;
-  --main-light: #ace6f6;
-  --light-shade: #ebebeb;
-  --lighter-shade: #f0f0f0;
-  --lightest-shade: #f7f7f7;
-  --dark-border: #1a1a1a;
-  --dark-shade: #1c1c1c;
-  --darker-shade: #1e1e1e;
-  --darkest-shade: #151515;
-}
-
-html[data-theme=dark] {
-  --main-dark: #4291d3;
-  --main: #33a1fd;
-  --main-light: #ace6f6;
-  --dark-shade: #ebebeb;
-  --darker-shade: #f0f0f0;
-  --darkest-shade: #f7f7f7;
-  --dark-border: #efefef;
-  --light-shade: #1c1c1c;
-  --lighter-shade: #1e1e1e;
-  --lightest-shade: #151515;
-}
-
 /* BOOTSTRAP CONFIG */
 :root {
   --bs-blue: #0d6efd;
@@ -471,6 +445,40 @@ html[data-theme=dark] {
   --bs-btn-border-radius: 0.25rem;
 }
 
+html {
+  --main-dark: #4291d3;
+  --main: #33a1fd;
+  --main-light: #ace6f6;
+  --light-shade: #ebebeb;
+  --lighter-shade: #f0f0f0;
+  --lightest-shade: #f7f7f7;
+  --dark-border: #1a1a1a;
+  --dark-shade: #1c1c1c;
+  --darker-shade: #1e1e1e;
+  --darkest-shade: #151515;
+}
+
+html[data-theme=dark] {
+  --main-dark: #4291d3;
+  --main: #33a1fd;
+  --main-light: #ace6f6;
+  --dark-shade: #ebebeb;
+  --darker-shade: #f0f0f0;
+  --darkest-shade: #f7f7f7;
+  --dark-border: #efefef;
+  --light-shade: #1c1c1c;
+  --lighter-shade: #1e1e1e;
+  --lightest-shade: #151515;
+}
+
+.badge-primary {
+  background-color: #33a1fd;
+}
+
+.badge-secondary {
+  background-color: #4291d3;
+}
+
 /* GLOBAL */
 * {
   margin: 0;
@@ -497,15 +505,15 @@ body {
 
 a,
 b {
-  color: var(--main-dark);
+  color: var(--main-dark) !important;
 }
 
 a:hover {
-  color: var(--main-light);
+  color: var(--main-light) !important;
 }
 
 p {
-  color: var(--lighter-shade);
+  color: var(--lighter-shade) !important;
 }
 
 /* END GLOBAL */
@@ -570,12 +578,12 @@ p {
 /* NAVBAR */
 .navbar-brand {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5em !important;
   margin-left: 3%;
   color: white !important;
   transition: ease-in-out 0.2s;
   /* causes brand to slide in */
-  padding: 0;
+  padding: 5px 0;
 }
 
 .navbar-brand:hover {
@@ -674,7 +682,7 @@ p {
   padding: 24px 24px 12px 24px;
   background: url("/svg/topography_low_opacity.svg");
   background-color: var(--darker-shade);
-  margin-top: 5% !important;
+  margin: 5% auto 0 auto !important;
   color: white;
 }
 

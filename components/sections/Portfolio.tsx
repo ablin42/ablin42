@@ -62,11 +62,11 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge bg-primary m-1">Typescript</span>
-                            <span className="badge bg-primary m-1">React</span>
-                            <span className="badge bg-primary m-1">Nodejs</span>
-                            <span className="badge bg-primary m-1">Solidity</span>
-                            <span className="badge bg-primary m-1">NFT</span>
+                            <span className="badge badge-primary m-1">Typescript</span>
+                            <span className="badge badge-primary m-1">React</span>
+                            <span className="badge badge-primary m-1">Nodejs</span>
+                            <span className="badge badge-primary m-1">Solidity</span>
+                            <span className="badge badge-primary m-1">NFT</span>
                           </div>
                         </div>
                       </ProjectItem>
@@ -98,9 +98,9 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge bg-primary m-1">Nextjs</span>
-                            <span className="badge bg-primary m-1">Nodejs</span>
-                            <span className="badge bg-primary m-1">MongoDB</span>
+                            <span className="badge badge-primary m-1">Nextjs</span>
+                            <span className="badge badge-primary m-1">Nodejs</span>
+                            <span className="badge badge-primary m-1">MongoDB</span>
                           </div>
                         </div>
                       </ProjectItem>
@@ -122,8 +122,8 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge bg-primary m-1">Nextjs</span>
-                            <span className="badge bg-primary m-1">Typescript</span>
+                            <span className="badge badge-primary m-1">Nextjs</span>
+                            <span className="badge badge-primary m-1">Typescript</span>
                           </div>
                         </div>
                       </ProjectItem>
@@ -145,9 +145,9 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge bg-primary m-1">Typescript</span>
-                            <span className="badge bg-primary m-1">React</span>
-                            <span className="badge bg-primary m-1">Nodejs</span>
+                            <span className="badge badge-primary m-1">Typescript</span>
+                            <span className="badge badge-primary m-1">React</span>
+                            <span className="badge badge-primary m-1">Nodejs</span>
                           </div>
                         </div>
                       </ProjectItem>
