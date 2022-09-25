@@ -1,5 +1,6 @@
 // @EXTERNALS
 import React from 'react';
+import Image from 'next/image';
 import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEthereum, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +8,8 @@ import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 // @COMPONENTS
 import Toggler from '../Toggler';
 // @MISC
+import profilePic from '../../public/0xharb3.jpg';
+import scrollGif from '../../public/scroll-indicator.gif';
 
 const Landing = () => {
   const handleClipboard = (ADDRESS: string) => {
@@ -55,7 +58,7 @@ const Landing = () => {
               <div className="row">
                 <div className="row align-items-center">
                   <div className="col-lg-4 text-center">
-                    <img alt="0xHarb" src="/0xharb3.jpg" className="profile-img shadow mb-2" width="100%" />
+                    <Image src={profilePic} alt="My avatar" className="profile-img shadow" />
                   </div>
 
                   <div className="col-lg-8">
@@ -101,7 +104,7 @@ const Landing = () => {
               </div>
             </div>
             <div className="d-flex justify-content-center mt-3">
-              <img src="/scroll-indicator.gif" alt="try scrolling" width="75px" />
+              <Image src={scrollGif} alt="Try scrolling" width="75px" height="75px" />
             </div>
           </div>
         </div>

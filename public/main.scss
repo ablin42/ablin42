@@ -16,8 +16,6 @@ $success: #2cb978;
 @import '../node_modules/bootstrap/scss/root';
 @import '../node_modules/bootstrap/scss/buttons';
 
-
-
 html {
   --main-dark: #4291d3;
   // ^ #4291d3 || #446491
@@ -49,11 +47,11 @@ html[data-theme='dark'] {
 }
 
 .badge-primary {
-  background-color: #33a1fd;
+  background-color: #1272c3;
 }
 
 .badge-secondary {
-  background-color: #4291d3;
+  background-color: #2f587a;
 }
 
 /* GLOBAL */
@@ -87,11 +85,11 @@ b {
 }
 
 a:hover {
-  color: var(--main-light)!important;
+  color: var(--main-light) !important;
 }
 
 p {
-  color: var(--lighter-shade)!important;
+  color: var(--lighter-shade) !important;
 }
 
 /* END GLOBAL */
