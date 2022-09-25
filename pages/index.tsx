@@ -13,33 +13,32 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>ablin42</title>
-        <meta name="description" content="xxxxxxx" />
-        // TODO
-        {/* <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="csrf-token" content="<%= locals.csrfToken %>" />
-		<meta name="robots" content="index,follow" />
-
-		<meta name="application-name" content="Fullstack Web Developer | ablin@dev" />
-		<meta name="author" content="Andréas Blin, Fullstack Web Developer freelance@ablin.dev" />
-		<meta name="description" content="Web Developer Fullstack expert in Javascript Based in Paris | Ready to enhance your online activity and grow your business, open for hire" />
-		<meta
-			name="keywords"
-			content="Developer, Développeur, Web, Fullstack, Paris, ile de france, ile, france, Portfolio, front-end, back-end, Création de site, Website building, Website, Freelance, ablin, dev, ablin@dev, ablin.dev, ablin42, Andréas Blin, Andréas, Blin, Javascript, Node.js, React, Nodejs, Vuejs, Vue.js, xs-url.fr, xs-url, xs url, url"
-		/>
-		<meta name="url" content="https://www.ablin.dev/" />
-		<meta name="identifier-URL" content="https://www.ablin.dev/" />
-		<meta name="category" content="Web Developer Fullstack" />
-
-		<meta property="og:title" content="Fullstack Web Developer | ablin@dev" />
-		<meta property="og:description" content="Web Developer Fullstack expert in Javascript Based in Paris | Ready to enhance your online activity and grow your business, open for hire" />
-
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.ablin.dev/" />
-		<meta property="og:image" content="https://www.ablin.dev/img/screencap.png" />
-
-		<link rel="icon" href="/img/favicon.ico" type="image/x-icon" /> */}
+        <title>ablin42 | Fullstack Blockchain Developer</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index,follow" />
+        <meta name="application-name" content="Fullstack Blockchain Developer | ablin@dev" />
+        <meta name="author" content="0xHarb, Fullstack Blockchain Developer | freelance@ablin.dev" />
+        <meta
+          name="description"
+          content="Fullstack Blockchain Developer with strong expertise in Javascript, based in Paris"
+        />
+        <meta
+          name="keywords"
+          content="Developer, Développeur, Web, Crypto, NFT, Solidity, Blockchain, Cryptomonnaie, Cryptography, Cryptographie, Web3, Fullstack, Paris, ile de france, ile, france, Portfolio, front-end, back-end, Création de site, Website building, Website, Freelance, ablin, dev, ablin@dev, ablin.dev, ablin42, Andréas Blin, Andréas, Blin, Javascript, Node.js, React, Nodejs, Vuejs, Vue.js, xs-url.fr, xs-url, xs url, url, maral.fr, chaproulette.lol, bullvsbear.pro, dungeondefenders.xyz, dungeon defenders, scraping, token, ERC-20, ERC-721"
+        />
+        <meta name="url" content="https://www.ablin.dev/" />
+        <meta name="identifier-URL" content="https://www.ablin.dev/" />
+        <meta name="category" content="Fullstack Blockchain Developer" />
+        <meta property="og:title" content="Fullstack Blockchain Developer | ablin@dev" />
+        <meta
+          property="og:description"
+          content="Fullstack Blockchain Developer with strong expertise in Javascript, based in Paris"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ablin.dev/" />
+        <meta property="og:image" content="/screencap.png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <ReactFullpage
         licenseKey={'gplv3-license'}
