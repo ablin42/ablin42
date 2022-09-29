@@ -51,7 +51,7 @@ const Skills = () => {
     const projectsObj = PROJECTS.map((project) => {
       return {
         name: project.name,
-        stack: project.stack.map((tag) => tag.toLowerCase()),
+        stack: project.stack,
         description: project.description,
         github: project.github,
         link: project.link,
@@ -63,7 +63,7 @@ const Skills = () => {
 
     tagStack.forEach((tag) => {
       projectsObj.forEach((project, index) => {
-        if (project.stack.includes(tag.toLowerCase())) projectsObj[index].nbMatch += 1;
+        if (project.stack.includes(tag)) projectsObj[index].nbMatch += 1;
       });
     });
 
