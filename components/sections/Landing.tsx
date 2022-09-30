@@ -8,7 +8,7 @@ import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 // @COMPONENTS
 import Toggler from '../Toggler';
 // @MISC
-import profilePic from '../../public/0xharb3.jpg';
+import profilePic from '../../public/pfp/jin4.jpg';
 import scrollGif from '../../public/scroll-indicator.gif';
 
 const Landing = () => {
@@ -48,7 +48,7 @@ const Landing = () => {
           <div className="container">
             <div className="col-md-8 col-xs-12 container-decorated shadow-lg" id="introduction">
               <h1 className="mb-3 text-main">
-                ~/0xHarb <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack
+                ~/ablin42 <FontAwesomeIcon className="fa-icon ms-3 me-3" icon={faTerminal} fontSize={30} /> Fullstack
                 Developer
               </h1>
               <div className="row">
@@ -91,9 +91,9 @@ const Landing = () => {
                     <a className="m-2" target="_blank" rel="noreferrer" href="https://github.com/ablin42">
                       <FontAwesomeIcon className="fa-icon" icon={faGithub} fontSize={30} />
                     </a>
-                    <a className="m-2" target="_blank" rel="noreferrer" href="https://twitter.com/0xharb">
+                    {/* <a className="m-2" target="_blank" rel="noreferrer" href="https://twitter.com/0xharb">
                       <FontAwesomeIcon className="fa-icon" icon={faTwitter} fontSize={30} />
-                    </a>
+                    </a> */}
                     <a className="m-2 d-inline-block" href="#">
                       <FontAwesomeIcon
                         className="fa-icon"

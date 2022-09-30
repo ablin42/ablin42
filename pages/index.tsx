@@ -18,7 +18,7 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index,follow" />
         <meta name="application-name" content="Fullstack Blockchain Developer | ablin@dev" />
-        <meta name="author" content="0xHarb, Fullstack Blockchain Developer | freelance@ablin.dev" />
+        <meta name="author" content="ablin42, Fullstack Blockchain Developer | freelance@ablin.dev" />
         <meta
           name="description"
           content="Fullstack Blockchain Developer with strong expertise in Javascript, based in Paris"
