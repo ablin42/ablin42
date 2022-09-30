@@ -26,7 +26,7 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
   const tagStack = tags.map((tag: any) => tag.name);
 
   return (
-    <div className="col-md-3 mt-2 mb-2">
+    <div className="col-md-3 p-2">
       <div className="skill-card shadow-sm">
         <SkillHeader>
           <b>{name}</b>
@@ -66,7 +66,7 @@ const SkillCard = ({ name, description, stack, externalLink, repoLink, tags }: C
               })
               .map((item) => {
                 return (
-                  <span key={item} className={`badge badge-${tagStack.includes(item) ? 'secondary' : 'primary'} m-1`}>
+                  <span key={item} className={`badge badge-${tagStack.includes(item) ? 'primary' : 'secondary'} m-1`}>
                     {item}
                   </span>
                 );

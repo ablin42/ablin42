@@ -479,6 +479,10 @@ html[data-theme=dark] {
   background-color: #2f587a;
 }
 
+.text-light {
+  color: var(--light-shade) !important;
+}
+
 /* GLOBAL */
 * {
   margin: 0;
@@ -509,7 +513,7 @@ b {
 }
 
 a:hover {
-  color: var(--main-light) !important;
+  color: var(--main) !important;
 }
 
 p {
@@ -602,7 +606,7 @@ p {
   bottom: 10px;
   margin-top: 10px;
   margin-right: 15px;
-  left: 25px;
+  left: 35px;
 }
 .badge-group span {
   margin: 5px;
@@ -615,7 +619,6 @@ p {
   min-height: 300px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   border: 3px solid var(--dark-border) !important;
-  margin: 10px 0;
 }
 .project-item h1 {
   font-size: 26px;
@@ -624,7 +627,7 @@ p {
 .project-item p {
   font-size: 16px;
   opacity: 0.95;
-  text-indent: 5px;
+  text-indent: 10px;
   font-weight: 300;
 }
 
@@ -667,6 +670,10 @@ p {
   background-color: var(--light-shade);
 }
 
+.section-header {
+  color: var(--main-dark);
+}
+
 .text-main {
   color: var(--main);
 }
@@ -696,7 +703,7 @@ p {
 input.form-control {
   background-color: var(--darker-shade);
   border: none;
-  color: white;
+  color: var(--lightest-shade);
   height: 40px;
 }
 
@@ -728,6 +735,7 @@ div.form-control {
 #introduction .profile-img {
   border-radius: 50%;
   border: 5px solid rgba(51, 161, 253, 0.231372549) !important;
+  width: 100%;
 }
 #introduction .paragraph {
   text-indent: 10px;
@@ -787,8 +795,8 @@ div.form-control {
 #portfolio-section .bg-clipper {
   background: url("/svg/topography.svg");
   background-color: var(--darker-shade);
-  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 95.65%, 1% 95.64%, 2% 95.61%, 3% 95.55%, 4% 95.48%, 5% 95.38%, 6% 95.26%, 7% 95.12%, 8% 94.96%, 9% 94.78%, 10% 94.59%, 11% 94.38%, 12% 94.15%, 13% 93.91%, 14% 93.65%, 15% 93.39%, 16% 93.11%, 17% 92.82%, 18% 92.53%, 19% 92.23%, 20% 91.92%, 21% 91.61%, 22% 91.3%, 23% 90.99%, 24% 90.68%, 25% 90.38%, 26% 90.08%, 27% 89.78%, 28% 89.5%, 29% 89.22%, 30% 88.95%, 31% 88.7%, 32% 88.45%, 33% 88.23%, 34% 88.02%, 35% 87.82%, 36% 87.64%, 37% 87.49%, 38% 87.35%, 39% 87.23%, 40% 87.13%, 41% 87.05%, 42% 87%, 43% 86.97%, 44% 86.96%, 45% 86.97%, 46% 87%, 47% 87.06%, 48% 87.13%, 49% 87.23%, 50% 87.35%, 51% 87.49%, 52% 87.65%, 53% 87.83%, 54% 88.02%, 55% 88.23%, 56% 88.46%, 57% 88.7%, 58% 88.96%, 59% 89.23%, 60% 89.51%, 61% 89.79%, 62% 90.09%, 63% 90.39%, 64% 90.69%, 65% 91%, 66% 91.31%, 67% 91.62%, 68% 91.93%, 69% 92.24%, 70% 92.54%, 71% 92.83%, 72% 93.12%, 73% 93.4%, 74% 93.66%, 75% 93.92%, 76% 94.16%, 77% 94.39%, 78% 94.6%, 79% 94.79%, 80% 94.97%, 81% 95.13%, 82% 95.26%, 83% 95.38%, 84% 95.48%, 85% 95.56%, 86% 95.61%, 87% 95.64%, 88% 95.65%, 89% 95.64%, 90% 95.61%, 91% 95.55%, 92% 95.47%, 93% 95.37%, 94% 95.25%, 95% 95.11%, 96% 94.96%, 97% 94.78%, 98% 94.58%, 99% 94.37%, 100% 94.14%);
-          clip-path: polygon(100% 0%, 0% 0%, 0% 95.65%, 1% 95.64%, 2% 95.61%, 3% 95.55%, 4% 95.48%, 5% 95.38%, 6% 95.26%, 7% 95.12%, 8% 94.96%, 9% 94.78%, 10% 94.59%, 11% 94.38%, 12% 94.15%, 13% 93.91%, 14% 93.65%, 15% 93.39%, 16% 93.11%, 17% 92.82%, 18% 92.53%, 19% 92.23%, 20% 91.92%, 21% 91.61%, 22% 91.3%, 23% 90.99%, 24% 90.68%, 25% 90.38%, 26% 90.08%, 27% 89.78%, 28% 89.5%, 29% 89.22%, 30% 88.95%, 31% 88.7%, 32% 88.45%, 33% 88.23%, 34% 88.02%, 35% 87.82%, 36% 87.64%, 37% 87.49%, 38% 87.35%, 39% 87.23%, 40% 87.13%, 41% 87.05%, 42% 87%, 43% 86.97%, 44% 86.96%, 45% 86.97%, 46% 87%, 47% 87.06%, 48% 87.13%, 49% 87.23%, 50% 87.35%, 51% 87.49%, 52% 87.65%, 53% 87.83%, 54% 88.02%, 55% 88.23%, 56% 88.46%, 57% 88.7%, 58% 88.96%, 59% 89.23%, 60% 89.51%, 61% 89.79%, 62% 90.09%, 63% 90.39%, 64% 90.69%, 65% 91%, 66% 91.31%, 67% 91.62%, 68% 91.93%, 69% 92.24%, 70% 92.54%, 71% 92.83%, 72% 93.12%, 73% 93.4%, 74% 93.66%, 75% 93.92%, 76% 94.16%, 77% 94.39%, 78% 94.6%, 79% 94.79%, 80% 94.97%, 81% 95.13%, 82% 95.26%, 83% 95.38%, 84% 95.48%, 85% 95.56%, 86% 95.61%, 87% 95.64%, 88% 95.65%, 89% 95.64%, 90% 95.61%, 91% 95.55%, 92% 95.47%, 93% 95.37%, 94% 95.25%, 95% 95.11%, 96% 94.96%, 97% 94.78%, 98% 94.58%, 99% 94.37%, 100% 94.14%);
+  -webkit-clip-path: none;
+          clip-path: none;
   height: 100vh;
 }
 
@@ -820,7 +828,7 @@ div.form-control {
 }
 
 /* END KEYFRAMES & ANIMATION CLASSES */
-@media (max-height: 950px) {
+@media (max-height: 920px) {
   #portfolio-section .bg-clipper {
     -webkit-clip-path: none;
             clip-path: none;
@@ -966,4 +974,65 @@ label:active:after {
 #fp-nav ul li span {
   background: none;
   display: none;
+}
+
+@-webkit-keyframes scrollAnim {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0.75em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scrollAnim {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0.75em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+.scroll-icon__dot {
+  display: block;
+  position: absolute;
+  left: 50%;
+  background: #fff;
+  height: 0.5em;
+  width: 0.5em;
+  top: 0.6em;
+  margin-left: -0.25em;
+  border-radius: 50%;
+  transform-origin: top center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: scrollAnim 1.2s ease-out infinite;
+          animation: scrollAnim 1.2s ease-out infinite;
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  border-radius: 1em;
 }/*# sourceMappingURL=main.css.map */

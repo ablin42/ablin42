@@ -34,19 +34,19 @@ const Portfolio = () => {
 
           <div className="bg-clipper">
             <div className="container-fluid ">
-              <div className="col-xl-8 col-lg-10 m-auto mt-5 pt-4 pb-5 portfolio-container">
-                <h1 style={{ color: 'white', marginLeft: '75px', marginTop: '0px', marginBottom: '-25px' }}>
-                  Highlighted Projects
-                </h1>
+              <h1 className="section-header text-center" style={{ margin: '50px auto -30px auto' }}>
+                Highlighted Projects
+              </h1>
 
+              <div className="col-xl-8 col-lg-10 m-auto mt-5 pt-4 pb-5 portfolio-container">
                 {/* <div className="tk-blob centered-blob" style={{ fill: "#2e7bbb" }}>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
 									<path d="M260.2 41.4c20 29.2 14.6 74.5 7.2 124.4-7.3 49.9-16.6 104.5-49.2 126-32.5 21.6-88.4 10.2-132-15.2s-75-64.7-83.6-107.8C-6.1 125.7 8 79 36.3 47.8 64.5 16.7 107 1.3 150.9.1c43.9-1.1 89.3 12 109.3 41.3z"></path>
 								</svg>
 							</div> */}
-                <div className="col-md-8 col-11 m-auto mt-5">
+                <div className="col-md-8 col-11 m-auto mt-3">
                   <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-6 p-2">
                       <ProjectItem className="project-item" style={{ borderRadius: '10px 10px 30px 10px' }}>
                         <ProjectMenu
                           externalLink="https://dungeondefenders.xyz/"
@@ -62,17 +62,17 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge badge-primary m-1">Typescript</span>
-                            <span className="badge badge-primary m-1">ReactJS</span>
-                            <span className="badge badge-primary m-1">NodeJS</span>
-                            <span className="badge badge-primary m-1">Solidity</span>
-                            <span className="badge badge-primary m-1">NFT</span>
+                            <span className="badge badge-secondary m-1">Typescript</span>
+                            <span className="badge badge-secondary m-1">ReactJS</span>
+                            <span className="badge badge-secondary m-1">NodeJS</span>
+                            <span className="badge badge-secondary m-1">Solidity</span>
+                            <span className="badge badge-secondary m-1">NFT</span>
                           </div>
                         </div>
                       </ProjectItem>
                     </div>
-                    <div className="col-md-6">
-                      <ProjectItem className="project-item" style={{ borderRadius: '10px 30px 10px 10px' }}>
+                    <div className="col-md-6 p-2">
+                      <ProjectItem className="project-item" style={{ borderRadius: '10px 10px 10px 30px' }}>
                         <ProjectMenu
                           externalLink="https://www.bullvsbear.pro/"
                           repoLink="https://github.com/ablin42/bullvsbear"
@@ -98,17 +98,17 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge badge-primary m-1">NextJS</span>
-                            <span className="badge badge-primary m-1">NodeJS</span>
-                            <span className="badge badge-primary m-1">MongoDB</span>
+                            <span className="badge badge-secondary m-1">NextJS</span>
+                            <span className="badge badge-secondary m-1">NodeJS</span>
+                            <span className="badge badge-secondary m-1">MongoDB</span>
                           </div>
                         </div>
                       </ProjectItem>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-md-6">
-                      <ProjectItem className="project-item" style={{ borderRadius: '10px 10px 10px 30px' }}>
+                    <div className="col-md-6 p-2">
+                      <ProjectItem className="project-item" style={{ borderRadius: '10px 30px 10px 10px' }}>
                         <ProjectMenu
                           externalLink="https://chaproulette.lol/"
                           repoLink="https://github.com/ablin42/chaproulette"
@@ -122,14 +122,14 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge badge-primary m-1">NextJS</span>
-                            <span className="badge badge-primary m-1">Typescript</span>
+                            <span className="badge badge-secondary m-1">NextJS</span>
+                            <span className="badge badge-secondary m-1">Typescript</span>
                           </div>
                         </div>
                       </ProjectItem>
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-6 p-2">
                       <ProjectItem className="project-item" style={{ borderRadius: '30px 10px 10px 10px' }}>
                         <ProjectMenu
                           externalLink="http://xs-url.fr/"
@@ -145,9 +145,9 @@ const Portfolio = () => {
 
                         <div className="d-flex justify-content-between align-items-center badge-group">
                           <div>
-                            <span className="badge badge-primary m-1">Typescript</span>
-                            <span className="badge badge-primary m-1">ReactJS</span>
-                            <span className="badge badge-primary m-1">NodeJS</span>
+                            <span className="badge badge-secondary m-1">Typescript</span>
+                            <span className="badge badge-secondary m-1">ReactJS</span>
+                            <span className="badge badge-secondary m-1">NodeJS</span>
                           </div>
                         </div>
                       </ProjectItem>

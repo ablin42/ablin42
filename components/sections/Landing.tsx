@@ -12,8 +12,9 @@ import profilePic from '../../public/0xharb3.jpg';
 import scrollGif from '../../public/scroll-indicator.gif';
 
 const Landing = () => {
-  const handleClipboard = (ADDRESS: string) => {
-    const tooltip = document.querySelector(`#harb > .tooltiptextSpecial`);
+  const handleClipboard = (anchor: string, text: string) => {
+    console.log(anchor, text);
+    const tooltip = document.querySelector(`#${anchor} > .tooltiptextSpecial`);
 
     if (tooltip && !tooltip.classList.contains('tooltip-visible')) {
       tooltip.classList.add('tooltipAnim');
@@ -26,7 +27,7 @@ const Landing = () => {
       }, 3000);
     }
 
-    navigator.clipboard.writeText(ADDRESS);
+    navigator.clipboard.writeText(text);
   };
 
   return (
@@ -58,7 +59,7 @@ const Landing = () => {
               <div className="row">
                 <div className="row align-items-center">
                   <div className="col-lg-4 text-center">
-                    <Image src={profilePic} alt="My avatar" className="profile-img shadow" />
+                    <Image src={profilePic} alt="My avatar" className="profile-img" />
                   </div>
 
                   <div className="col-lg-8">
@@ -69,11 +70,18 @@ const Landing = () => {
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="text-center w-auto ms-4">
-                    <a href="mailto: ablin.dev@gmail.com" className="email">
+                    <a
+                      href="mailto: ablin.dev@gmail.com"
+                      className="email"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleClipboard('mail', 'ablin.dev@gmail.com');
+                      }}
+                    >
                       ablin.dev@gmail.com
                     </a>
                     <div className="tooltipSpecial" id="mail">
-                      <span className="tooltiptextSpecial">
+                      <span className="tooltiptextSpecial" style={{ left: '10px' }}>
                         <Trans>Clipboard</Trans>
                       </span>
                     </div>
@@ -91,7 +99,7 @@ const Landing = () => {
                         className="fa-icon"
                         icon={faEthereum}
                         fontSize={30}
-                        onClick={() => handleClipboard('0xCC61d2bb1A215f19922eCF81613bEa3253713371')}
+                        onClick={() => handleClipboard('harb', '0xCC61d2bb1A215f19922eCF81613bEa3253713371')}
                       />
                       <div className="tooltipSpecial" id="harb">
                         <span className="tooltiptextSpecial">
@@ -104,7 +112,10 @@ const Landing = () => {
               </div>
             </div>
             <div className="d-flex justify-content-center mt-3">
-              <Image src={scrollGif} alt="Try scrolling" width="75px" height="75px" />
+              <span className="scroll-icon">
+                <span className="scroll-icon__dot"></span>
+              </span>
+              {/* <Image src={scrollGif} alt="Try scrolling" width="75px" height="75px" /> */}
             </div>
           </div>
         </div>

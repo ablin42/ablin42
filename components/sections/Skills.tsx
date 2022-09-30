@@ -79,7 +79,7 @@ const Skills = () => {
   return (
     <>
       <section className="section main-section fp-auto-height-responsive" id="skills-section" data-anchor="skills">
-        <h1 style={{ textAlign: 'center', color: 'white', marginTop: '30px', marginBottom: '-30px' }}>
+        <h1 className="section-header" style={{ margin: '25px auto -30px auto' }}>
           Projects & Skills
         </h1>
         <div className="container-fluid mb-5">
@@ -93,8 +93,12 @@ const Skills = () => {
                 onChange={(e) => handleSearch(e)}
                 onKeyDown={(e) => handleKey(e)}
               />
-              <div className="mt-2">
-                {suggestions.length > 0 && <span style={{ color: 'white' }}>Suggestions</span>}
+              <div className="mt-2 ms-2">
+                {suggestions.length > 0 && (
+                  <span className="text-light" style={{ width: '100px', display: 'inline-block' }}>
+                    Suggestions
+                  </span>
+                )}
                 {suggestions.map((tag, index) => (
                   <span
                     key={tag}
@@ -106,6 +110,12 @@ const Skills = () => {
                   </span>
                 ))}
                 <br />
+                {tags.length > 0 && (
+                  <span className="text-light" style={{ width: '100px', display: 'inline-block' }}>
+                    Sélection
+                  </span>
+                )}
+
                 {tags.map((tag, index) => (
                   <span key={tag.name} className="badge badge-primary m-1">
                     {tag.name}
@@ -120,23 +130,21 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-            <div className="mt-3">
-              <div className="row">
-                {matchingProjects.map((project) => {
-                  const { name, stack, description, github, link } = project;
-                  return (
-                    <SkillCard
-                      key={name}
-                      name={name}
-                      description={description}
-                      stack={stack}
-                      externalLink={link}
-                      repoLink={github}
-                      tags={tags}
-                    />
-                  );
-                })}
-              </div>
+            <div className="row">
+              {matchingProjects.map((project) => {
+                const { name, stack, description, github, link } = project;
+                return (
+                  <SkillCard
+                    key={name}
+                    name={name}
+                    description={description}
+                    stack={stack}
+                    externalLink={link}
+                    repoLink={github}
+                    tags={tags}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
