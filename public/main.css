@@ -783,6 +783,7 @@ div.form-control {
 #portfolio-section {
   background: url("/svg/topography.svg");
   background-color: var(--darker-shade);
+  overflow: hidden;
 }
 #portfolio-section .portfolio-container {
   position: relative;
@@ -860,6 +861,9 @@ div.form-control {
   }
   .bg-clipper {
     height: auto !important;
+  }
+  #landing-section .bg-clipper {
+    height: 175vh !important;
   }
 }
 /* TOOLTIP */
