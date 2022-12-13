@@ -131,11 +131,7 @@ const Portfolio = () => {
 
                     <div className="col-md-6 p-2">
                       <ProjectItem className="project-item" style={{ borderRadius: '30px 10px 10px 10px' }}>
-                        <ProjectMenu
-                          externalLink="http://xs-url.fr/"
-                          repoLink="https://github.com/ablin42/url-shortener"
-                          attachRight
-                        />
+                        <ProjectMenu externalLink="" repoLink="https://github.com/ablin42/url-shortener" attachRight />
                         <div className="d-flex align-items-center mb-1">
                           <h1>Xs-url</h1>
                         </div>

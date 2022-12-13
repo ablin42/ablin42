@@ -31,7 +31,7 @@ const resources = {
       LibftSmallDescription: `A collection of useful functions in C`,
       CamagruSmallDescription: `Website allowing users to take pictures with their webcam & applying filters to them`,
       MatchaSmallDescription: `A Proof-of-Concept dating website`,
-      HypertubeSmallDescription: `An app to query multiple torrent website at once & streamer them in the browser`,
+      HypertubeSmallDescription: `An app to query multiple torrent website at once & stream them in the browser`,
       FlipperSmallDescription: `Small app to scout for new coins posted on /biz/`,
       TokenizedSmallVotesDescription: `A tokenized voting system`,
       ChaprouletteSmallDescription: `App to roll a random champion & lane based on the ennemy team from the last game`,

@@ -31,15 +31,17 @@ const ProjectMenu = ({ repoLink, externalLink, attachRight }: MenuProps) => {
       />
       {open && (
         <>
-          <a href={externalLink} target="_blank">
-            <FontAwesomeIcon
-              className="fa-icon clickable-icon p-2"
-              fontSize={25}
-              icon={faArrowUpRightFromSquare}
-              style={{ cursor: 'pointer' }}
-              color="#1a1a1a"
-            />
-          </a>
+          {externalLink && (
+            <a href={externalLink} target="_blank">
+              <FontAwesomeIcon
+                className="fa-icon clickable-icon p-2"
+                fontSize={25}
+                icon={faArrowUpRightFromSquare}
+                style={{ cursor: 'pointer' }}
+                color="#1a1a1a"
+              />
+            </a>
+          )}
           <a href={repoLink} target="_blank">
             <FontAwesomeIcon
               className="fa-icon clickable-icon p-2"
